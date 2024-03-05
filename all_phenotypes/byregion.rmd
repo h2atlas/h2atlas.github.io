@@ -1,0 +1,28 @@
+---
+date: "2019-10-29T11:02:05+06:00"
+title: Browse by Region
+description: Rank of fraction of heritability for each loci
+type: post
+weight: 15
+---
+
+```{r, echo=FALSE}
+library(htmltools)
+htmltools::HTML('<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>')
+```
+
+We searched for specific pleiotropic loci that contribute significant non-zero heritability to various phenotypes.
+For each locus, we calculated the inflation ratio of the fraction of total heritability, which indicates how many times the locus explains larger amount of heritability than its expected value (${1}\over{N\,of\,segments}$).
+Each value means the ratio of fraction of total SNP Heritability to the expected value considering the length of physical distance.
+
+
+```{r, echo=FALSE}
+htmltools::div(class="alert rounded-0 alert-info","
+You can hover your mouse on each figure and read information on it. Furthermore, you can magnify a region of interest, check detailed information, and download the figure, etc. using plenty of interactive functions (zoom, pan, reset, save, etc.). You can also click on a phenotype of your interest to get more information.
+")
+```
+Rank of fraction of heritability for each loci.
+```{r, echo=FALSE}
+htmltools::includeHTML('../../plot_data/byregion_script')
+htmltools::includeHTML('../../plot_data/byregion_div')
+```

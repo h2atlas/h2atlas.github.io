@@ -1,0 +1,69 @@
+---
+date: "2019-08-19T11:02:05+06:00"
+title: Technical Details
+weight: 3
+---
+
+##### ```This page is currently under preparation. The full version will be uploaded after our article goes to the public.```
+
+
+## Motivation
+Most of the complex traits have a highly polygenic nature, which means that numerous genes influence the traits. Recently, it turned out causal genes are dispersed across the genome at much finer scale than expected. We analyzed how widely causal variants are spread across the genome for complex traits in the UK biobank. To this end, we used LD score regression to estimate regional heritability of small genomic segments and examined if the heritability is evenly distributed across segments in each phenotype. We split genome with various constant physical lengths, as it turned out that the distribution of heritability across segments depends on the segment size in some phenotypes. Additionally, using the regional heritability data, we investigated relationship among the traits included in our analysis and searched for pleiotropic loci contributing much of heritability to many traits. We present our analysis results of 497 traits in our interactive online database.
+
+
+## Data resources
+We used genetic and phenotypic data from the UK Biobank. We utilized genetic association results of the UK Biobank data provided by the Neale lab, which was freely available on the lab website (http://www.nealelab.is/uk-biobank/). We used the round 2 version, which was released on August 1, 2018. The data in this release contained association results for 4,203 phenotypes recorded for 361,194 individuals. Detailed information about the quality control (QC) procedure, association model and phenotype curation are described in the Neale lab website. In addition, we downloaded 1000 Genomes Project Phase 3 genotype dataset which was used to calculate LD scores of SNPs
+
+## Phenotype curation
+To secure the liability of our analysis results, we filtered the phenotypes in the data. First, among 2,968 phenotypes excluding environmental phenotypes in the Neale lab data, we only included phenotypes whose effective sample size n_effective was >30,000 for binary phenotypes, whose (liability scale) heritability $h^2$ was >0.03, and whose p-value for non-zero $h^2$ was <0.01. Additionally, after performing local heritability analysis and calculating between-phenotype correlations based on regional heritability, we examined pairs of phenotypes having very similar results ($r^2$>0.97) and excluded a phenotype of lower $h^2$ to avoid duplication of similar phenotypes (e.g. mean corpuscular volume and mean corpuscular hemoglobin). These processes of filtering phenotypes finally resulted in 497 phenotypes. We used the association results of both sexes for all phenotypes except phenotypes specific to sex (e.g. malignant neoplasm of ovary) for which we used the results of the appropriate sex. Descriptions on finally selected phenotypes are in Table S2.
+
+
+## Genotype filtering
+
+The GWAS summary statistics provided by the Neale lab were calculated from QC-passed 13,791,467 SNP genotypes (GRCh build 37). Among them, statistics for 1,169,764 SNPs were used as input of LDSC module, after applying basic QC (INFO score>0.9, minor allele frequency (MAF)≤0.01), excluding sex chromosomes, and excluding SNPs not in the HapMap phase 3 data. We excluded SNPs in the MHC region in running LD score regression. We extracted 503 individuals of European ancestry from the 1000 Genomes Project Phase 3 genotype data using PLINK 1.9 software and utilized them for calculating LD scores of SNPs.  When interpolating genetic distance(cM) from physical position(bp), we used the recombination map downloaded from the IMPUTE2 website (https://mathgen.stats.ox.ac.uk/impute/impute_v2.html).
+
+
+### Segmentation of genome
+We performed stepwise segmentation in which the genome was split with constant physical length in gradually finer scale (starting from the chromosomes to 128Mb, 64Mb, 32Mb, 16Mb, and 8Mb). We only conducted the segmentation on autosomal chromosomes. The physical lengths of autosomes varied from 51Mb (chromosome 22) to 249Mb (chromosome 1). As the lengths of chromosomes were not exact multiples of the segmentation scale, the leftover pieces of the chromosomes shorter than the segmentation scale were generated. For example, splitting chromosome 1 in 64Mb resulted in segments of 0~64Mb, 64~128Mb, 128~192Mb, and the leftover piece 192~249Mb. Note that the unequal segment size of leftover piece did not affect our variance analysis below because we used the heritability per physical length. 
+
+### Estimating regional heritability with LDSC
+We utilized a modified implementation of LDSC module v.1.0.0 (https://github.com/bulik/ldsc) for estimating regional heritability of segments. We wanted to estimate the heritability of maximum 358 segments (8Mb scale) simultaneously using the stratified LDSC. Because the original implementation of LDSC often gave numerical errors when we segmented genome into >100 segments, we replaced numpy.linalg.solve function in the jackknife submodule with numpy.linalg.lstsq. We checked that the modification returned the same results when applied to small numbers of categories (segments). The modified version is available at our GitHub repository (https://github.com/ch6845/ldsc). For LD scores for regression weight (--w-ld-chr), we used precalculated LD scores obtained from the LDSC website. 
+
+
+
+### Analysis of Variance (ANOVA)
+To measure how evenly or unevenly the regional heritability is distributed over the segments, we conducted the analysis of variance (ANOVA). First, we calculated the heritability per physical length (%/Mb) for all segments on the lowest scale (8Mb). For each of upper scales (16Mb, 32Mb, 64Mb, 128Mb, and chromosomes), we grouped the segments in the lowest scale based on where they belong in the upper scale. Then, we conducted one-way analysis of variance (ANOVA) to test between-group variance. For each scale of segmentation, the F statistic is calculated as:
+
+$F={{MSTr}\over{MSE}}$ ($MSTr={{SSTr}\over{N_{upper}-1}}$, $MSE={{SSE}\over{N_{lowest}-N_{upper}}}$)
+
+
+where SStr is the sum of squares due to grouping of segments, SSE is the sum of squares due to in-group residual, N_lowest=358 is the number of segments when split by the lowest scale (8Mb in our analysis), and N_upper is the number of segments when split by the upper scale (22, 34, 55, 100, and 186 for chromosome, 128Mb, 64Mb, 32Mb, and 16Mb respectively). The p-value of the resulted F statistic indicates the statistical significance of how large between-group variance is compared with within-group variance. Thus, the ANOVA p-value will become significant if the heritability is unevenly distributed over segments in a specific upper scale. We calculated the F statistic and its corresponding p-value using scipy.stats.f_oneway function included in SciPy package.
+
+
+### Correlation analysis
+
+To identify pairs of traits whose genetic components colocalize within the same regions of the genome, we calculated Pearson’s correlation coefficient of regional heritability vectors of each pair of phenotypes. We rendered the correlations among phenotypes in a graph. For 16 pairs of phenotypes that had virtually duplicated values ($r^2$>0.95), we only included one phenotype in the results. We displayed correlations of $r^2$>0.5 and positioned the nodes using Kamada-Kawai algorithm28 implemented in Networkx Python package. Additionally, we performed unsupervised clustering of phenotypes with the regional heritability vector. We first applied principal component analysis (PCA). Then, we subsequently applied t-distributed stochastic neighbor embedding (tSNE), a machine-learning method for high-dimensionality compression and visualization, to the dimension-reduced vector (50 principal components) using perplexity value of 4. Finally, on the basis of two components returned by tSNE, we performed DBSCAN clustering algorithm in order to automatically categorize phenotypes, where the maximum distance between two samples in a neighborhood and the minimum number of reachable points in DBSCAN algorithm were 3 and 2 respectively. For these stepwise processes, we utilized functions implemented in Scikit-learn machine learning Python package30.
+
+
+
+### Finding pleiotropic loci
+To find pleiotropic loci, we examined the segments in the lowest scale (8Mb). For each segment, we counted the number of phenotypes of which variance is explained 5 times more than expected.  We only included one phenotype from each pair of two similar phenotypes ($r^2$>0.8), since the selection of phenotypes in our analysis can bias the identification of pleiotropic loci toward over-represented or nearly duplicated traits. We plotted the top 10 segments ranked by the counted values (Fig. 5). For each locus, we calculated the inflation ratio of the fraction of total heritability, which indicates how many times the locus explains larger amount of heritability than its expected value (1/(N of segments)).
+
+
+
+## Acknowledgements
+We express our gratitude to UK Biobank (http://www.ukbiobank.ac.uk/) for establishing a large long-term resource for genetic and epidemiological studies. We would like to thank the Neale Lab (http://www.nealelab.is/) for sharing UK Biobank GWAS summary statistics that we used in our study.
+
+
+## Citation
+When you use results from our website, please cite the following.
+```Kim, C. et al. Landscape of polygenicity of complex traits in UK Biobank. [under preparation].```
+
+## Softwares
+For data analysis, Python 3.7.3, PLINK v1.90, Pandas 0.24.2, Numpy 1.16.3, LDSC 1.0.0, Scikit-learn 0.21.2, SciPy 1.3.0
+For plotting the analysis result, Matplotlib 3.0.3, Seaborn 0.9.0 Networkx 2.3,
+For building web database, Hugo 0.58.0, Bokeh 1.3.4, DataTables 1.10.19
+
+## Source code
+Full pipeline of analysis in this research (including codes for figures, website conversion as well) https://github.com/ch6845/regional_heritability_analysis
+Modified version of LDSC v.1.0.0 https://github.com/ch6845/ldsc

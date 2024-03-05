@@ -1,0 +1,35 @@
+---
+author: Somrat
+date: "2019-10-29T11:02:05+06:00"
+title: Phenotype Network
+description: Correlation network of phenotypes
+type: post
+weight: 20
+---
+
+```{r, echo=FALSE}
+library(htmltools)
+htmltools::HTML('<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>')
+```
+
+We investigated the relationship among the traits included in our analysis using the regional heritability.
+For each pair of phenotypes included in our analysis, we calculated the correlation of regional heritability across the entire genome, which can serve as a proxy for the magnitude of pleiotropy between traits.
+Note that this correlation differs from the typical SNP-based genetic correlation in that regional heritability does not distinguish positive and negative effects.
+However, if we consider a locus as pleiotropic when it affects multiple traits regardless of directions, the regional heritability correlation may reflect the concept of pleiotropy better ([Frei, Oleksandr, et al.](https://www.nature.com/articles/s41467-019-10310-0)).
+Using the regional heritability correlation, we rendered a correlation network of traits.
+
+Pairs of traits having higher correlation are linked by thicker edges.
+The level of polygenicity of a trait is indicated by the color of the node.
+Traits sharing loci are clustered close together as a circle.
+Traits of high level of polygenicity are located in the center of the graph, and those of relative low level of polygenicity are located in periphery of it. 
+
+```{r, echo=FALSE}
+htmltools::div(class="alert rounded-0 alert-info","
+You can hover your mouse on each figure and read information on it. Furthermore, you can magnify a region of interest, check detailed information, and download the figure, etc. using plenty of interactive functions (zoom, pan, reset, save, etc.). You can also click on a phenotype of your interest to get more information.
+")
+```
+
+```{r, echo=FALSE}
+htmltools::includeHTML('../../plot_data/network_script')
+htmltools::includeHTML('../../plot_data/network_div')
+```

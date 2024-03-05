@@ -1,0 +1,34 @@
+---
+date: "2019-10-29T11:02:05+06:00"
+title: ANOVA Result
+description: ANOVA result p-value for various scale
+type: post
+weight: 25
+---
+```{r, echo=FALSE}
+library(htmltools)
+htmltools::HTML('<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>')
+```
+
+We calculated the heritability per physical length (%/Mb) for each segment in the lowest scale (8Mb).
+Then for each of upper scales (16Mb, 32Mb, 64Mb, 128Mb, and chromosomes), we grouped the segments based on the upper scale and applied ANOVA to calculate the statistical significance of between-group variance.
+If the heritability is unevenly distributed over segments in a specific upper scale, the p-value will become significant.
+Thus, the vector of p-values can give us a summary of the uniformity of heritability over different scales.
+Though many traits showed more significant p-values gradually on finer scale, each trait had different patterns with regard to at which scales the p-value rapidly became significant and how steeply the p-value became significant
+
+Heatmap in this figure shows the p-value resulted from ANOVA, in which on the basis of segments in the lowest scale (8Mb) for each upper scale (from 16Mb 128Mb) between-group variance of each upper scale is measured.
+We sorted traits in order of their level of polygenicity to fairly compare change pattern of within-group variance within a group of traits having similar between-group variance.
+
+When we plotted $δ_t$ of all phenotypes and all segment sizes, it was clear that some phenotypes show largely varying $δ_t$ across segment sizes.
+We wanted to examine if the level of polygenicity can differ depending on the segment size.
+We applied a statistical test to measure how unevenly the regional heritability is distributed over the segments.
+```{r, echo=FALSE}
+htmltools::div(class="alert rounded-0 alert-info","
+You can hover your mouse on each figure and read information on it. Furthermore, you can magnify a region of interest, check detailed information, and download the figure, etc. using plenty of interactive functions (zoom, pan, reset, save, etc.). You can also click on a phenotype of your interest to get more information.
+")
+```
+
+```{r, echo=FALSE}
+htmltools::includeHTML('../../plot_data/anova_total_script')
+htmltools::includeHTML('../../plot_data/anova_total_div')
+```

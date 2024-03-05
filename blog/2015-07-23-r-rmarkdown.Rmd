@@ -1,0 +1,74 @@
+---
+title: "Hello R Markdown"
+author: "Frida Gomam"
+date: 2015-07-23T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+
+```{r aa}
+library(rbokeh)
+
+p <- figure() %>%
+  ly_points(Sepal.Length, Sepal.Width, data = iris,
+    color = Species, glyph = Species,
+    hover = list(Sepal.Length, Sepal.Width))
+p
+
+```
+
+```{r sss}
+#print(23232)
+#bdsd=bokeh_render_json('a.json')
+```
+
+```{r ss,echo=FALSE}
+library(htmltools)
+htmltools::HTML('<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
+')
+htmltools::includeHTML("../../plot_data/poly_h2_cont_script")
+htmltools::includeHTML("../../plot_data/poly_h2_cont_div")
+htmltools::HTML('<a href="http://electronic-moongchi.tistory.com">전자뭉치 블로그로 이동하기</a>')
+#print()
+```
+
+
+
+```{r aba}
+print(2)
+#rbokeh::bokeh_render_json()
+#rbokeh::bokeh_render_json('a.json')
+```
+
+
+
+# R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+fit <- lm(dist ~ speed, data = cars)
+fit
+```
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
+par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  col = c('#0292D8', '#F7EA39', '#C4B632'),
+  init.angle = -50, border = NA
+)
+```

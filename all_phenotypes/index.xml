@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>All Phenotypes on Regional Heritability ATLAS</title>
+    <link>/all_phenotypes/</link>
+    <description>Recent content in All Phenotypes on Regional Heritability ATLAS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright(c) 2019 by Chanwoo Kim @ Genomics &amp; Bioinformatics Laboratory (hanlab.snu.ac.kr)</copyright>
+    <lastBuildDate>Sat, 29 Dec 2018 11:02:05 +0600</lastBuildDate>
+    
+	<atom:link href="/all_phenotypes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Overview</title>
+      <link>/all_phenotypes/overview/</link>
+      <pubDate>Tue, 29 Oct 2019 11:02:05 +0600</pubDate>
+      
+      <guid>/all_phenotypes/overview/</guid>
+      <description>We present a comprehensive segment-based analysis for the regional heritability of 497 traits in the UK biobank. We expect that the regional heritability information presented herein may help researchers for better understanding the unique genetic architectures of complex traits.
+We spliced genome into small segments with various constant physical lengths (by chromosome, 128Mb, 64Mb, 32Mb, 16Mb, 8Mb). A requirement for this analysis was a method that estimates the regional heritability of a large number of segments accurately at a time.</description>
+    </item>
+    
+    <item>
+      <title>Polygenicity</title>
+      <link>/all_phenotypes/polygenicity/</link>
+      <pubDate>Tue, 29 Oct 2019 11:02:05 +0600</pubDate>
+      
+      <guid>/all_phenotypes/polygenicity/</guid>
+      <description>We wanted to systematically measure how evenly the heritability is distributed, the level of polygenicity. To this end, we calculated the heritability per physical length (%/Mb) for each segment and the variance of this quantity over all segments. Let \(V_t\) be this variance for trait t. \[ \begin{align} ρ_t=-log(V_t) \end{align} \]
+For each segment length, we calculated \(ρ_t\) for all 497 traits. To emphasize the relative difference of \(ρ_t\) among different traits, we define the scaled \(ρ_t\) as follows:</description>
+    </item>
+    
+    <item>
+      <title>Browse by Region</title>
+      <link>/all_phenotypes/byregion/</link>
+      <pubDate>Tue, 29 Oct 2019 11:02:05 +0600</pubDate>
+      
+      <guid>/all_phenotypes/byregion/</guid>
+      <description>We searched for specific pleiotropic loci that contribute significant non-zero heritability to various phenotypes. For each locus, we calculated the inflation ratio of the fraction of total heritability, which indicates how many times the locus explains larger amount of heritability than its expected value (\({1}\over{N\,of\,segments}\)). Each value means the ratio of fraction of total SNP Heritability to the expected value considering the length of physical distance.
+You can hover your mouse on each figure and read information on it.</description>
+    </item>
+    
+    <item>
+      <title>Phenotype Network</title>
+      <link>/all_phenotypes/network/</link>
+      <pubDate>Tue, 29 Oct 2019 11:02:05 +0600</pubDate>
+      
+      <guid>/all_phenotypes/network/</guid>
+      <description>We investigated the relationship among the traits included in our analysis using the regional heritability. For each pair of phenotypes included in our analysis, we calculated the correlation of regional heritability across the entire genome, which can serve as a proxy for the magnitude of pleiotropy between traits. Note that this correlation differs from the typical SNP-based genetic correlation in that regional heritability does not distinguish positive and negative effects.</description>
+    </item>
+    
+    <item>
+      <title>ANOVA Result</title>
+      <link>/all_phenotypes/anova_total/</link>
+      <pubDate>Tue, 29 Oct 2019 11:02:05 +0600</pubDate>
+      
+      <guid>/all_phenotypes/anova_total/</guid>
+      <description>We calculated the heritability per physical length (%/Mb) for each segment in the lowest scale (8Mb). Then for each of upper scales (16Mb, 32Mb, 64Mb, 128Mb, and chromosomes), we grouped the segments based on the upper scale and applied ANOVA to calculate the statistical significance of between-group variance. If the heritability is unevenly distributed over segments in a specific upper scale, the p-value will become significant. Thus, the vector of p-values can give us a summary of the uniformity of heritability over different scales.</description>
+    </item>
+    
+  </channel>
+</rss>

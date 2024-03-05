@@ -1,0 +1,55 @@
+---
+date: "2019-10-29T11:02:05+06:00"
+title: Polygenicity
+description: Level of polygenicity and heritability
+type: post
+weight: 5
+---
+```{r, echo=FALSE}
+library(htmltools)
+htmltools::HTML('<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>')
+```
+
+We wanted to systematically measure how evenly the heritability is distributed, the level of polygenicity.
+To this end, we calculated the heritability per physical length (%/Mb) for each segment and the variance of this quantity over all segments.
+Let $V_t$ be this variance for trait t.
+$$
+\begin{align}
+ρ_t=-log(V_t)
+\end{align}
+$$
+
+For each segment length, we calculated $ρ_t$ for all 497 traits.
+To emphasize the relative difference of  $ρ_t$ among different traits, we define the scaled $ρ_t$ as follows:
+
+$$\begin{align}δ_t=(ρ_t-ρ_{min})/(ρ_{max}-ρ_{min})\end{align}$$
+where $ρ_{min}$ is the minimum of $ρ_t$ and $ρ_{max}$ is the maximum of $ρ_t$ among traits.
+Through our analysis, we used $δ_t$.
+
+
+```{r, echo=FALSE}
+htmltools::div(class="alert rounded-0 alert-info","
+You can hover your mouse on each figure and read information on it. Furthermore, you can magnify a region of interest, check detailed information, and download the figure, etc. using plenty of interactive functions (zoom, pan, reset, save, etc.). You can also click on a phenotype of your interest to get more information.
+")
+```
+
+
+```{r, echo=FALSE}
+htmltools::includeHTML('../../plot_data/poly_h2_all_script')
+htmltools::includeHTML('../../plot_data/poly_h2_all_div')
+```
+
+Continuous trait only
+```{r, echo=FALSE}
+htmltools::includeHTML('../../plot_data/poly_h2_cont_script')
+htmltools::includeHTML('../../plot_data/poly_h2_cont_div')
+```
+
+
+Binary trait only
+```{r, echo=FALSE}
+htmltools::includeHTML('../../plot_data/poly_h2_bin_script')
+htmltools::includeHTML('../../plot_data/poly_h2_bin_div')
+```
+
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on Regional Heritability ATLAS</title>
+    <link>/documentation/</link>
+    <description>Recent content in Documentation on Regional Heritability ATLAS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright(c) 2019 by Chanwoo Kim @ Genomics &amp; Bioinformatics Laboratory (hanlab.snu.ac.kr)</copyright>
+    <lastBuildDate>Fri, 28 Dec 2018 11:02:05 +0600</lastBuildDate>
+    
+	<atom:link href="/documentation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Technical Details</title>
+      <link>/documentation/technical_detail/</link>
+      <pubDate>Mon, 19 Aug 2019 11:02:05 +0600</pubDate>
+      
+      <guid>/documentation/technical_detail/</guid>
+      <description>This page is currently under preparation. The full version will be uploaded after our article goes to the public.  Motivation Most of the complex traits have a highly polygenic nature, which means that numerous genes influence the traits. Recently, it turned out causal genes are dispersed across the genome at much finer scale than expected. We analyzed how widely causal variants are spread across the genome for complex traits in the UK biobank.</description>
+    </item>
+    
+    <item>
+      <title>Download Center</title>
+      <link>/documentation/download/</link>
+      <pubDate>Mon, 19 Aug 2019 11:02:05 +0600</pubDate>
+      
+      <guid>/documentation/download/</guid>
+      <description> We distribute raw data of our analysis result.
+Please feel free to contact us if you have any question.
+Contact
+List of files phenotype_info.csv
+phenotype_info_chr.csv
+phenotype_info_128Mb.csv
+phenotype_info_64Mb.csv
+phenotype_info_32Mb.csv
+phenotype_info_16Mb.csv
+phenotype_info_8Mb.csv
+ </description>
+    </item>
+    
+    <item>
+      <title>Source Code</title>
+      <link>/documentation/implementation/</link>
+      <pubDate>Mon, 19 Aug 2019 11:02:05 +0600</pubDate>
+      
+      <guid>/documentation/implementation/</guid>
+      <description>Code implementing full pipeline is uploaded to GitHub repository. The full pipeline includes analyzing data, visualizing result, and building this website, etc.
+https://github.com/ch6845/regional_heritability_analysis</description>
+    </item>
+    
+  </channel>
+</rss>

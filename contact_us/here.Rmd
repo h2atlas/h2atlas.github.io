@@ -1,0 +1,30 @@
+---
+title: Contact
+date: 2019-07-23T21:13:14-05:00
+type: contact_us
+---
+Please feel free to contact us if you have any question.
+
+This website was built as a part of research project at [Genomics & Bioinformatics Laboratory](http://hanlab.snu.ac.kr/)
+
+```{r, echo=FALSE}
+htmltools::h4('✉️ E-mail')
+```
+E-mail address: contact.h2atlas@gmail.com
+
+
+```{r, echo=FALSE}
+htmltools::h4('📍 Address')
+```
+103, Daehak-ro, Jongno-gu, Seoul, Republic of Korea
+```{r, echo=FALSE}
+library(htmltools)
+htmltools::HTML('<div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%EB%8C%80%ED%95%99%EA%B5%90%20%EC%9D%98%EA%B3%BC%EB%8C%80%ED%95%99&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/private-internet-access-coupon/">pia promotions</a></div><style>.mapouter{position:relative;text-align:right;height:400px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:600px;}</style></div>'
+)
+```
+
+
+
+
+![](../../images/snu_medicine.jpg)
+

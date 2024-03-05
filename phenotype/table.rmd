@@ -1,0 +1,21 @@
+---
+date: "2019-08-10T11:02:05+06:00"
+title: List of Phenotypes
+type: phenotype
+weight: 2
+---
+
+```{r, echo=FALSE}
+library(htmltools)
+htmltools::HTML('<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>')
+```
+
+```{r, echo=FALSE}
+library(readr)
+table <- read_csv("../../plot_data/table.csv", 
+    col_types = cols("prev(%)" = col_number())
+        )
+library(DT)
+datatable(table,class='cell-border stripe',rownames=FALSE,filter='top',escape=FALSE, options = list(pageLength = 10))
+```
+

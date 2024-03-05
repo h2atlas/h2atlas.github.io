@@ -1,0 +1,156 @@
+---
+date: "2019-10-29T11:02:05+06:00"
+title: QRS duration - 12340_irnt
+type: phenotype
+weight: 2
+---
+
+```{r, echo=FALSE}
+library(htmltools)
+htmltools::HTML('<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>')
+```
+
+
+```{r, echo=FALSE}
+htmltools::h3('Phenotype Infomation')
+library(readr)
+table <- read_csv("../../plot_data/table_all.csv",
+        col_types = cols(`Total Observed scale h2` = col_double()))
+table_select <- t(subset(table,phenotype=='12340_irnt'))
+library(DT)
+datatable(table_select,class='cell-border stripe',colnames='value',escape=FALSE,filter="none",options = list(pageLength = 30))
+htmltools::p('phenotype code in this table matches the code in GWAS summary statistics offered by the Neale lab(http://www.nealelab.is/uk-biobank).')
+```
+
+
+```{r, echo=FALSE}
+htmltools::h3('Analysis Result Viewer')
+########################################
+# configuring tab information
+########################################
+htmltools::HTML('<div class="tab">
+  <button class="tablinks" onclick="openTab(event, \'tab-1\')" id="defaultOpen">◼️ Landscape</button>
+  <button class="tablinks" onclick="openTab(event, \'tab-2\')">◼️ Correlation</button>
+  <button class="tablinks" onclick="openTab(event, \'tab-3\')">◼️ ANOVA result</button>
+</div>')
+
+
+htmltools::HTML('<div id="tab-1" class="tabcontent">')
+htmltools::br()
+htmltools::h4('Estimated regional heritability of genomic segment over various scales')
+htmltools::p('Distribution of regional heritability over different scales of segmentation simultaneously plotted on nested donut plot. This figure shows the regional heritability of genomic segment split by various scales (chromosome, 128Mb, 64Mb, 32Mb, 16Mb, and 8Mb). The size of each segment is proportional to the fraction of heritability it accounts for. The fraction of heritability can be measured using outer circular gauge. The chromosome to which each segment belongs is marked by the background color of the segment.')
+
+
+htmltools::div(class="alert rounded-0 alert-warning",
+"You can hover your mouse on each segment and read information of it! If you want to examine segments of small size, you can zoom the figure using magnifying glass on the right toolbar. Making use of other additional functions (pan, reset, save, etc.) would help you deal with data conveniently
+")
+htmltools::includeHTML('../../plot_data/phenotype_par_pie_12340_irnt_script')
+htmltools::includeHTML('../../plot_data/phenotype_par_pie_12340_irnt_div')
+htmltools::HTML('</div>')
+
+htmltools::HTML('<div id="tab-2" class="tabcontent">')
+htmltools::br()
+htmltools::h4('Correlation between phenotypes estimated using regional heritability ')
+htmltools::p('It shows Pearson correlation with other phenotypes in UK Biobank. The level of polygenicity of phenotypes is indicated by the color of its bar. 
+')
+htmltools::div(class="alert rounded-0 alert-warning",
+"You can hover your mouse on each segment and read information of it! If you want to examine segments of small size, you can zoom the figure using magnifying glass on the right toolbar. Making use of other additional functions (pan, reset, save, etc.) would help you deal with data conveniently
+")
+htmltools::includeHTML('../../plot_data/phenotype_corr_rank_12340_irnt_script')
+htmltools::includeHTML('../../plot_data/phenotype_corr_rank_12340_irnt_div')
+htmltools::HTML('</div>')
+
+
+
+htmltools::HTML('<div id="tab-3" class="tabcontent">')
+htmltools::br()
+htmltools::h4('Analysis of Variance result')
+htmltools::p('First, we calculated the heritability per physical length (%/Mb) for all segments in the lowest scale (8Mb). For each of upper scales (16Mb, 32Mb, 64Mb, 128Mb, and chromosomes), we grouped the segments in the lowest scale based on where they belong in the upper scale. Then, we conducted one-way analysis of variance (ANOVA) to test between-group variance.')
+htmltools::div(class="alert rounded-0 alert-warning",
+"You can hover your mouse on each segment and read information of it! Making use of other additional functions (pan, reset, save, etc.) would help you deal with data conveniently
+")
+htmltools::includeHTML('../../plot_data/phenotype_anova_phenoype_12340_irnt_script')
+htmltools::includeHTML('../../plot_data/phenotype_anova_phenoype_12340_irnt_div')
+htmltools::HTML('</div>')
+
+
+
+########################################
+# embedding script for tabmenu functionality
+########################################
+htmltools::HTML('
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+')
+
+htmltools::HTML('
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: #d9d9d9;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #eb9d0c;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ffa600;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+</style>
+')
+```
+

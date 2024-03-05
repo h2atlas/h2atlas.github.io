@@ -1,0 +1,1302 @@
+<head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162546695-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162546695-1');
+</script>
+
+
+
+  <meta charset="utf-8">
+  <title>Technical Details</title>
+
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css">
+  <!-- highlight -->
+  <link rel="stylesheet" href="/plugins/highlight/hybrid.css">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+  <style>
+  :root{
+    --primary-color:#02007e;
+    --secondary-color:#f9f9f9;
+    --text-color:#636363;
+    --text-color-dark:#242738;
+    --white-color:#ffffff;
+  }  
+  </style>
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+
+  <!-- jquiry -->
+  <script src="/plugins/jquery/jquery-1.12.4.js"></script>
+
+  <!-- jquary ui -->
+  <script src="/plugins/jquery/jquery-ui.js"></script>
+
+  <!--Favicon-->
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+</head>
+
+
+<!-- navigation -->
+<header class="shadow-bottom sticky-top bg-white">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="/">Regional Heritability ATLAS</a>
+  <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse text-center" id="navigation">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/all_phenotypes/overview">All Phenotypes</a>
+      </li>
+      
+      
+      
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/phenotype/table">By Phenotype</a>
+      </li>
+      
+      
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          More
+        </a>
+        <div class="dropdown-menu" >
+          
+          <a class="dropdown-item" href="/documentation/technical_detail">Documentation</a>
+          
+          <a class="dropdown-item" href="/contact_us/here">Contact</a>
+          
+        </div>
+      </li>
+      
+      
+    </ul>
+    
+    <ul class="list-inline text-center mb-0">
+      
+    </ul>
+  </div>
+</nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+
+<section class="single pt-5 bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="p-4 bg-white sticky-top top-100">
+            
+            <nav class="sidebar-menu">
+              <ul class="list-styled">
+            <li class=""><a href="/all_phenotypes/">All Phenotypes</a>
+              <ul class="">
+            <li class=""><a href="/all_phenotypes/overview/">Overview</a>
+            </li>
+            <li class=""><a href="/all_phenotypes/polygenicity/">Polygenicity</a>
+            </li>
+            <li class=""><a href="/all_phenotypes/byregion/">Browse by Region</a>
+            </li>
+            <li class=""><a href="/all_phenotypes/network/">Phenotype Network</a>
+            </li>
+            <li class=""><a href="/all_phenotypes/anova_total/">ANOVA Result</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/contact_us/">Overview</a>
+              <ul class="">
+            <li class=""><a href="/contact_us/here/">Contact</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/billing-pricing/">Billing &amp; Pricing</a>
+              <ul class="">
+            <li class=""><a href="/billing-pricing/requirments/">Requirments</a>
+            </li>
+            <li class=""><a href="/billing-pricing/install/">Installation</a>
+            </li>
+            <li class=""><a href="/billing-pricing/configuration/">Configuration</a>
+            </li>
+            <li class=""><a href="/billing-pricing/customization/">Customization</a>
+            </li>
+            <li class=""><a href="/billing-pricing/elements/">Elements</a>
+            </li>
+            <li class=""><a href="/billing-pricing/ownership/">Customer instructions for change of ownership</a>
+            </li>
+            <li class=""><a href="/billing-pricing/bill/">How to pay your bill</a>
+            </li>
+            <li class=""><a href="/billing-pricing/profile/">Understand the different levels of profile</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/phenotype/">By Phenotype</a>
+              <ul class="">
+            <li class=""><a href="/phenotype/5111_irnt/">3mm asymmetry angle (left) - 5111_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5108_irnt/">3mm asymmetry angle (right) - 5108_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5119_irnt/">3mm cylindrical power (left) - 5119_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5116_irnt/">3mm cylindrical power (right) - 5116_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5160_irnt/">3mm regularity index (right) - 5160_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5132_irnt/">3mm strong meridian (right) - 5132_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5104_irnt/">3mm strong meridian angle (left) - 5104_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5107_irnt/">3mm strong meridian angle (right) - 5107_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5099_irnt/">3mm weak meridian (right) - 5099_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5103_irnt/">3mm weak meridian angle (left) - 5103_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5110_irnt/">6mm asymmetry angle (left) - 5110_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5109_irnt/">6mm asymmetry angle (right) - 5109_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5157_irnt/">6mm asymmetry index (left) - 5157_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5158_irnt/">6mm asymmetry index (right) - 5158_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5161_irnt/">6mm regularity index (right) - 5161_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5105_irnt/">6mm strong meridian angle (left) - 5105_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5106_irnt/">6mm strong meridian angle (right) - 5106_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5097_irnt/">6mm weak meridian (left) - 5097_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5098_irnt/">6mm weak meridian (right) - 5098_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2110/">Able to confide - 2110</a>
+            </li>
+            <li class=""><a href="/phenotype/20550_1/">Activities undertaken to treat anxiety. Talking therapies, such as psychotherapy, counselling, group therapy or CBT - 20550_1</a>
+            </li>
+            <li class=""><a href="/phenotype/20547_3/">Activities undertaken to treat depression. Other therapeutic activities such as mindfulness, yoga or art classes - 20547_3</a>
+            </li>
+            <li class=""><a href="/phenotype/20547_1/">Activities undertaken to treat depression. Talking therapies, such as psychotherapy, counselling, group therapy or CBT - 20547_1</a>
+            </li>
+            <li class=""><a href="/phenotype/3786_irnt/">Age asthma diagnosed - 3786_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/22147_irnt/">Age asthma diagnosed by doctor - 22147_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20433_irnt/">Age at first episode of depression - 20433_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/845/">Age completed full time education - 845</a>
+            </li>
+            <li class=""><a href="/phenotype/2139_irnt/">Age first had sexual intercourse - 2139_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3761_irnt/">Age hay fever, rhinitis or eczema diagnosed - 3761_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/22146_irnt/">Age hayfever or allergic rhinitis diagnosed by doctor - 22146_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2966_irnt/">Age high blood pressure diagnosed - 2966_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3436_irnt/">Age started smoking in current smokers - 3436_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2867_irnt/">Age started smoking in former smokers - 2867_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2217_irnt/">Age started wearing glasses or contact lenses - 2217_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20455_irnt/">Age when last took cannabis - 20455_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2714/">Age when periods started (menarche) - 2714</a>
+            </li>
+            <li class=""><a href="/phenotype/20117_2/">Alcohol drinker status. Current - 20117_2</a>
+            </li>
+            <li class=""><a href="/phenotype/20117_0/">Alcohol drinker status. Never - 20117_0</a>
+            </li>
+            <li class=""><a href="/phenotype/20117_1/">Alcohol drinker status. Previous - 20117_1</a>
+            </li>
+            <li class=""><a href="/phenotype/1558/">Alcohol intake frequency. - 1558</a>
+            </li>
+            <li class=""><a href="/phenotype/1618/">Alcohol usually taken with meals - 1618</a>
+            </li>
+            <li class=""><a href="/phenotype/20403/">Amount of alcohol drunk on a typical drinking day - 20403</a>
+            </li>
+            <li class=""><a href="/phenotype/4100_irnt/">Ankle spacing width (left) - 4100_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3143_irnt/">Ankle spacing width - 3143_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2129/">Answered sexual history questions - 2129</a>
+            </li>
+            <li class=""><a href="/phenotype/icdmain_any_entry/">Any ICDMAIN event in hilmo or causes of death - ICDMAIN_ANY_ENTRY</a>
+            </li>
+            <li class=""><a href="/phenotype/23119_irnt/">Arm fat percentage (right) - 23119_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/m13_arthrosis/">Arthrosis - M13_ARTHROSIS</a>
+            </li>
+            <li class=""><a href="/phenotype/6146_3/">Attendance/disability/mobility allowance. Blue badge - 6146_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6146_2/">Attendance/disability/mobility allowance. Disability living allowance - 6146_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6146_100/">Attendance/disability/mobility allowance. None of the above - 6146_100</a>
+            </li>
+            <li class=""><a href="/phenotype/4440/">Average monthly spirits intake - 4440</a>
+            </li>
+            <li class=""><a href="/phenotype/738/">Average total household income before tax - 738</a>
+            </li>
+            <li class=""><a href="/phenotype/1588/">Average weekly beer plus cider intake - 1588</a>
+            </li>
+            <li class=""><a href="/phenotype/1568/">Average weekly red wine intake - 1568</a>
+            </li>
+            <li class=""><a href="/phenotype/3571/">Back pain for 3&#43; months - 3571</a>
+            </li>
+            <li class=""><a href="/phenotype/30220_irnt/">Basophill percentage - 30220_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20460/">Belief that own life is meaningful - 20460</a>
+            </li>
+            <li class=""><a href="/phenotype/2834/">Bilateral oophorectomy (both ovaries removed) - 2834</a>
+            </li>
+            <li class=""><a href="/phenotype/20126_0/">Bipolar and major depression status. No Bipolar or Depression - 20126_0</a>
+            </li>
+            <li class=""><a href="/phenotype/20126_4/">Bipolar and major depression status. Probable Recurrent major depression (moderate) - 20126_4</a>
+            </li>
+            <li class=""><a href="/phenotype/20022_irnt/">Birth weight - 20022_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2744/">Birth weight of first child - 2744</a>
+            </li>
+            <li class=""><a href="/phenotype/6152_8/">Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor. Asthma - 6152_8</a>
+            </li>
+            <li class=""><a href="/phenotype/6152_9/">Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor. Hayfever, allergic rhinitis or eczema - 6152_9</a>
+            </li>
+            <li class=""><a href="/phenotype/6152_100/">Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor. None of the above - 6152_100</a>
+            </li>
+            <li class=""><a href="/phenotype/23099_irnt/">Body fat percentage - 23099_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/23104_irnt/">Body mass index (BMI) - 23104_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/c_skin/">C_SKIN - C_SKIN</a>
+            </li>
+            <li class=""><a href="/phenotype/20001_1002/">Cancer code, self-reported. breast cancer - 20001_1002</a>
+            </li>
+            <li class=""><a href="/phenotype/cardiac_arrhytm/">Cardiac arrhytmias, COPD co-morbidities - CARDIAC_ARRHYTM</a>
+            </li>
+            <li class=""><a href="/phenotype/g6_carptu/">Carpal tunnel syndrome - G6_CARPTU</a>
+            </li>
+            <li class=""><a href="/phenotype/2335/">Chest pain or discomfort - 2335</a>
+            </li>
+            <li class=""><a href="/phenotype/3606/">Chest pain or discomfort walking normally - 3606</a>
+            </li>
+            <li class=""><a href="/phenotype/3751/">Chest pain or discomfort when walking uphill or hurrying - 3751</a>
+            </li>
+            <li class=""><a href="/phenotype/1737/">Childhood sunburn occasions - 1737</a>
+            </li>
+            <li class=""><a href="/phenotype/1687/">Comparative body size at age 10 - 1687</a>
+            </li>
+            <li class=""><a href="/phenotype/1697/">Comparative height size at age 10 - 1697</a>
+            </li>
+            <li class=""><a href="/phenotype/5264_irnt/">Corneal hysteresis (left) - 5264_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5256_irnt/">Corneal hysteresis (right) - 5256_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5265_irnt/">Corneal resistance factor (left) - 5265_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5257_irnt/">Corneal resistance factor (right) - 5257_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/i9_corather/">Coronary atherosclerosis - I9_CORATHER</a>
+            </li>
+            <li class=""><a href="/phenotype/22502/">Cough on most days - 22502</a>
+            </li>
+            <li class=""><a href="/phenotype/30510_irnt/">Creatinine (enzymatic) in urine - 30510_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1239/">Current tobacco smoking - 1239</a>
+            </li>
+            <li class=""><a href="/phenotype/5087_irnt/">Cylindrical power (right) - 5087_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1220/">Daytime dozing / sleeping (narcolepsy) - 1220</a>
+            </li>
+            <li class=""><a href="/phenotype/2443/">Diabetes diagnosed by doctor - 2443</a>
+            </li>
+            <li class=""><a href="/phenotype/c44/">Diagnoses - main ICD10. C44 Other malignant neoplasms of skin - C44</a>
+            </li>
+            <li class=""><a href="/phenotype/c50/">Diagnoses - main ICD10. C50 Malignant neoplasm of breast - C50</a>
+            </li>
+            <li class=""><a href="/phenotype/d12/">Diagnoses - main ICD10. D12 Benign neoplasm of colon, rectum, anus and anal canal - D12</a>
+            </li>
+            <li class=""><a href="/phenotype/g56/">Diagnoses - main ICD10. G56 Mononeuropathies of upper limb - G56</a>
+            </li>
+            <li class=""><a href="/phenotype/h26/">Diagnoses - main ICD10. H26 Other cataract - H26</a>
+            </li>
+            <li class=""><a href="/phenotype/i83/">Diagnoses - main ICD10. I83 Varicose veins of lower extremities - I83</a>
+            </li>
+            <li class=""><a href="/phenotype/i84/">Diagnoses - main ICD10. I84 Haemorrhoids - I84</a>
+            </li>
+            <li class=""><a href="/phenotype/k21/">Diagnoses - main ICD10. K21 Gastro-oesophageal reflux disease - K21</a>
+            </li>
+            <li class=""><a href="/phenotype/k29/">Diagnoses - main ICD10. K29 Gastritis and duodenitis - K29</a>
+            </li>
+            <li class=""><a href="/phenotype/k40/">Diagnoses - main ICD10. K40 Inguinal hernia - K40</a>
+            </li>
+            <li class=""><a href="/phenotype/k57/">Diagnoses - main ICD10. K57 Diverticular disease of intestine - K57</a>
+            </li>
+            <li class=""><a href="/phenotype/k80/">Diagnoses - main ICD10. K80 Cholelithiasis - K80</a>
+            </li>
+            <li class=""><a href="/phenotype/m16/">Diagnoses - main ICD10. M16 Coxarthrosis [arthrosis of hip] - M16</a>
+            </li>
+            <li class=""><a href="/phenotype/m17/">Diagnoses - main ICD10. M17 Gonarthrosis [arthrosis of knee] - M17</a>
+            </li>
+            <li class=""><a href="/phenotype/m20/">Diagnoses - main ICD10. M20 Acquired deformities of fingers and toes - M20</a>
+            </li>
+            <li class=""><a href="/phenotype/m23/">Diagnoses - main ICD10. M23 Internal derangement of knee - M23</a>
+            </li>
+            <li class=""><a href="/phenotype/m54/">Diagnoses - main ICD10. M54 Dorsalgia - M54</a>
+            </li>
+            <li class=""><a href="/phenotype/n39/">Diagnoses - main ICD10. N39 Other disorders of urinary system - N39</a>
+            </li>
+            <li class=""><a href="/phenotype/n92/">Diagnoses - main ICD10. N92 Excessive, frequent and irregular menstruation - N92</a>
+            </li>
+            <li class=""><a href="/phenotype/r07/">Diagnoses - main ICD10. R07 Pain in throat and chest - R07</a>
+            </li>
+            <li class=""><a href="/phenotype/r10/">Diagnoses - main ICD10. R10 Abdominal and pelvic pain - R10</a>
+            </li>
+            <li class=""><a href="/phenotype/z09/">Diagnoses - main ICD10. Z09 Follow-up examination after treatment for conditions other than malignant neoplasms - Z09</a>
+            </li>
+            <li class=""><a href="/phenotype/4079_irnt/">Diastolic blood pressure, automated reading - 4079_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/94_irnt/">Diastolic blood pressure, manual reading - 94_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20435/">Difficulty concentrating during worst depression - 20435</a>
+            </li>
+            <li class=""><a href="/phenotype/3476/">Difficulty not smoking for 1 day - 3476</a>
+            </li>
+            <li class=""><a href="/phenotype/ix_circulatory/">Diseases of the circulatory system - IX_CIRCULATORY</a>
+            </li>
+            <li class=""><a href="/phenotype/xi_digestive/">Diseases of the digestive system - XI_DIGESTIVE</a>
+            </li>
+            <li class=""><a href="/phenotype/xiii_musculoskelet/">Diseases of the musculoskeletal system and connective tissue - XIII_MUSCULOSKELET</a>
+            </li>
+            <li class=""><a href="/phenotype/vi_nervous/">Diseases of the nervous system - VI_NERVOUS</a>
+            </li>
+            <li class=""><a href="/phenotype/x_respiratory/">Diseases of the respiratory system - X_RESPIRATORY</a>
+            </li>
+            <li class=""><a href="/phenotype/i9_disveinlymph/">Diseases of veins, lymphatic vessels and lymph nodes, not elsewhere classified - I9_DISVEINLYMPH</a>
+            </li>
+            <li class=""><a href="/phenotype/k11_gallbilpanc/">Disorders of gallbladder, biliary tract and pancreas - K11_GALLBILPANC</a>
+            </li>
+            <li class=""><a href="/phenotype/h7_lens/">Disorders of lens - H7_LENS</a>
+            </li>
+            <li class=""><a href="/phenotype/22127/">Doctor diagnosed asthma - 22127</a>
+            </li>
+            <li class=""><a href="/phenotype/22126/">Doctor diagnosed hayfever or allergic rhinitis - 22126</a>
+            </li>
+            <li class=""><a href="/phenotype/1100/">Drive faster than motorway speed limit - 1100</a>
+            </li>
+            <li class=""><a href="/phenotype/874_irnt/">Duration of walks - 874_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/404_irnt/">Duration to first press of snap-button in each round - 404_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5983_irnt/">ECG, heart rate - 5983_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5984_irnt/">ECG, load - 5984_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30150/">Eosinophill count - 30150</a>
+            </li>
+            <li class=""><a href="/phenotype/30210_irnt/">Eosinophill percentage - 30210_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20485/">Ever contemplated self-harm - 20485</a>
+            </li>
+            <li class=""><a href="/phenotype/4598/">Ever depressed for a whole week - 4598</a>
+            </li>
+            <li class=""><a href="/phenotype/20421/">Ever felt worried, tense, or anxious for most of a month or longer - 20421</a>
+            </li>
+            <li class=""><a href="/phenotype/3591/">Ever had hysterectomy (womb removed) - 3591</a>
+            </li>
+            <li class=""><a href="/phenotype/20405_0/">Ever had known person concerned about, or recommend reduction of, alcohol consumption. No - 20405_0</a>
+            </li>
+            <li class=""><a href="/phenotype/20502/">Ever had period extreme irritability - 20502</a>
+            </li>
+            <li class=""><a href="/phenotype/20446/">Ever had prolonged feelings of sadness or depression - 20446</a>
+            </li>
+            <li class=""><a href="/phenotype/20441/">Ever had prolonged loss of interest in normal activities - 20441</a>
+            </li>
+            <li class=""><a href="/phenotype/2365/">Ever had prostate specific antigen (PSA) test - 2365</a>
+            </li>
+            <li class=""><a href="/phenotype/2159/">Ever had same-sex intercourse - 2159</a>
+            </li>
+            <li class=""><a href="/phenotype/4653/">Ever highly irritable/argumentative for 2 days - 4653</a>
+            </li>
+            <li class=""><a href="/phenotype/20160/">Ever smoked - 20160</a>
+            </li>
+            <li class=""><a href="/phenotype/20499/">Ever sought or received professional help for mental distress - 20499</a>
+            </li>
+            <li class=""><a href="/phenotype/20500/">Ever suffered mental distress preventing usual activities - 20500</a>
+            </li>
+            <li class=""><a href="/phenotype/20453/">Ever taken cannabis - 20453</a>
+            </li>
+            <li class=""><a href="/phenotype/2784/">Ever taken oral contraceptive pill - 2784</a>
+            </li>
+            <li class=""><a href="/phenotype/20479/">Ever thought that life not worth living - 20479</a>
+            </li>
+            <li class=""><a href="/phenotype/4631/">Ever unenthusiastic/disinterested for a whole week - 4631</a>
+            </li>
+            <li class=""><a href="/phenotype/2814/">Ever used hormone-replacement therapy (HRT) - 2814</a>
+            </li>
+            <li class=""><a href="/phenotype/20425/">Ever worried more than most people would in similar situation - 20425</a>
+            </li>
+            <li class=""><a href="/phenotype/6148_4/">Eye problems/disorders. Cataract - 6148_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6148_100/">Eye problems/disorders. None of the above - 6148_100</a>
+            </li>
+            <li class=""><a href="/phenotype/1757/">Facial ageing - 1757</a>
+            </li>
+            <li class=""><a href="/phenotype/4559/">Family relationship satisfaction - 4559</a>
+            </li>
+            <li class=""><a href="/phenotype/1960/">Fed-up feelings - 1960</a>
+            </li>
+            <li class=""><a href="/phenotype/20449/">Feelings of tiredness during worst episode of depression - 20449</a>
+            </li>
+            <li class=""><a href="/phenotype/20450/">Feelings of worthlessness during worst period of depression - 20450</a>
+            </li>
+            <li class=""><a href="/phenotype/20496/">Felt distant from other people in past month - 20496</a>
+            </li>
+            <li class=""><a href="/phenotype/20487/">Felt hated by family member as a child - 20487</a>
+            </li>
+            <li class=""><a href="/phenotype/20489/">Felt loved as a child - 20489</a>
+            </li>
+            <li class=""><a href="/phenotype/20498/">Felt very upset when reminded of stressful experience in past month - 20498</a>
+            </li>
+            <li class=""><a href="/phenotype/4957/">FI3 . word interpolation - 4957</a>
+            </li>
+            <li class=""><a href="/phenotype/4968/">FI4 . positional arithmetic - 4968</a>
+            </li>
+            <li class=""><a href="/phenotype/4979/">FI5 . family relationship calculation - 4979</a>
+            </li>
+            <li class=""><a href="/phenotype/4990/">FI6 . conditional arithmetic - 4990</a>
+            </li>
+            <li class=""><a href="/phenotype/5001/">FI7 . synonym - 5001</a>
+            </li>
+            <li class=""><a href="/phenotype/5012/">FI8 . chained arithmetic - 5012</a>
+            </li>
+            <li class=""><a href="/phenotype/5556/">FI9 . concept interpolation - 5556</a>
+            </li>
+            <li class=""><a href="/phenotype/4581/">Financial situation satisfaction - 4581</a>
+            </li>
+            <li class=""><a href="/phenotype/20016_irnt/">Fluid intelligence score - 20016_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3063_irnt/">Forced expiratory volume in 1-second (FEV1) - 3063_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20153_irnt/">Forced expiratory volume in 1-second (FEV1), predicted - 20153_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20154_irnt/">Forced expiratory volume in 1-second (FEV1), predicted percentage - 20154_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3062_irnt/">Forced vital capacity (FVC) - 3062_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3005/">Fracture resulting from simple fall - 3005</a>
+            </li>
+            <li class=""><a href="/phenotype/2463/">Fractured/broken bones in last 5 years - 2463</a>
+            </li>
+            <li class=""><a href="/phenotype/20416/">Frequency of consuming six or more units of alcohol - 20416</a>
+            </li>
+            <li class=""><a href="/phenotype/2050/">Frequency of depressed mood in last 2 weeks - 2050</a>
+            </li>
+            <li class=""><a href="/phenotype/20414/">Frequency of drinking alcohol - 20414</a>
+            </li>
+            <li class=""><a href="/phenotype/20409/">Frequency of feeling guilt or remorse after drinking alcohol in last year - 20409</a>
+            </li>
+            <li class=""><a href="/phenotype/20539/">Frequency of inability to stop worrying during worst period of anxiety - 20539</a>
+            </li>
+            <li class=""><a href="/phenotype/20408/">Frequency of memory loss due to drinking alcohol in last year - 20408</a>
+            </li>
+            <li class=""><a href="/phenotype/2070/">Frequency of tenseness / restlessness in last 2 weeks - 2070</a>
+            </li>
+            <li class=""><a href="/phenotype/2080/">Frequency of tiredness / lethargy in last 2 weeks - 2080</a>
+            </li>
+            <li class=""><a href="/phenotype/4570/">Friendships satisfaction - 4570</a>
+            </li>
+            <li class=""><a href="/phenotype/6139_3/">Gas or solid-fuel cooking/heating. An open solid fuel fire that you use regularly in winter time - 6139_3</a>
+            </li>
+            <li class=""><a href="/phenotype/20458/">General happiness - 20458</a>
+            </li>
+            <li class=""><a href="/phenotype/20459/">General happiness with own health - 20459</a>
+            </li>
+            <li class=""><a href="/phenotype/1170/">Getting up in morning - 1170</a>
+            </li>
+            <li class=""><a href="/phenotype/2030/">Guilty feelings - 2030</a>
+            </li>
+            <li class=""><a href="/phenotype/2724/">Had menopause - 2724</a>
+            </li>
+            <li class=""><a href="/phenotype/2844/">Had other major operations - 2844</a>
+            </li>
+            <li class=""><a href="/phenotype/30030_irnt/">Haematocrit percentage - 30030_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30020_irnt/">Haemoglobin concentration - 30020_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1747_5/">Hair colour (natural, before greying). Black - 1747_5</a>
+            </li>
+            <li class=""><a href="/phenotype/1747_1/">Hair colour (natural, before greying). Blonde - 1747_1</a>
+            </li>
+            <li class=""><a href="/phenotype/1747_4/">Hair colour (natural, before greying). Dark brown - 1747_4</a>
+            </li>
+            <li class=""><a href="/phenotype/1747_3/">Hair colour (natural, before greying). Light brown - 1747_3</a>
+            </li>
+            <li class=""><a href="/phenotype/2395_1/">Hair/balding pattern. Pattern 1 - 2395_1</a>
+            </li>
+            <li class=""><a href="/phenotype/2395_2/">Hair/balding pattern. Pattern 2 - 2395_2</a>
+            </li>
+            <li class=""><a href="/phenotype/2395_3/">Hair/balding pattern. Pattern 3 - 2395_3</a>
+            </li>
+            <li class=""><a href="/phenotype/2395_4/">Hair/balding pattern. Pattern 4 - 2395_4</a>
+            </li>
+            <li class=""><a href="/phenotype/46_irnt/">Hand grip strength (left) - 46_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/47_irnt/">Hand grip strength (right) - 47_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/4526/">Happiness - 4526</a>
+            </li>
+            <li class=""><a href="/phenotype/3799/">Headaches for 3&#43; months - 3799</a>
+            </li>
+            <li class=""><a href="/phenotype/4548/">Health satisfaction - 4548</a>
+            </li>
+            <li class=""><a href="/phenotype/3393/">Hearing aid user - 3393</a>
+            </li>
+            <li class=""><a href="/phenotype/2257/">Hearing difficulty/problems with background noise - 2257</a>
+            </li>
+            <li class=""><a href="/phenotype/2247_0/">Hearing difficulty/problems. No - 2247_0</a>
+            </li>
+            <li class=""><a href="/phenotype/4105_irnt/">Heel bone mineral density (BMD) (left) - 4105_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3148_irnt/">Heel bone mineral density (BMD) - 3148_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/k11_hernia/">Hernia - K11_HERNIA</a>
+            </li>
+            <li class=""><a href="/phenotype/30290_irnt/">High light scatter reticulocyte percentage - 30290_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/49_irnt/">Hip circumference - 49_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1518/">Hot drink temperature - 1518</a>
+            </li>
+            <li class=""><a href="/phenotype/6141_1/">How are people in household related to participant. Husband, wife or partner - 6141_1</a>
+            </li>
+            <li class=""><a href="/phenotype/ild_diff_dg/">ILD differential diagnosis - ILD_DIFF_DG</a>
+            </li>
+            <li class=""><a href="/phenotype/6145_6/">Illness, injury, bereavement, stress in last 2 years. Financial difficulties - 6145_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6145_1/">Illness, injury, bereavement, stress in last 2 years. Serious illness, injury or assault to yourself - 6145_1</a>
+            </li>
+            <li class=""><a href="/phenotype/20107_6/">Illnesses of father. Chronic bronchitis/emphysema - 20107_6</a>
+            </li>
+            <li class=""><a href="/phenotype/20107_9/">Illnesses of father. Diabetes - 20107_9</a>
+            </li>
+            <li class=""><a href="/phenotype/20107_1/">Illnesses of father. Heart disease - 20107_1</a>
+            </li>
+            <li class=""><a href="/phenotype/20107_3/">Illnesses of father. Lung cancer - 20107_3</a>
+            </li>
+            <li class=""><a href="/phenotype/20110_6/">Illnesses of mother. Chronic bronchitis/emphysema - 20110_6</a>
+            </li>
+            <li class=""><a href="/phenotype/20110_9/">Illnesses of mother. Diabetes - 20110_9</a>
+            </li>
+            <li class=""><a href="/phenotype/20110_8/">Illnesses of mother. High blood pressure - 20110_8</a>
+            </li>
+            <li class=""><a href="/phenotype/20111_9/">Illnesses of siblings. Diabetes - 20111_9</a>
+            </li>
+            <li class=""><a href="/phenotype/20111_1/">Illnesses of siblings. Heart disease - 20111_1</a>
+            </li>
+            <li class=""><a href="/phenotype/20111_8/">Illnesses of siblings. High blood pressure - 20111_8</a>
+            </li>
+            <li class=""><a href="/phenotype/20111_100/">Illnesses of siblings. None of the above (group 1) - 20111_100</a>
+            </li>
+            <li class=""><a href="/phenotype/20111_12/">Illnesses of siblings. Severe depression - 20111_12</a>
+            </li>
+            <li class=""><a href="/phenotype/30280_irnt/">Immature reticulocyte fraction - 30280_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20418/">Impact on normal roles during worst period of anxiety - 20418</a>
+            </li>
+            <li class=""><a href="/phenotype/23109_irnt/">Impedance of arm (right) - 23109_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/23107_irnt/">Impedance of leg (right) - 23107_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/23106_irnt/">Impedance of whole body - 23106_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5262_irnt/">Intra-ocular pressure, corneal-compensated (left) - 5262_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5254_irnt/">Intra-ocular pressure, corneal-compensated (right) - 5254_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5263_irnt/">Intra-ocular pressure, Goldmann-correlated (left) - 5263_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5255_irnt/">Intra-ocular pressure, Goldmann-correlated (right) - 5255_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/110001/">Invitation to complete online 24-hour recall dietary questionnaire, acceptance - 110001</a>
+            </li>
+            <li class=""><a href="/phenotype/1940/">Irritability - 1940</a>
+            </li>
+            <li class=""><a href="/phenotype/i9_ihd/">Ischaemic heart disease, wide definition - I9_IHD</a>
+            </li>
+            <li class=""><a href="/phenotype/3773/">Knee pain for 3&#43; months - 3773</a>
+            </li>
+            <li class=""><a href="/phenotype/23116_irnt/">Leg fat mass (left) - 23116_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/23115_irnt/">Leg fat percentage (left) - 23115_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/template/">Leg fat percentage - 23115_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/4728/">Leg pain on walking - 4728</a>
+            </li>
+            <li class=""><a href="/phenotype/5507/">Leg pain on walking . action taken - 5507</a>
+            </li>
+            <li class=""><a href="/phenotype/23118_irnt/">Leg predicted mass (left) - 23118_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6160_4/">Leisure/social activities. Adult education class - 6160_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6160_100/">Leisure/social activities. None of the above - 6160_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6160_2/">Leisure/social activities. Pub or social club - 6160_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6160_3/">Leisure/social activities. Religious group - 6160_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6160_1/">Leisure/social activities. Sports club or gym - 6160_1</a>
+            </li>
+            <li class=""><a href="/phenotype/3710/">Length of menstrual cycle - 3710</a>
+            </li>
+            <li class=""><a href="/phenotype/1110/">Length of mobile phone use - 1110</a>
+            </li>
+            <li class=""><a href="/phenotype/2149/">Lifetime number of sexual partners - 2149</a>
+            </li>
+            <li class=""><a href="/phenotype/2644/">Light smokers, at least 100 smokes in lifetime - 2644</a>
+            </li>
+            <li class=""><a href="/phenotype/2020/">Loneliness, isolation - 2020</a>
+            </li>
+            <li class=""><a href="/phenotype/2188/">Long-standing illness, disability or infirmity - 2188</a>
+            </li>
+            <li class=""><a href="/phenotype/5375_irnt/">Longest period of unenthusiasm / disinterest - 5375_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20420_irnt/">Longest period spent worried or anxious - 20420_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30120_irnt/">Lymphocyte count - 30120_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30180_irnt/">Lymphocyte percentage - 30180_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/i9_chd/">Major coronary heart disease event - I9_CHD</a>
+            </li>
+            <li class=""><a href="/phenotype/1538_0/">Major dietary changes in the last 5 years. No - 1538_0</a>
+            </li>
+            <li class=""><a href="/phenotype/1538_1/">Major dietary changes in the last 5 years. Yes, because of illness - 1538_1</a>
+            </li>
+            <li class=""><a href="/phenotype/c_breast_3/">Malignant neoplasm of breast - C_BREAST_3</a>
+            </li>
+            <li class=""><a href="/phenotype/20548_7/">Manifestations of mania or irritability. I was easily distracted - 20548_7</a>
+            </li>
+            <li class=""><a href="/phenotype/20548_2/">Manifestations of mania or irritability. I was more restless than usual - 20548_2</a>
+            </li>
+            <li class=""><a href="/phenotype/20548_3/">Manifestations of mania or irritability. My thoughts were racing - 20548_3</a>
+            </li>
+            <li class=""><a href="/phenotype/1787/">Maternal smoking around birth - 1787</a>
+            </li>
+            <li class=""><a href="/phenotype/4282/">Maximum digits remembered correctly - 4282</a>
+            </li>
+            <li class=""><a href="/phenotype/20454/">Maximum frequency of taking cannabis - 20454</a>
+            </li>
+            <li class=""><a href="/phenotype/6033_irnt/">Maximum heart rate during fitness test - 6033_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6032_irnt/">Maximum workload during fitness test - 6032_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30060_irnt/">Mean corpuscular haemoglobin concentration - 30060_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30040_irnt/">Mean corpuscular volume - 30040_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30100_irnt/">Mean platelet (thrombocyte) volume - 30100_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30260_irnt/">Mean reticulocyte volume - 30260_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30270_irnt/">Mean sphered cell volume - 30270_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20023_irnt/">Mean time to correctly identify matches - 20023_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6177_2/">Medication for cholesterol, blood pressure or diabetes. Blood pressure medication - 6177_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6177_1/">Medication for cholesterol, blood pressure or diabetes. Cholesterol lowering medication - 6177_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6177_100/">Medication for cholesterol, blood pressure or diabetes. None of the above - 6177_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6153_2/">Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones. Blood pressure medication - 6153_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6153_1/">Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones. Cholesterol lowering medication - 6153_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6153_4/">Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones. Hormone replacement therapy - 6153_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6153_100/">Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones. None of the above - 6153_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_1/">Medication for pain relief, constipation, heartburn. Aspirin - 6154_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_2/">Medication for pain relief, constipation, heartburn. Ibuprofen (e.g. Nurofen) - 6154_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_6/">Medication for pain relief, constipation, heartburn. Laxatives (e.g. Dulcolax, Senokot) - 6154_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_100/">Medication for pain relief, constipation, heartburn. None of the above - 6154_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_5/">Medication for pain relief, constipation, heartburn. Omeprazole (e.g. Zanprol) - 6154_5</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_3/">Medication for pain relief, constipation, heartburn. Paracetamol - 6154_3</a>
+            </li>
+            <li class=""><a href="/phenotype/pulm_medicatio_comorb/">Medication related adverse effects (Asthma/COPD) - PULM_MEDICATIO_COMORB</a>
+            </li>
+            <li class=""><a href="/phenotype/asthma_medicatio_comorb/">Medication related adverse effects - ASTHMA_MEDICATIO_COMORB</a>
+            </li>
+            <li class=""><a href="/phenotype/m13_meniscusderangements/">Meniscus derangement - M13_MENISCUSDERANGEMENTS</a>
+            </li>
+            <li class=""><a href="/phenotype/20544_15/">Mental health problems ever diagnosed by a professional. Anxiety, nerves or generalized anxiety disorder - 20544_15</a>
+            </li>
+            <li class=""><a href="/phenotype/20544_11/">Mental health problems ever diagnosed by a professional. Depression - 20544_11</a>
+            </li>
+            <li class=""><a href="/phenotype/6179_1/">Mineral and other dietary supplements. Fish oil (including cod liver oil) - 6179_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6179_2/">Mineral and other dietary supplements. Glucosamine - 6179_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6179_100/">Mineral and other dietary supplements. None of the above - 6179_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6179_6/">Mineral and other dietary supplements. Selenium - 6179_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6179_4/">Mineral and other dietary supplements. Zinc - 6179_4</a>
+            </li>
+            <li class=""><a href="/phenotype/1930/">Miserableness - 1930</a>
+            </li>
+            <li class=""><a href="/phenotype/30130_irnt/">Monocyte count - 30130_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30190_irnt/">Monocyte percentage - 30190_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1920/">Mood swings - 1920</a>
+            </li>
+            <li class=""><a href="/phenotype/1180/">Morning/evening person (chronotype) - 1180</a>
+            </li>
+            <li class=""><a href="/phenotype/6149_3/">Mouth/teeth dental problems. Bleeding gums - 6149_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6149_6/">Mouth/teeth dental problems. Dentures - 6149_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6149_4/">Mouth/teeth dental problems. Loose teeth - 6149_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6149_1/">Mouth/teeth dental problems. Mouth ulcers - 6149_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6149_100/">Mouth/teeth dental problems. None of the above - 6149_100</a>
+            </li>
+            <li class=""><a href="/phenotype/1190/">Nap during day - 1190</a>
+            </li>
+            <li class=""><a href="/phenotype/g6_nerplex/">Nerve, nerve root and plexus disorders - G6_NERPLEX</a>
+            </li>
+            <li class=""><a href="/phenotype/1970/">Nervous feelings - 1970</a>
+            </li>
+            <li class=""><a href="/phenotype/20127_irnt/">Neuroticism score - 20127_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30140_irnt/">Neutrophill count - 30140_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30200_irnt/">Neutrophill percentage - 30200_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6144_1/">Never eat eggs, dairy, wheat, sugar. Eggs or foods containing eggs - 6144_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6144_5/">Never eat eggs, dairy, wheat, sugar. I eat all of the above - 6144_5</a>
+            </li>
+            <li class=""><a href="/phenotype/6144_4/">Never eat eggs, dairy, wheat, sugar. Sugar or foods/drinks containing sugar - 6144_4</a>
+            </li>
+            <li class=""><a href="/phenotype/4825/">Noisy workplace - 4825</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1074/">Non-cancer illness code, self-reported. angina - 20002_1074</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1286/">Non-cancer illness code, self-reported. depression - 20002_1286</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1220/">Non-cancer illness code, self-reported. diabetes - 20002_1220</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1452/">Non-cancer illness code, self-reported. eczema/dermatitis - 20002_1452</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1138/">Non-cancer illness code, self-reported. gastro-oesophageal reflux (gord) / gastric reflux - 20002_1138</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1387/">Non-cancer illness code, self-reported. hayfever/allergic rhinitis - 20002_1387</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1474/">Non-cancer illness code, self-reported. hiatus hernia - 20002_1474</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1473/">Non-cancer illness code, self-reported. high cholesterol - 20002_1473</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1226/">Non-cancer illness code, self-reported. hypothyroidism/myxoedema - 20002_1226</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1265/">Non-cancer illness code, self-reported. migraine - 20002_1265</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1465/">Non-cancer illness code, self-reported. osteoarthritis - 20002_1465</a>
+            </li>
+            <li class=""><a href="/phenotype/3456/">Number of cigarettes currently smoked daily (current cigarette smokers) - 3456</a>
+            </li>
+            <li class=""><a href="/phenotype/2887/">Number of cigarettes previously smoked daily - 2887</a>
+            </li>
+            <li class=""><a href="/phenotype/864/">Number of days/week walked 10&#43; minutes - 864</a>
+            </li>
+            <li class=""><a href="/phenotype/20128/">Number of fluid intelligence questions attempted within time limit - 20128</a>
+            </li>
+            <li class=""><a href="/phenotype/399_irnt/">Number of incorrect matches in round - 399_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2734/">Number of live births - 2734</a>
+            </li>
+            <li class=""><a href="/phenotype/3849/">Number of pregnancy terminations - 3849</a>
+            </li>
+            <li class=""><a href="/phenotype/4283/">Number of rounds of numeric memory test performed - 4283</a>
+            </li>
+            <li class=""><a href="/phenotype/135/">Number of self-reported non-cancer illnesses - 135</a>
+            </li>
+            <li class=""><a href="/phenotype/20543/">Number of things worried about during worst period of anxiety - 20543</a>
+            </li>
+            <li class=""><a href="/phenotype/137/">Number of treatments/medications taken - 137</a>
+            </li>
+            <li class=""><a href="/phenotype/2926/">Number of unsuccessful stop-smoking attempts - 2926</a>
+            </li>
+            <li class=""><a href="/phenotype/k11_othgastr/">Other gastritis (incl. Duodenitis) - K11_OTHGASTR</a>
+            </li>
+            <li class=""><a href="/phenotype/m13_otherjoint/">Other joint disorders - M13_OTHERJOINT</a>
+            </li>
+            <li class=""><a href="/phenotype/c3_other_skin/">Other malignant neoplasms of skin - C3_OTHER_SKIN</a>
+            </li>
+            <li class=""><a href="/phenotype/2473/">Other serious medical condition/disability diagnosed by doctor - 2473</a>
+            </li>
+            <li class=""><a href="/phenotype/2178/">Overall health rating - 2178</a>
+            </li>
+            <li class=""><a href="/phenotype/680_1/">Own or rent accommodation lived in. Own outright (by you or someone in your household) - 680_1</a>
+            </li>
+            <li class=""><a href="/phenotype/680_3/">Own or rent accommodation lived in. Rent - from local authority, local council, housing association - 680_3</a>
+            </li>
+            <li class=""><a href="/phenotype/680_4/">Own or rent accommodation lived in. Rent - from private landlord or letting agency - 680_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_4/">Pain type(s) experienced in last month. Back pain - 6159_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_1/">Pain type(s) experienced in last month. Headache - 6159_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_6/">Pain type(s) experienced in last month. Hip pain - 6159_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_7/">Pain type(s) experienced in last month. Knee pain - 6159_7</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_3/">Pain type(s) experienced in last month. Neck or shoulder pain - 6159_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_100/">Pain type(s) experienced in last month. None of the above - 6159_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_5/">Pain type(s) experienced in last month. Stomach or abdominal pain - 6159_5</a>
+            </li>
+            <li class=""><a href="/phenotype/1249/">Past tobacco smoking - 1249</a>
+            </li>
+            <li class=""><a href="/phenotype/3064_irnt/">Peak expiratory flow (PEF) - 3064_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20488/">Physically abused by family as a child - 20488</a>
+            </li>
+            <li class=""><a href="/phenotype/30080_irnt/">Platelet count - 30080_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30090_irnt/">Platelet crit - 30090_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30110_irnt/">Platelet distribution width - 30110_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2237/">Plays computer games - 2237</a>
+            </li>
+            <li class=""><a href="/phenotype/30520_irnt/">Potassium in urine - 30520_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20428/">Professional informed about anxiety - 20428</a>
+            </li>
+            <li class=""><a href="/phenotype/20448/">Professional informed about depression - 20448</a>
+            </li>
+            <li class=""><a href="/phenotype/20018/">Prospective memory result - 20018</a>
+            </li>
+            <li class=""><a href="/phenotype/4194_irnt/">Pulse rate - 4194_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/102_irnt/">Pulse rate, automated reading - 102_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/4196_irnt/">Pulse wave peak to peak time - 4196_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/4195_irnt/">Pulse wave reflection index - 4195_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/12340_irnt/">QRS duration - 12340_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_2/">Qualifications. A levels/AS levels or equivalent - 6138_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_1/">Qualifications. College or University degree - 6138_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_4/">Qualifications. CSEs or equivalent - 6138_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_100/">Qualifications. None of the above - 6138_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_3/">Qualifications. O levels/GCSEs or equivalent - 6138_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_6/">Qualifications. Other professional qualifications eg. nursing, teaching - 6138_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6147_4/">Reason for glasses/contact lenses. For &#39;astigmatism&#39; - 6147_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6147_2/">Reason for glasses/contact lenses. For long-sightedness, i.e. for distance and near, but particularly for near tasks like reading (called &#39;hypermetropia&#39;) - 6147_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6147_1/">Reason for glasses/contact lenses. For short-sightedness, i.e. only or mainly for distance viewing such as driving, cinema etc (called &#39;myopia&#39;) - 6147_1</a>
+            </li>
+            <li class=""><a href="/phenotype/2664_3/">Reason for reducing amount of alcohol drunk. Health precaution - 2664_3</a>
+            </li>
+            <li class=""><a href="/phenotype/2664_5/">Reason for reducing amount of alcohol drunk. Other reason - 2664_5</a>
+            </li>
+            <li class=""><a href="/phenotype/20505/">Recent easy annoyance or irritability - 20505</a>
+            </li>
+            <li class=""><a href="/phenotype/20510/">Recent feelings of depression - 20510</a>
+            </li>
+            <li class=""><a href="/phenotype/20512/">Recent feelings of foreboding - 20512</a>
+            </li>
+            <li class=""><a href="/phenotype/20519/">Recent feelings of tiredness or low energy - 20519</a>
+            </li>
+            <li class=""><a href="/phenotype/20509/">Recent inability to stop or control worrying - 20509</a>
+            </li>
+            <li class=""><a href="/phenotype/20511/">Recent poor appetite or overeating - 20511</a>
+            </li>
+            <li class=""><a href="/phenotype/20515/">Recent trouble relaxing - 20515</a>
+            </li>
+            <li class=""><a href="/phenotype/20520/">Recent worrying too much about different things - 20520</a>
+            </li>
+            <li class=""><a href="/phenotype/30010_irnt/">Red blood cell (erythrocyte) count - 30010_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30070_irnt/">Red blood cell (erythrocyte) distribution width - 30070_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2375/">Relative age of first facial hair - 2375</a>
+            </li>
+            <li class=""><a href="/phenotype/2385/">Relative age voice broke - 2385</a>
+            </li>
+            <li class=""><a href="/phenotype/20497/">Repeated disturbing thoughts of stressful experience in past month - 20497</a>
+            </li>
+            <li class=""><a href="/phenotype/20426/">Restless during period of worst anxiety - 20426</a>
+            </li>
+            <li class=""><a href="/phenotype/30240_irnt/">Reticulocyte percentage - 30240_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2040/">Risk taking - 2040</a>
+            </li>
+            <li class=""><a href="/phenotype/2100/">Seen a psychiatrist for nerves, anxiety, tension or depression - 2100</a>
+            </li>
+            <li class=""><a href="/phenotype/2090/">Seen doctor (GP) for nerves, anxiety, tension or depression - 2090</a>
+            </li>
+            <li class=""><a href="/phenotype/1950/">Sensitivity / hurt feelings - 1950</a>
+            </li>
+            <li class=""><a href="/phenotype/4717/">Shortness of breath walking on level ground - 4717</a>
+            </li>
+            <li class=""><a href="/phenotype/20015_irnt/">Sitting height - 20015_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1717/">Skin colour - 1717</a>
+            </li>
+            <li class=""><a href="/phenotype/1160/">Sleep duration - 1160</a>
+            </li>
+            <li class=""><a href="/phenotype/1200/">Sleeplessness / insomnia - 1200</a>
+            </li>
+            <li class=""><a href="/phenotype/20116_0/">Smoking status. Never - 20116_0</a>
+            </li>
+            <li class=""><a href="/phenotype/20116_1/">Smoking status. Previous - 20116_1</a>
+            </li>
+            <li class=""><a href="/phenotype/1210/">Snoring - 1210</a>
+            </li>
+            <li class=""><a href="/phenotype/30530_irnt/">Sodium in urine - 30530_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5085_irnt/">Spherical power (left) - 5085_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5084_irnt/">Spherical power (right) - 5084_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/50_irnt/">Standing height - 50_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20549_3/">Substances taken for anxiety. Medication prescribed to you (for at least two weeks) - 20549_3</a>
+            </li>
+            <li class=""><a href="/phenotype/20546_4/">Substances taken for depression. Drugs or alcohol (more than once) - 20546_4</a>
+            </li>
+            <li class=""><a href="/phenotype/20546_3/">Substances taken for depression. Medication prescribed to you (for at least two weeks) - 20546_3</a>
+            </li>
+            <li class=""><a href="/phenotype/2010/">Suffer from &#39;nerves&#39; - 2010</a>
+            </li>
+            <li class=""><a href="/phenotype/xviii_miscfindings/">Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified - XVIII_MISCFINDINGS</a>
+            </li>
+            <li class=""><a href="/phenotype/4080_irnt/">Systolic blood pressure, automated reading - 4080_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/93_irnt/">Systolic blood pressure, manual reading - 93_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2492/">Taking other prescription medications - 2492</a>
+            </li>
+            <li class=""><a href="/phenotype/1990/">Tense / &#39;highly strung&#39; - 1990</a>
+            </li>
+            <li class=""><a href="/phenotype/20417/">Tense, sore, or aching muscles during worst period of anxiety - 20417</a>
+            </li>
+            <li class=""><a href="/phenotype/3466/">Time from waking to first cigarette - 3466</a>
+            </li>
+            <li class=""><a href="/phenotype/1050/">Time spend outdoors in summer - 1050</a>
+            </li>
+            <li class=""><a href="/phenotype/1090/">Time spent driving - 1090</a>
+            </li>
+            <li class=""><a href="/phenotype/1060/">Time spent outdoors in winter - 1060</a>
+            </li>
+            <li class=""><a href="/phenotype/1080/">Time spent using computer - 1080</a>
+            </li>
+            <li class=""><a href="/phenotype/1070/">Time spent watching television (TV) - 1070</a>
+            </li>
+            <li class=""><a href="/phenotype/400_irnt/">Time to complete round - 400_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/4803_0/">Tinnitus. No, never - 4803_0</a>
+            </li>
+            <li class=""><a href="/phenotype/4803_14/">Tinnitus. Yes, but not now, but have in the past - 4803_14</a>
+            </li>
+            <li class=""><a href="/phenotype/22506_113/">Tobacco smoking. Ex-smoker - 22506_113</a>
+            </li>
+            <li class=""><a href="/phenotype/22506_114/">Tobacco smoking. Never smoked - 22506_114</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140879802/">Treatment/medication code. amlodipine - 20003_1140879802</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140868226/">Treatment/medication code. aspirin - 20003_1140868226</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140866738/">Treatment/medication code. atenolol - 20003_1140866738</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1141146234/">Treatment/medication code. atorvastatin - 20003_1141146234</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1141194794/">Treatment/medication code. bendroflumethiazide - 20003_1141194794</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140923346/">Treatment/medication code. co-codamol - 20003_1140923346</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140864752/">Treatment/medication code. lansoprazole - 20003_1140864752</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1141191044/">Treatment/medication code. levothyroxine sodium - 20003_1141191044</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140860696/">Treatment/medication code. lisinopril - 20003_1140860696</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140884600/">Treatment/medication code. metformin - 20003_1140884600</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140865634/">Treatment/medication code. omeprazole - 20003_1140865634</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_2038460150/">Treatment/medication code. paracetamol - 20003_2038460150</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140860806/">Treatment/medication code. ramipril - 20003_1140860806</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140861958/">Treatment/medication code. simvastatin - 20003_1140861958</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140861998/">Treatment/medication code. ventolin 100micrograms inhaler - 20003_1140861998</a>
+            </li>
+            <li class=""><a href="/phenotype/20533/">Trouble falling asleep - 20533</a>
+            </li>
+            <li class=""><a href="/phenotype/20517/">Trouble falling or staying asleep, or sleeping too much - 20517</a>
+            </li>
+            <li class=""><a href="/phenotype/2877_1/">Type of tobacco previously smoked. Manufactured cigarettes - 2877_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_5/">Types of physical activity in last 4 weeks. Heavy DIY (eg. weeding, lawn mowing, carpentry, digging) - 6164_5</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_4/">Types of physical activity in last 4 weeks. Light DIY (eg. pruning, watering the lawn) - 6164_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_100/">Types of physical activity in last 4 weeks. None of the above - 6164_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_2/">Types of physical activity in last 4 weeks. Other exercises (eg. swimming, cycling, keep fit, bowling) - 6164_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_3/">Types of physical activity in last 4 weeks. Strenuous sports - 6164_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_1/">Types of physical activity in last 4 weeks. Walking for pleasure (not as a means of transport) - 6164_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6162_1/">Types of transport used (excluding work). Car/motor vehicle - 6162_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6162_4/">Types of transport used (excluding work). Cycle - 6162_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6162_3/">Types of transport used (excluding work). Public transport - 6162_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6162_2/">Types of transport used (excluding work). Walk - 6162_2</a>
+            </li>
+            <li class=""><a href="/phenotype/1150_3/">Usual side of head for mobile phone use. Equally left and right - 1150_3</a>
+            </li>
+            <li class=""><a href="/phenotype/1150_2/">Usual side of head for mobile phone use. Right - 1150_2</a>
+            </li>
+            <li class=""><a href="/phenotype/924/">Usual walking pace - 924</a>
+            </li>
+            <li class=""><a href="/phenotype/1548/">Variation in diet - 1548</a>
+            </li>
+            <li class=""><a href="/phenotype/6150_1/">Vascular/heart problems diagnosed by doctor. Heart attack - 6150_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6150_100/">Vascular/heart problems diagnosed by doctor. None of the above - 6150_100</a>
+            </li>
+            <li class=""><a href="/phenotype/12336_irnt/">Ventricular rate - 12336_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20529/">Victim of physically violent crime - 20529</a>
+            </li>
+            <li class=""><a href="/phenotype/20531/">Victim of sexual assault - 20531</a>
+            </li>
+            <li class=""><a href="/phenotype/48_irnt/">Waist circumference - 48_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20535/">Waking too early - 20535</a>
+            </li>
+            <li class=""><a href="/phenotype/2207/">Wears glasses or contact lenses - 2207</a>
+            </li>
+            <li class=""><a href="/phenotype/1120/">Weekly usage of mobile phone in last 3 months - 1120</a>
+            </li>
+            <li class=""><a href="/phenotype/23098_irnt/">Weight - 23098_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20536_1/">Weight change during worst episode of depression. Gained weight - 20536_1</a>
+            </li>
+            <li class=""><a href="/phenotype/20536_0/">Weight change during worst episode of depression. Stayed about the same or was on a diet - 20536_0</a>
+            </li>
+            <li class=""><a href="/phenotype/2316/">Wheeze or whistling in the chest in last year - 2316</a>
+            </li>
+            <li class=""><a href="/phenotype/30000_irnt/">White blood cell (leukocyte) count - 30000_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6157_3/">Why stopped smoking. Health precaution - 6157_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6157_100/">Why stopped smoking. None of the above - 6157_100</a>
+            </li>
+            <li class=""><a href="/phenotype/20530/">Witnessed sudden violent death - 20530</a>
+            </li>
+            <li class=""><a href="/phenotype/1980/">Worrier / anxious feelings - 1980</a>
+            </li>
+            <li class=""><a href="/phenotype/2000/">Worry too long after embarrassment - 2000</a>
+            </li>
+            <li class=""><a href="/phenotype/22501_irnt/">Year ended full time education - 22501_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/table/">List of Phenotypes</a>
+            </li></ul>
+              
+            </li>
+            <li class="parent d-block "><a href="/documentation/">Documentation</a>
+              <ul class="sub-menu">
+            <li class=" active "><a href="/documentation/technical_detail/">Technical Details</a>
+            </li>
+            <li class=""><a href="/documentation/download/">Download Center</a>
+            </li>
+            <li class=""><a href="/documentation/implementation/">Source Code</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/contact_old/">Contact</a>
+            </li>
+            <li class=""><a href="/faq/">Frequently Asked Questions</a>
+            </li>
+            <li class=""><a href="/blog/">Blogs</a>
+              <ul class="">
+            <li class=""><a href="/blog/2015-07-23-r-rmarkdown/">Hello R Markdown</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/post/">Posts</a>
+              <ul class="">
+            <li class=""><a href="/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/elements/"></a>
+            </li></ul>
+            </nav>
+
+            
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="p-5 bg-white">
+            <h2>Technical Details</h2>
+            
+
+
+<div id="this-page-is-currently-under-preparation.-the-full-version-will-be-uploaded-after-our-article-goes-to-the-public." class="section level5">
+<h5><code>This page is currently under preparation. The full version will be uploaded after our article goes to the public.</code></h5>
+</div>
+<div id="motivation" class="section level2">
+<h2>Motivation</h2>
+<p>Most of the complex traits have a highly polygenic nature, which means that numerous genes influence the traits. Recently, it turned out causal genes are dispersed across the genome at much finer scale than expected. We analyzed how widely causal variants are spread across the genome for complex traits in the UK biobank. To this end, we used LD score regression to estimate regional heritability of small genomic segments and examined if the heritability is evenly distributed across segments in each phenotype. We split genome with various constant physical lengths, as it turned out that the distribution of heritability across segments depends on the segment size in some phenotypes. Additionally, using the regional heritability data, we investigated relationship among the traits included in our analysis and searched for pleiotropic loci contributing much of heritability to many traits. We present our analysis results of 497 traits in our interactive online database.</p>
+</div>
+<div id="data-resources" class="section level2">
+<h2>Data resources</h2>
+<p>We used genetic and phenotypic data from the UK Biobank. We utilized genetic association results of the UK Biobank data provided by the Neale lab, which was freely available on the lab website (<a href="http://www.nealelab.is/uk-biobank/" class="uri">http://www.nealelab.is/uk-biobank/</a>). We used the round 2 version, which was released on August 1, 2018. The data in this release contained association results for 4,203 phenotypes recorded for 361,194 individuals. Detailed information about the quality control (QC) procedure, association model and phenotype curation are described in the Neale lab website. In addition, we downloaded 1000 Genomes Project Phase 3 genotype dataset which was used to calculate LD scores of SNPs</p>
+</div>
+<div id="phenotype-curation" class="section level2">
+<h2>Phenotype curation</h2>
+<p>To secure the liability of our analysis results, we filtered the phenotypes in the data. First, among 2,968 phenotypes excluding environmental phenotypes in the Neale lab data, we only included phenotypes whose effective sample size n_effective was &gt;30,000 for binary phenotypes, whose (liability scale) heritability <span class="math inline">\(h^2\)</span> was &gt;0.03, and whose p-value for non-zero <span class="math inline">\(h^2\)</span> was &lt;0.01. Additionally, after performing local heritability analysis and calculating between-phenotype correlations based on regional heritability, we examined pairs of phenotypes having very similar results (<span class="math inline">\(r^2\)</span>&gt;0.97) and excluded a phenotype of lower <span class="math inline">\(h^2\)</span> to avoid duplication of similar phenotypes (e.g. mean corpuscular volume and mean corpuscular hemoglobin). These processes of filtering phenotypes finally resulted in 497 phenotypes. We used the association results of both sexes for all phenotypes except phenotypes specific to sex (e.g. malignant neoplasm of ovary) for which we used the results of the appropriate sex. Descriptions on finally selected phenotypes are in Table S2.</p>
+</div>
+<div id="genotype-filtering" class="section level2">
+<h2>Genotype filtering</h2>
+<p>The GWAS summary statistics provided by the Neale lab were calculated from QC-passed 13,791,467 SNP genotypes (GRCh build 37). Among them, statistics for 1,169,764 SNPs were used as input of LDSC module, after applying basic QC (INFO score&gt;0.9, minor allele frequency (MAF)≤0.01), excluding sex chromosomes, and excluding SNPs not in the HapMap phase 3 data. We excluded SNPs in the MHC region in running LD score regression. We extracted 503 individuals of European ancestry from the 1000 Genomes Project Phase 3 genotype data using PLINK 1.9 software and utilized them for calculating LD scores of SNPs. When interpolating genetic distance(cM) from physical position(bp), we used the recombination map downloaded from the IMPUTE2 website (<a href="https://mathgen.stats.ox.ac.uk/impute/impute_v2.html" class="uri">https://mathgen.stats.ox.ac.uk/impute/impute_v2.html</a>).</p>
+<div id="segmentation-of-genome" class="section level3">
+<h3>Segmentation of genome</h3>
+<p>We performed stepwise segmentation in which the genome was split with constant physical length in gradually finer scale (starting from the chromosomes to 128Mb, 64Mb, 32Mb, 16Mb, and 8Mb). We only conducted the segmentation on autosomal chromosomes. The physical lengths of autosomes varied from 51Mb (chromosome 22) to 249Mb (chromosome 1). As the lengths of chromosomes were not exact multiples of the segmentation scale, the leftover pieces of the chromosomes shorter than the segmentation scale were generated. For example, splitting chromosome 1 in 64Mb resulted in segments of 0~64Mb, 64~128Mb, 128~192Mb, and the leftover piece 192~249Mb. Note that the unequal segment size of leftover piece did not affect our variance analysis below because we used the heritability per physical length.</p>
+</div>
+<div id="estimating-regional-heritability-with-ldsc" class="section level3">
+<h3>Estimating regional heritability with LDSC</h3>
+<p>We utilized a modified implementation of LDSC module v.1.0.0 (<a href="https://github.com/bulik/ldsc" class="uri">https://github.com/bulik/ldsc</a>) for estimating regional heritability of segments. We wanted to estimate the heritability of maximum 358 segments (8Mb scale) simultaneously using the stratified LDSC. Because the original implementation of LDSC often gave numerical errors when we segmented genome into &gt;100 segments, we replaced numpy.linalg.solve function in the jackknife submodule with numpy.linalg.lstsq. We checked that the modification returned the same results when applied to small numbers of categories (segments). The modified version is available at our GitHub repository (<a href="https://github.com/ch6845/ldsc" class="uri">https://github.com/ch6845/ldsc</a>). For LD scores for regression weight (–w-ld-chr), we used precalculated LD scores obtained from the LDSC website.</p>
+</div>
+<div id="analysis-of-variance-anova" class="section level3">
+<h3>Analysis of Variance (ANOVA)</h3>
+<p>To measure how evenly or unevenly the regional heritability is distributed over the segments, we conducted the analysis of variance (ANOVA). First, we calculated the heritability per physical length (%/Mb) for all segments on the lowest scale (8Mb). For each of upper scales (16Mb, 32Mb, 64Mb, 128Mb, and chromosomes), we grouped the segments in the lowest scale based on where they belong in the upper scale. Then, we conducted one-way analysis of variance (ANOVA) to test between-group variance. For each scale of segmentation, the F statistic is calculated as:</p>
+<p><span class="math inline">\(F={{MSTr}\over{MSE}}\)</span> (<span class="math inline">\(MSTr={{SSTr}\over{N_{upper}-1}}\)</span>, <span class="math inline">\(MSE={{SSE}\over{N_{lowest}-N_{upper}}}\)</span>)</p>
+<p>where SStr is the sum of squares due to grouping of segments, SSE is the sum of squares due to in-group residual, N_lowest=358 is the number of segments when split by the lowest scale (8Mb in our analysis), and N_upper is the number of segments when split by the upper scale (22, 34, 55, 100, and 186 for chromosome, 128Mb, 64Mb, 32Mb, and 16Mb respectively). The p-value of the resulted F statistic indicates the statistical significance of how large between-group variance is compared with within-group variance. Thus, the ANOVA p-value will become significant if the heritability is unevenly distributed over segments in a specific upper scale. We calculated the F statistic and its corresponding p-value using scipy.stats.f_oneway function included in SciPy package.</p>
+</div>
+<div id="correlation-analysis" class="section level3">
+<h3>Correlation analysis</h3>
+<p>To identify pairs of traits whose genetic components colocalize within the same regions of the genome, we calculated Pearson’s correlation coefficient of regional heritability vectors of each pair of phenotypes. We rendered the correlations among phenotypes in a graph. For 16 pairs of phenotypes that had virtually duplicated values (<span class="math inline">\(r^2\)</span>&gt;0.95), we only included one phenotype in the results. We displayed correlations of <span class="math inline">\(r^2\)</span>&gt;0.5 and positioned the nodes using Kamada-Kawai algorithm28 implemented in Networkx Python package. Additionally, we performed unsupervised clustering of phenotypes with the regional heritability vector. We first applied principal component analysis (PCA). Then, we subsequently applied t-distributed stochastic neighbor embedding (tSNE), a machine-learning method for high-dimensionality compression and visualization, to the dimension-reduced vector (50 principal components) using perplexity value of 4. Finally, on the basis of two components returned by tSNE, we performed DBSCAN clustering algorithm in order to automatically categorize phenotypes, where the maximum distance between two samples in a neighborhood and the minimum number of reachable points in DBSCAN algorithm were 3 and 2 respectively. For these stepwise processes, we utilized functions implemented in Scikit-learn machine learning Python package30.</p>
+</div>
+<div id="finding-pleiotropic-loci" class="section level3">
+<h3>Finding pleiotropic loci</h3>
+<p>To find pleiotropic loci, we examined the segments in the lowest scale (8Mb). For each segment, we counted the number of phenotypes of which variance is explained 5 times more than expected. We only included one phenotype from each pair of two similar phenotypes (<span class="math inline">\(r^2\)</span>&gt;0.8), since the selection of phenotypes in our analysis can bias the identification of pleiotropic loci toward over-represented or nearly duplicated traits. We plotted the top 10 segments ranked by the counted values (Fig. 5). For each locus, we calculated the inflation ratio of the fraction of total heritability, which indicates how many times the locus explains larger amount of heritability than its expected value (1/(N of segments)).</p>
+</div>
+</div>
+<div id="acknowledgements" class="section level2">
+<h2>Acknowledgements</h2>
+<p>We express our gratitude to UK Biobank (<a href="http://www.ukbiobank.ac.uk/" class="uri">http://www.ukbiobank.ac.uk/</a>) for establishing a large long-term resource for genetic and epidemiological studies. We would like to thank the Neale Lab (<a href="http://www.nealelab.is/" class="uri">http://www.nealelab.is/</a>) for sharing UK Biobank GWAS summary statistics that we used in our study.</p>
+</div>
+<div id="citation" class="section level2">
+<h2>Citation</h2>
+<p>When you use results from our website, please cite the following. <code>Kim, C. et al. Landscape of polygenicity of complex traits in UK Biobank. [under preparation].</code></p>
+</div>
+<div id="softwares" class="section level2">
+<h2>Softwares</h2>
+<p>For data analysis, Python 3.7.3, PLINK v1.90, Pandas 0.24.2, Numpy 1.16.3, LDSC 1.0.0, Scikit-learn 0.21.2, SciPy 1.3.0 For plotting the analysis result, Matplotlib 3.0.3, Seaborn 0.9.0 Networkx 2.3, For building web database, Hugo 0.58.0, Bokeh 1.3.4, DataTables 1.10.19</p>
+</div>
+<div id="source-code" class="section level2">
+<h2>Source code</h2>
+<p>Full pipeline of analysis in this research (including codes for figures, website conversion as well) <a href="https://github.com/ch6845/regional_heritability_analysis" class="uri">https://github.com/ch6845/regional_heritability_analysis</a> Modified version of LDSC v.1.0.0 <a href="https://github.com/ch6845/ldsc" class="uri">https://github.com/ch6845/ldsc</a></p>
+</div>
+
+            <nav class="pagination mt-3">
+            
+            </nav></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer -->
+<footer class="section bg-gray pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 text-md-left text-center">
+        <p>Copyright(c) 2019 by Chanwoo Kim @ Genomics &amp; Bioinformatics Laboratory (hanlab.snu.ac.kr)</p> 
+      </div>
+      <div class="col-md-4 text-md-right text-center">
+        <ul class="list-inline mb-3">
+          
+          <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="/"><i class="ti-home"></i></a></li>
+          
+          <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="https://github.com/ch6845/regional_heritability_analysis"><i class="ti-github"></i></a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- Bootstrap JS -->
+<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- highlight -->
+<script src="/plugins/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Main Script -->
+
+<script src="/js/script.min.js"></script>

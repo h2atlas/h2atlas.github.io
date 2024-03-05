@@ -1,0 +1,9 @@
+---
+date: "2019-08-19T11:02:05+06:00"
+title: Source Code
+weight: 10
+---
+
+Code implementing full pipeline is uploaded to GitHub repository. The full pipeline includes analyzing data, visualizing result, and building this website, etc.
+
+https://github.com/ch6845/regional_heritability_analysis

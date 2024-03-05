@@ -1,0 +1,1376 @@
+<head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162546695-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162546695-1');
+</script>
+
+
+
+  <meta charset="utf-8">
+  <title>Hello R Markdown</title>
+
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css">
+  <!-- highlight -->
+  <link rel="stylesheet" href="/plugins/highlight/hybrid.css">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+  <style>
+  :root{
+    --primary-color:#02007e;
+    --secondary-color:#f9f9f9;
+    --text-color:#636363;
+    --text-color-dark:#242738;
+    --white-color:#ffffff;
+  }  
+  </style>
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+
+  <!-- jquiry -->
+  <script src="/plugins/jquery/jquery-1.12.4.js"></script>
+
+  <!-- jquary ui -->
+  <script src="/plugins/jquery/jquery-ui.js"></script>
+
+  <!--Favicon-->
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+</head>
+
+
+<!-- navigation -->
+<header class="shadow-bottom sticky-top bg-white">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="/">Regional Heritability ATLAS</a>
+  <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse text-center" id="navigation">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/all_phenotypes/overview">All Phenotypes</a>
+      </li>
+      
+      
+      
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/phenotype/table">By Phenotype</a>
+      </li>
+      
+      
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          More
+        </a>
+        <div class="dropdown-menu" >
+          
+          <a class="dropdown-item" href="/documentation/technical_detail">Documentation</a>
+          
+          <a class="dropdown-item" href="/contact_us/here">Contact</a>
+          
+        </div>
+      </li>
+      
+      
+    </ul>
+    
+    <ul class="list-inline text-center mb-0">
+      
+    </ul>
+  </div>
+</nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+
+<section class="single pt-5 bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="p-4 bg-white sticky-top top-100">
+            
+            <nav class="sidebar-menu">
+              <ul class="list-styled">
+            <li class=""><a href="/all_phenotypes/">All Phenotypes</a>
+              <ul class="">
+            <li class=""><a href="/all_phenotypes/overview/">Overview</a>
+            </li>
+            <li class=""><a href="/all_phenotypes/polygenicity/">Polygenicity</a>
+            </li>
+            <li class=""><a href="/all_phenotypes/byregion/">Browse by Region</a>
+            </li>
+            <li class=""><a href="/all_phenotypes/network/">Phenotype Network</a>
+            </li>
+            <li class=""><a href="/all_phenotypes/anova_total/">ANOVA Result</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/contact_us/">Overview</a>
+              <ul class="">
+            <li class=""><a href="/contact_us/here/">Contact</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/billing-pricing/">Billing &amp; Pricing</a>
+              <ul class="">
+            <li class=""><a href="/billing-pricing/requirments/">Requirments</a>
+            </li>
+            <li class=""><a href="/billing-pricing/install/">Installation</a>
+            </li>
+            <li class=""><a href="/billing-pricing/configuration/">Configuration</a>
+            </li>
+            <li class=""><a href="/billing-pricing/customization/">Customization</a>
+            </li>
+            <li class=""><a href="/billing-pricing/elements/">Elements</a>
+            </li>
+            <li class=""><a href="/billing-pricing/ownership/">Customer instructions for change of ownership</a>
+            </li>
+            <li class=""><a href="/billing-pricing/bill/">How to pay your bill</a>
+            </li>
+            <li class=""><a href="/billing-pricing/profile/">Understand the different levels of profile</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/phenotype/">By Phenotype</a>
+              <ul class="">
+            <li class=""><a href="/phenotype/5111_irnt/">3mm asymmetry angle (left) - 5111_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5108_irnt/">3mm asymmetry angle (right) - 5108_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5119_irnt/">3mm cylindrical power (left) - 5119_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5116_irnt/">3mm cylindrical power (right) - 5116_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5160_irnt/">3mm regularity index (right) - 5160_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5132_irnt/">3mm strong meridian (right) - 5132_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5104_irnt/">3mm strong meridian angle (left) - 5104_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5107_irnt/">3mm strong meridian angle (right) - 5107_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5099_irnt/">3mm weak meridian (right) - 5099_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5103_irnt/">3mm weak meridian angle (left) - 5103_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5110_irnt/">6mm asymmetry angle (left) - 5110_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5109_irnt/">6mm asymmetry angle (right) - 5109_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5157_irnt/">6mm asymmetry index (left) - 5157_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5158_irnt/">6mm asymmetry index (right) - 5158_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5161_irnt/">6mm regularity index (right) - 5161_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5105_irnt/">6mm strong meridian angle (left) - 5105_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5106_irnt/">6mm strong meridian angle (right) - 5106_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5097_irnt/">6mm weak meridian (left) - 5097_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5098_irnt/">6mm weak meridian (right) - 5098_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2110/">Able to confide - 2110</a>
+            </li>
+            <li class=""><a href="/phenotype/20550_1/">Activities undertaken to treat anxiety. Talking therapies, such as psychotherapy, counselling, group therapy or CBT - 20550_1</a>
+            </li>
+            <li class=""><a href="/phenotype/20547_3/">Activities undertaken to treat depression. Other therapeutic activities such as mindfulness, yoga or art classes - 20547_3</a>
+            </li>
+            <li class=""><a href="/phenotype/20547_1/">Activities undertaken to treat depression. Talking therapies, such as psychotherapy, counselling, group therapy or CBT - 20547_1</a>
+            </li>
+            <li class=""><a href="/phenotype/3786_irnt/">Age asthma diagnosed - 3786_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/22147_irnt/">Age asthma diagnosed by doctor - 22147_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20433_irnt/">Age at first episode of depression - 20433_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/845/">Age completed full time education - 845</a>
+            </li>
+            <li class=""><a href="/phenotype/2139_irnt/">Age first had sexual intercourse - 2139_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3761_irnt/">Age hay fever, rhinitis or eczema diagnosed - 3761_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/22146_irnt/">Age hayfever or allergic rhinitis diagnosed by doctor - 22146_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2966_irnt/">Age high blood pressure diagnosed - 2966_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3436_irnt/">Age started smoking in current smokers - 3436_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2867_irnt/">Age started smoking in former smokers - 2867_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2217_irnt/">Age started wearing glasses or contact lenses - 2217_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20455_irnt/">Age when last took cannabis - 20455_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2714/">Age when periods started (menarche) - 2714</a>
+            </li>
+            <li class=""><a href="/phenotype/20117_2/">Alcohol drinker status. Current - 20117_2</a>
+            </li>
+            <li class=""><a href="/phenotype/20117_0/">Alcohol drinker status. Never - 20117_0</a>
+            </li>
+            <li class=""><a href="/phenotype/20117_1/">Alcohol drinker status. Previous - 20117_1</a>
+            </li>
+            <li class=""><a href="/phenotype/1558/">Alcohol intake frequency. - 1558</a>
+            </li>
+            <li class=""><a href="/phenotype/1618/">Alcohol usually taken with meals - 1618</a>
+            </li>
+            <li class=""><a href="/phenotype/20403/">Amount of alcohol drunk on a typical drinking day - 20403</a>
+            </li>
+            <li class=""><a href="/phenotype/4100_irnt/">Ankle spacing width (left) - 4100_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3143_irnt/">Ankle spacing width - 3143_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2129/">Answered sexual history questions - 2129</a>
+            </li>
+            <li class=""><a href="/phenotype/icdmain_any_entry/">Any ICDMAIN event in hilmo or causes of death - ICDMAIN_ANY_ENTRY</a>
+            </li>
+            <li class=""><a href="/phenotype/23119_irnt/">Arm fat percentage (right) - 23119_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/m13_arthrosis/">Arthrosis - M13_ARTHROSIS</a>
+            </li>
+            <li class=""><a href="/phenotype/6146_3/">Attendance/disability/mobility allowance. Blue badge - 6146_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6146_2/">Attendance/disability/mobility allowance. Disability living allowance - 6146_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6146_100/">Attendance/disability/mobility allowance. None of the above - 6146_100</a>
+            </li>
+            <li class=""><a href="/phenotype/4440/">Average monthly spirits intake - 4440</a>
+            </li>
+            <li class=""><a href="/phenotype/738/">Average total household income before tax - 738</a>
+            </li>
+            <li class=""><a href="/phenotype/1588/">Average weekly beer plus cider intake - 1588</a>
+            </li>
+            <li class=""><a href="/phenotype/1568/">Average weekly red wine intake - 1568</a>
+            </li>
+            <li class=""><a href="/phenotype/3571/">Back pain for 3&#43; months - 3571</a>
+            </li>
+            <li class=""><a href="/phenotype/30220_irnt/">Basophill percentage - 30220_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20460/">Belief that own life is meaningful - 20460</a>
+            </li>
+            <li class=""><a href="/phenotype/2834/">Bilateral oophorectomy (both ovaries removed) - 2834</a>
+            </li>
+            <li class=""><a href="/phenotype/20126_0/">Bipolar and major depression status. No Bipolar or Depression - 20126_0</a>
+            </li>
+            <li class=""><a href="/phenotype/20126_4/">Bipolar and major depression status. Probable Recurrent major depression (moderate) - 20126_4</a>
+            </li>
+            <li class=""><a href="/phenotype/20022_irnt/">Birth weight - 20022_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2744/">Birth weight of first child - 2744</a>
+            </li>
+            <li class=""><a href="/phenotype/6152_8/">Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor. Asthma - 6152_8</a>
+            </li>
+            <li class=""><a href="/phenotype/6152_9/">Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor. Hayfever, allergic rhinitis or eczema - 6152_9</a>
+            </li>
+            <li class=""><a href="/phenotype/6152_100/">Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor. None of the above - 6152_100</a>
+            </li>
+            <li class=""><a href="/phenotype/23099_irnt/">Body fat percentage - 23099_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/23104_irnt/">Body mass index (BMI) - 23104_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/c_skin/">C_SKIN - C_SKIN</a>
+            </li>
+            <li class=""><a href="/phenotype/20001_1002/">Cancer code, self-reported. breast cancer - 20001_1002</a>
+            </li>
+            <li class=""><a href="/phenotype/cardiac_arrhytm/">Cardiac arrhytmias, COPD co-morbidities - CARDIAC_ARRHYTM</a>
+            </li>
+            <li class=""><a href="/phenotype/g6_carptu/">Carpal tunnel syndrome - G6_CARPTU</a>
+            </li>
+            <li class=""><a href="/phenotype/2335/">Chest pain or discomfort - 2335</a>
+            </li>
+            <li class=""><a href="/phenotype/3606/">Chest pain or discomfort walking normally - 3606</a>
+            </li>
+            <li class=""><a href="/phenotype/3751/">Chest pain or discomfort when walking uphill or hurrying - 3751</a>
+            </li>
+            <li class=""><a href="/phenotype/1737/">Childhood sunburn occasions - 1737</a>
+            </li>
+            <li class=""><a href="/phenotype/1687/">Comparative body size at age 10 - 1687</a>
+            </li>
+            <li class=""><a href="/phenotype/1697/">Comparative height size at age 10 - 1697</a>
+            </li>
+            <li class=""><a href="/phenotype/5264_irnt/">Corneal hysteresis (left) - 5264_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5256_irnt/">Corneal hysteresis (right) - 5256_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5265_irnt/">Corneal resistance factor (left) - 5265_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5257_irnt/">Corneal resistance factor (right) - 5257_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/i9_corather/">Coronary atherosclerosis - I9_CORATHER</a>
+            </li>
+            <li class=""><a href="/phenotype/22502/">Cough on most days - 22502</a>
+            </li>
+            <li class=""><a href="/phenotype/30510_irnt/">Creatinine (enzymatic) in urine - 30510_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1239/">Current tobacco smoking - 1239</a>
+            </li>
+            <li class=""><a href="/phenotype/5087_irnt/">Cylindrical power (right) - 5087_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1220/">Daytime dozing / sleeping (narcolepsy) - 1220</a>
+            </li>
+            <li class=""><a href="/phenotype/2443/">Diabetes diagnosed by doctor - 2443</a>
+            </li>
+            <li class=""><a href="/phenotype/c44/">Diagnoses - main ICD10. C44 Other malignant neoplasms of skin - C44</a>
+            </li>
+            <li class=""><a href="/phenotype/c50/">Diagnoses - main ICD10. C50 Malignant neoplasm of breast - C50</a>
+            </li>
+            <li class=""><a href="/phenotype/d12/">Diagnoses - main ICD10. D12 Benign neoplasm of colon, rectum, anus and anal canal - D12</a>
+            </li>
+            <li class=""><a href="/phenotype/g56/">Diagnoses - main ICD10. G56 Mononeuropathies of upper limb - G56</a>
+            </li>
+            <li class=""><a href="/phenotype/h26/">Diagnoses - main ICD10. H26 Other cataract - H26</a>
+            </li>
+            <li class=""><a href="/phenotype/i83/">Diagnoses - main ICD10. I83 Varicose veins of lower extremities - I83</a>
+            </li>
+            <li class=""><a href="/phenotype/i84/">Diagnoses - main ICD10. I84 Haemorrhoids - I84</a>
+            </li>
+            <li class=""><a href="/phenotype/k21/">Diagnoses - main ICD10. K21 Gastro-oesophageal reflux disease - K21</a>
+            </li>
+            <li class=""><a href="/phenotype/k29/">Diagnoses - main ICD10. K29 Gastritis and duodenitis - K29</a>
+            </li>
+            <li class=""><a href="/phenotype/k40/">Diagnoses - main ICD10. K40 Inguinal hernia - K40</a>
+            </li>
+            <li class=""><a href="/phenotype/k57/">Diagnoses - main ICD10. K57 Diverticular disease of intestine - K57</a>
+            </li>
+            <li class=""><a href="/phenotype/k80/">Diagnoses - main ICD10. K80 Cholelithiasis - K80</a>
+            </li>
+            <li class=""><a href="/phenotype/m16/">Diagnoses - main ICD10. M16 Coxarthrosis [arthrosis of hip] - M16</a>
+            </li>
+            <li class=""><a href="/phenotype/m17/">Diagnoses - main ICD10. M17 Gonarthrosis [arthrosis of knee] - M17</a>
+            </li>
+            <li class=""><a href="/phenotype/m20/">Diagnoses - main ICD10. M20 Acquired deformities of fingers and toes - M20</a>
+            </li>
+            <li class=""><a href="/phenotype/m23/">Diagnoses - main ICD10. M23 Internal derangement of knee - M23</a>
+            </li>
+            <li class=""><a href="/phenotype/m54/">Diagnoses - main ICD10. M54 Dorsalgia - M54</a>
+            </li>
+            <li class=""><a href="/phenotype/n39/">Diagnoses - main ICD10. N39 Other disorders of urinary system - N39</a>
+            </li>
+            <li class=""><a href="/phenotype/n92/">Diagnoses - main ICD10. N92 Excessive, frequent and irregular menstruation - N92</a>
+            </li>
+            <li class=""><a href="/phenotype/r07/">Diagnoses - main ICD10. R07 Pain in throat and chest - R07</a>
+            </li>
+            <li class=""><a href="/phenotype/r10/">Diagnoses - main ICD10. R10 Abdominal and pelvic pain - R10</a>
+            </li>
+            <li class=""><a href="/phenotype/z09/">Diagnoses - main ICD10. Z09 Follow-up examination after treatment for conditions other than malignant neoplasms - Z09</a>
+            </li>
+            <li class=""><a href="/phenotype/4079_irnt/">Diastolic blood pressure, automated reading - 4079_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/94_irnt/">Diastolic blood pressure, manual reading - 94_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20435/">Difficulty concentrating during worst depression - 20435</a>
+            </li>
+            <li class=""><a href="/phenotype/3476/">Difficulty not smoking for 1 day - 3476</a>
+            </li>
+            <li class=""><a href="/phenotype/ix_circulatory/">Diseases of the circulatory system - IX_CIRCULATORY</a>
+            </li>
+            <li class=""><a href="/phenotype/xi_digestive/">Diseases of the digestive system - XI_DIGESTIVE</a>
+            </li>
+            <li class=""><a href="/phenotype/xiii_musculoskelet/">Diseases of the musculoskeletal system and connective tissue - XIII_MUSCULOSKELET</a>
+            </li>
+            <li class=""><a href="/phenotype/vi_nervous/">Diseases of the nervous system - VI_NERVOUS</a>
+            </li>
+            <li class=""><a href="/phenotype/x_respiratory/">Diseases of the respiratory system - X_RESPIRATORY</a>
+            </li>
+            <li class=""><a href="/phenotype/i9_disveinlymph/">Diseases of veins, lymphatic vessels and lymph nodes, not elsewhere classified - I9_DISVEINLYMPH</a>
+            </li>
+            <li class=""><a href="/phenotype/k11_gallbilpanc/">Disorders of gallbladder, biliary tract and pancreas - K11_GALLBILPANC</a>
+            </li>
+            <li class=""><a href="/phenotype/h7_lens/">Disorders of lens - H7_LENS</a>
+            </li>
+            <li class=""><a href="/phenotype/22127/">Doctor diagnosed asthma - 22127</a>
+            </li>
+            <li class=""><a href="/phenotype/22126/">Doctor diagnosed hayfever or allergic rhinitis - 22126</a>
+            </li>
+            <li class=""><a href="/phenotype/1100/">Drive faster than motorway speed limit - 1100</a>
+            </li>
+            <li class=""><a href="/phenotype/874_irnt/">Duration of walks - 874_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/404_irnt/">Duration to first press of snap-button in each round - 404_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5983_irnt/">ECG, heart rate - 5983_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5984_irnt/">ECG, load - 5984_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30150/">Eosinophill count - 30150</a>
+            </li>
+            <li class=""><a href="/phenotype/30210_irnt/">Eosinophill percentage - 30210_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20485/">Ever contemplated self-harm - 20485</a>
+            </li>
+            <li class=""><a href="/phenotype/4598/">Ever depressed for a whole week - 4598</a>
+            </li>
+            <li class=""><a href="/phenotype/20421/">Ever felt worried, tense, or anxious for most of a month or longer - 20421</a>
+            </li>
+            <li class=""><a href="/phenotype/3591/">Ever had hysterectomy (womb removed) - 3591</a>
+            </li>
+            <li class=""><a href="/phenotype/20405_0/">Ever had known person concerned about, or recommend reduction of, alcohol consumption. No - 20405_0</a>
+            </li>
+            <li class=""><a href="/phenotype/20502/">Ever had period extreme irritability - 20502</a>
+            </li>
+            <li class=""><a href="/phenotype/20446/">Ever had prolonged feelings of sadness or depression - 20446</a>
+            </li>
+            <li class=""><a href="/phenotype/20441/">Ever had prolonged loss of interest in normal activities - 20441</a>
+            </li>
+            <li class=""><a href="/phenotype/2365/">Ever had prostate specific antigen (PSA) test - 2365</a>
+            </li>
+            <li class=""><a href="/phenotype/2159/">Ever had same-sex intercourse - 2159</a>
+            </li>
+            <li class=""><a href="/phenotype/4653/">Ever highly irritable/argumentative for 2 days - 4653</a>
+            </li>
+            <li class=""><a href="/phenotype/20160/">Ever smoked - 20160</a>
+            </li>
+            <li class=""><a href="/phenotype/20499/">Ever sought or received professional help for mental distress - 20499</a>
+            </li>
+            <li class=""><a href="/phenotype/20500/">Ever suffered mental distress preventing usual activities - 20500</a>
+            </li>
+            <li class=""><a href="/phenotype/20453/">Ever taken cannabis - 20453</a>
+            </li>
+            <li class=""><a href="/phenotype/2784/">Ever taken oral contraceptive pill - 2784</a>
+            </li>
+            <li class=""><a href="/phenotype/20479/">Ever thought that life not worth living - 20479</a>
+            </li>
+            <li class=""><a href="/phenotype/4631/">Ever unenthusiastic/disinterested for a whole week - 4631</a>
+            </li>
+            <li class=""><a href="/phenotype/2814/">Ever used hormone-replacement therapy (HRT) - 2814</a>
+            </li>
+            <li class=""><a href="/phenotype/20425/">Ever worried more than most people would in similar situation - 20425</a>
+            </li>
+            <li class=""><a href="/phenotype/6148_4/">Eye problems/disorders. Cataract - 6148_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6148_100/">Eye problems/disorders. None of the above - 6148_100</a>
+            </li>
+            <li class=""><a href="/phenotype/1757/">Facial ageing - 1757</a>
+            </li>
+            <li class=""><a href="/phenotype/4559/">Family relationship satisfaction - 4559</a>
+            </li>
+            <li class=""><a href="/phenotype/1960/">Fed-up feelings - 1960</a>
+            </li>
+            <li class=""><a href="/phenotype/20449/">Feelings of tiredness during worst episode of depression - 20449</a>
+            </li>
+            <li class=""><a href="/phenotype/20450/">Feelings of worthlessness during worst period of depression - 20450</a>
+            </li>
+            <li class=""><a href="/phenotype/20496/">Felt distant from other people in past month - 20496</a>
+            </li>
+            <li class=""><a href="/phenotype/20487/">Felt hated by family member as a child - 20487</a>
+            </li>
+            <li class=""><a href="/phenotype/20489/">Felt loved as a child - 20489</a>
+            </li>
+            <li class=""><a href="/phenotype/20498/">Felt very upset when reminded of stressful experience in past month - 20498</a>
+            </li>
+            <li class=""><a href="/phenotype/4957/">FI3 . word interpolation - 4957</a>
+            </li>
+            <li class=""><a href="/phenotype/4968/">FI4 . positional arithmetic - 4968</a>
+            </li>
+            <li class=""><a href="/phenotype/4979/">FI5 . family relationship calculation - 4979</a>
+            </li>
+            <li class=""><a href="/phenotype/4990/">FI6 . conditional arithmetic - 4990</a>
+            </li>
+            <li class=""><a href="/phenotype/5001/">FI7 . synonym - 5001</a>
+            </li>
+            <li class=""><a href="/phenotype/5012/">FI8 . chained arithmetic - 5012</a>
+            </li>
+            <li class=""><a href="/phenotype/5556/">FI9 . concept interpolation - 5556</a>
+            </li>
+            <li class=""><a href="/phenotype/4581/">Financial situation satisfaction - 4581</a>
+            </li>
+            <li class=""><a href="/phenotype/20016_irnt/">Fluid intelligence score - 20016_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3063_irnt/">Forced expiratory volume in 1-second (FEV1) - 3063_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20153_irnt/">Forced expiratory volume in 1-second (FEV1), predicted - 20153_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20154_irnt/">Forced expiratory volume in 1-second (FEV1), predicted percentage - 20154_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3062_irnt/">Forced vital capacity (FVC) - 3062_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3005/">Fracture resulting from simple fall - 3005</a>
+            </li>
+            <li class=""><a href="/phenotype/2463/">Fractured/broken bones in last 5 years - 2463</a>
+            </li>
+            <li class=""><a href="/phenotype/20416/">Frequency of consuming six or more units of alcohol - 20416</a>
+            </li>
+            <li class=""><a href="/phenotype/2050/">Frequency of depressed mood in last 2 weeks - 2050</a>
+            </li>
+            <li class=""><a href="/phenotype/20414/">Frequency of drinking alcohol - 20414</a>
+            </li>
+            <li class=""><a href="/phenotype/20409/">Frequency of feeling guilt or remorse after drinking alcohol in last year - 20409</a>
+            </li>
+            <li class=""><a href="/phenotype/20539/">Frequency of inability to stop worrying during worst period of anxiety - 20539</a>
+            </li>
+            <li class=""><a href="/phenotype/20408/">Frequency of memory loss due to drinking alcohol in last year - 20408</a>
+            </li>
+            <li class=""><a href="/phenotype/2070/">Frequency of tenseness / restlessness in last 2 weeks - 2070</a>
+            </li>
+            <li class=""><a href="/phenotype/2080/">Frequency of tiredness / lethargy in last 2 weeks - 2080</a>
+            </li>
+            <li class=""><a href="/phenotype/4570/">Friendships satisfaction - 4570</a>
+            </li>
+            <li class=""><a href="/phenotype/6139_3/">Gas or solid-fuel cooking/heating. An open solid fuel fire that you use regularly in winter time - 6139_3</a>
+            </li>
+            <li class=""><a href="/phenotype/20458/">General happiness - 20458</a>
+            </li>
+            <li class=""><a href="/phenotype/20459/">General happiness with own health - 20459</a>
+            </li>
+            <li class=""><a href="/phenotype/1170/">Getting up in morning - 1170</a>
+            </li>
+            <li class=""><a href="/phenotype/2030/">Guilty feelings - 2030</a>
+            </li>
+            <li class=""><a href="/phenotype/2724/">Had menopause - 2724</a>
+            </li>
+            <li class=""><a href="/phenotype/2844/">Had other major operations - 2844</a>
+            </li>
+            <li class=""><a href="/phenotype/30030_irnt/">Haematocrit percentage - 30030_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30020_irnt/">Haemoglobin concentration - 30020_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1747_5/">Hair colour (natural, before greying). Black - 1747_5</a>
+            </li>
+            <li class=""><a href="/phenotype/1747_1/">Hair colour (natural, before greying). Blonde - 1747_1</a>
+            </li>
+            <li class=""><a href="/phenotype/1747_4/">Hair colour (natural, before greying). Dark brown - 1747_4</a>
+            </li>
+            <li class=""><a href="/phenotype/1747_3/">Hair colour (natural, before greying). Light brown - 1747_3</a>
+            </li>
+            <li class=""><a href="/phenotype/2395_1/">Hair/balding pattern. Pattern 1 - 2395_1</a>
+            </li>
+            <li class=""><a href="/phenotype/2395_2/">Hair/balding pattern. Pattern 2 - 2395_2</a>
+            </li>
+            <li class=""><a href="/phenotype/2395_3/">Hair/balding pattern. Pattern 3 - 2395_3</a>
+            </li>
+            <li class=""><a href="/phenotype/2395_4/">Hair/balding pattern. Pattern 4 - 2395_4</a>
+            </li>
+            <li class=""><a href="/phenotype/46_irnt/">Hand grip strength (left) - 46_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/47_irnt/">Hand grip strength (right) - 47_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/4526/">Happiness - 4526</a>
+            </li>
+            <li class=""><a href="/phenotype/3799/">Headaches for 3&#43; months - 3799</a>
+            </li>
+            <li class=""><a href="/phenotype/4548/">Health satisfaction - 4548</a>
+            </li>
+            <li class=""><a href="/phenotype/3393/">Hearing aid user - 3393</a>
+            </li>
+            <li class=""><a href="/phenotype/2257/">Hearing difficulty/problems with background noise - 2257</a>
+            </li>
+            <li class=""><a href="/phenotype/2247_0/">Hearing difficulty/problems. No - 2247_0</a>
+            </li>
+            <li class=""><a href="/phenotype/4105_irnt/">Heel bone mineral density (BMD) (left) - 4105_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/3148_irnt/">Heel bone mineral density (BMD) - 3148_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/k11_hernia/">Hernia - K11_HERNIA</a>
+            </li>
+            <li class=""><a href="/phenotype/30290_irnt/">High light scatter reticulocyte percentage - 30290_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/49_irnt/">Hip circumference - 49_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1518/">Hot drink temperature - 1518</a>
+            </li>
+            <li class=""><a href="/phenotype/6141_1/">How are people in household related to participant. Husband, wife or partner - 6141_1</a>
+            </li>
+            <li class=""><a href="/phenotype/ild_diff_dg/">ILD differential diagnosis - ILD_DIFF_DG</a>
+            </li>
+            <li class=""><a href="/phenotype/6145_6/">Illness, injury, bereavement, stress in last 2 years. Financial difficulties - 6145_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6145_1/">Illness, injury, bereavement, stress in last 2 years. Serious illness, injury or assault to yourself - 6145_1</a>
+            </li>
+            <li class=""><a href="/phenotype/20107_6/">Illnesses of father. Chronic bronchitis/emphysema - 20107_6</a>
+            </li>
+            <li class=""><a href="/phenotype/20107_9/">Illnesses of father. Diabetes - 20107_9</a>
+            </li>
+            <li class=""><a href="/phenotype/20107_1/">Illnesses of father. Heart disease - 20107_1</a>
+            </li>
+            <li class=""><a href="/phenotype/20107_3/">Illnesses of father. Lung cancer - 20107_3</a>
+            </li>
+            <li class=""><a href="/phenotype/20110_6/">Illnesses of mother. Chronic bronchitis/emphysema - 20110_6</a>
+            </li>
+            <li class=""><a href="/phenotype/20110_9/">Illnesses of mother. Diabetes - 20110_9</a>
+            </li>
+            <li class=""><a href="/phenotype/20110_8/">Illnesses of mother. High blood pressure - 20110_8</a>
+            </li>
+            <li class=""><a href="/phenotype/20111_9/">Illnesses of siblings. Diabetes - 20111_9</a>
+            </li>
+            <li class=""><a href="/phenotype/20111_1/">Illnesses of siblings. Heart disease - 20111_1</a>
+            </li>
+            <li class=""><a href="/phenotype/20111_8/">Illnesses of siblings. High blood pressure - 20111_8</a>
+            </li>
+            <li class=""><a href="/phenotype/20111_100/">Illnesses of siblings. None of the above (group 1) - 20111_100</a>
+            </li>
+            <li class=""><a href="/phenotype/20111_12/">Illnesses of siblings. Severe depression - 20111_12</a>
+            </li>
+            <li class=""><a href="/phenotype/30280_irnt/">Immature reticulocyte fraction - 30280_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20418/">Impact on normal roles during worst period of anxiety - 20418</a>
+            </li>
+            <li class=""><a href="/phenotype/23109_irnt/">Impedance of arm (right) - 23109_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/23107_irnt/">Impedance of leg (right) - 23107_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/23106_irnt/">Impedance of whole body - 23106_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5262_irnt/">Intra-ocular pressure, corneal-compensated (left) - 5262_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5254_irnt/">Intra-ocular pressure, corneal-compensated (right) - 5254_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5263_irnt/">Intra-ocular pressure, Goldmann-correlated (left) - 5263_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5255_irnt/">Intra-ocular pressure, Goldmann-correlated (right) - 5255_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/110001/">Invitation to complete online 24-hour recall dietary questionnaire, acceptance - 110001</a>
+            </li>
+            <li class=""><a href="/phenotype/1940/">Irritability - 1940</a>
+            </li>
+            <li class=""><a href="/phenotype/i9_ihd/">Ischaemic heart disease, wide definition - I9_IHD</a>
+            </li>
+            <li class=""><a href="/phenotype/3773/">Knee pain for 3&#43; months - 3773</a>
+            </li>
+            <li class=""><a href="/phenotype/23116_irnt/">Leg fat mass (left) - 23116_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/23115_irnt/">Leg fat percentage (left) - 23115_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/template/">Leg fat percentage - 23115_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/4728/">Leg pain on walking - 4728</a>
+            </li>
+            <li class=""><a href="/phenotype/5507/">Leg pain on walking . action taken - 5507</a>
+            </li>
+            <li class=""><a href="/phenotype/23118_irnt/">Leg predicted mass (left) - 23118_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6160_4/">Leisure/social activities. Adult education class - 6160_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6160_100/">Leisure/social activities. None of the above - 6160_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6160_2/">Leisure/social activities. Pub or social club - 6160_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6160_3/">Leisure/social activities. Religious group - 6160_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6160_1/">Leisure/social activities. Sports club or gym - 6160_1</a>
+            </li>
+            <li class=""><a href="/phenotype/3710/">Length of menstrual cycle - 3710</a>
+            </li>
+            <li class=""><a href="/phenotype/1110/">Length of mobile phone use - 1110</a>
+            </li>
+            <li class=""><a href="/phenotype/2149/">Lifetime number of sexual partners - 2149</a>
+            </li>
+            <li class=""><a href="/phenotype/2644/">Light smokers, at least 100 smokes in lifetime - 2644</a>
+            </li>
+            <li class=""><a href="/phenotype/2020/">Loneliness, isolation - 2020</a>
+            </li>
+            <li class=""><a href="/phenotype/2188/">Long-standing illness, disability or infirmity - 2188</a>
+            </li>
+            <li class=""><a href="/phenotype/5375_irnt/">Longest period of unenthusiasm / disinterest - 5375_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20420_irnt/">Longest period spent worried or anxious - 20420_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30120_irnt/">Lymphocyte count - 30120_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30180_irnt/">Lymphocyte percentage - 30180_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/i9_chd/">Major coronary heart disease event - I9_CHD</a>
+            </li>
+            <li class=""><a href="/phenotype/1538_0/">Major dietary changes in the last 5 years. No - 1538_0</a>
+            </li>
+            <li class=""><a href="/phenotype/1538_1/">Major dietary changes in the last 5 years. Yes, because of illness - 1538_1</a>
+            </li>
+            <li class=""><a href="/phenotype/c_breast_3/">Malignant neoplasm of breast - C_BREAST_3</a>
+            </li>
+            <li class=""><a href="/phenotype/20548_7/">Manifestations of mania or irritability. I was easily distracted - 20548_7</a>
+            </li>
+            <li class=""><a href="/phenotype/20548_2/">Manifestations of mania or irritability. I was more restless than usual - 20548_2</a>
+            </li>
+            <li class=""><a href="/phenotype/20548_3/">Manifestations of mania or irritability. My thoughts were racing - 20548_3</a>
+            </li>
+            <li class=""><a href="/phenotype/1787/">Maternal smoking around birth - 1787</a>
+            </li>
+            <li class=""><a href="/phenotype/4282/">Maximum digits remembered correctly - 4282</a>
+            </li>
+            <li class=""><a href="/phenotype/20454/">Maximum frequency of taking cannabis - 20454</a>
+            </li>
+            <li class=""><a href="/phenotype/6033_irnt/">Maximum heart rate during fitness test - 6033_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6032_irnt/">Maximum workload during fitness test - 6032_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30060_irnt/">Mean corpuscular haemoglobin concentration - 30060_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30040_irnt/">Mean corpuscular volume - 30040_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30100_irnt/">Mean platelet (thrombocyte) volume - 30100_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30260_irnt/">Mean reticulocyte volume - 30260_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30270_irnt/">Mean sphered cell volume - 30270_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20023_irnt/">Mean time to correctly identify matches - 20023_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6177_2/">Medication for cholesterol, blood pressure or diabetes. Blood pressure medication - 6177_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6177_1/">Medication for cholesterol, blood pressure or diabetes. Cholesterol lowering medication - 6177_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6177_100/">Medication for cholesterol, blood pressure or diabetes. None of the above - 6177_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6153_2/">Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones. Blood pressure medication - 6153_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6153_1/">Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones. Cholesterol lowering medication - 6153_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6153_4/">Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones. Hormone replacement therapy - 6153_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6153_100/">Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones. None of the above - 6153_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_1/">Medication for pain relief, constipation, heartburn. Aspirin - 6154_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_2/">Medication for pain relief, constipation, heartburn. Ibuprofen (e.g. Nurofen) - 6154_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_6/">Medication for pain relief, constipation, heartburn. Laxatives (e.g. Dulcolax, Senokot) - 6154_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_100/">Medication for pain relief, constipation, heartburn. None of the above - 6154_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_5/">Medication for pain relief, constipation, heartburn. Omeprazole (e.g. Zanprol) - 6154_5</a>
+            </li>
+            <li class=""><a href="/phenotype/6154_3/">Medication for pain relief, constipation, heartburn. Paracetamol - 6154_3</a>
+            </li>
+            <li class=""><a href="/phenotype/pulm_medicatio_comorb/">Medication related adverse effects (Asthma/COPD) - PULM_MEDICATIO_COMORB</a>
+            </li>
+            <li class=""><a href="/phenotype/asthma_medicatio_comorb/">Medication related adverse effects - ASTHMA_MEDICATIO_COMORB</a>
+            </li>
+            <li class=""><a href="/phenotype/m13_meniscusderangements/">Meniscus derangement - M13_MENISCUSDERANGEMENTS</a>
+            </li>
+            <li class=""><a href="/phenotype/20544_15/">Mental health problems ever diagnosed by a professional. Anxiety, nerves or generalized anxiety disorder - 20544_15</a>
+            </li>
+            <li class=""><a href="/phenotype/20544_11/">Mental health problems ever diagnosed by a professional. Depression - 20544_11</a>
+            </li>
+            <li class=""><a href="/phenotype/6179_1/">Mineral and other dietary supplements. Fish oil (including cod liver oil) - 6179_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6179_2/">Mineral and other dietary supplements. Glucosamine - 6179_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6179_100/">Mineral and other dietary supplements. None of the above - 6179_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6179_6/">Mineral and other dietary supplements. Selenium - 6179_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6179_4/">Mineral and other dietary supplements. Zinc - 6179_4</a>
+            </li>
+            <li class=""><a href="/phenotype/1930/">Miserableness - 1930</a>
+            </li>
+            <li class=""><a href="/phenotype/30130_irnt/">Monocyte count - 30130_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30190_irnt/">Monocyte percentage - 30190_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1920/">Mood swings - 1920</a>
+            </li>
+            <li class=""><a href="/phenotype/1180/">Morning/evening person (chronotype) - 1180</a>
+            </li>
+            <li class=""><a href="/phenotype/6149_3/">Mouth/teeth dental problems. Bleeding gums - 6149_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6149_6/">Mouth/teeth dental problems. Dentures - 6149_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6149_4/">Mouth/teeth dental problems. Loose teeth - 6149_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6149_1/">Mouth/teeth dental problems. Mouth ulcers - 6149_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6149_100/">Mouth/teeth dental problems. None of the above - 6149_100</a>
+            </li>
+            <li class=""><a href="/phenotype/1190/">Nap during day - 1190</a>
+            </li>
+            <li class=""><a href="/phenotype/g6_nerplex/">Nerve, nerve root and plexus disorders - G6_NERPLEX</a>
+            </li>
+            <li class=""><a href="/phenotype/1970/">Nervous feelings - 1970</a>
+            </li>
+            <li class=""><a href="/phenotype/20127_irnt/">Neuroticism score - 20127_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30140_irnt/">Neutrophill count - 30140_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30200_irnt/">Neutrophill percentage - 30200_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6144_1/">Never eat eggs, dairy, wheat, sugar. Eggs or foods containing eggs - 6144_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6144_5/">Never eat eggs, dairy, wheat, sugar. I eat all of the above - 6144_5</a>
+            </li>
+            <li class=""><a href="/phenotype/6144_4/">Never eat eggs, dairy, wheat, sugar. Sugar or foods/drinks containing sugar - 6144_4</a>
+            </li>
+            <li class=""><a href="/phenotype/4825/">Noisy workplace - 4825</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1074/">Non-cancer illness code, self-reported. angina - 20002_1074</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1286/">Non-cancer illness code, self-reported. depression - 20002_1286</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1220/">Non-cancer illness code, self-reported. diabetes - 20002_1220</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1452/">Non-cancer illness code, self-reported. eczema/dermatitis - 20002_1452</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1138/">Non-cancer illness code, self-reported. gastro-oesophageal reflux (gord) / gastric reflux - 20002_1138</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1387/">Non-cancer illness code, self-reported. hayfever/allergic rhinitis - 20002_1387</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1474/">Non-cancer illness code, self-reported. hiatus hernia - 20002_1474</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1473/">Non-cancer illness code, self-reported. high cholesterol - 20002_1473</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1226/">Non-cancer illness code, self-reported. hypothyroidism/myxoedema - 20002_1226</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1265/">Non-cancer illness code, self-reported. migraine - 20002_1265</a>
+            </li>
+            <li class=""><a href="/phenotype/20002_1465/">Non-cancer illness code, self-reported. osteoarthritis - 20002_1465</a>
+            </li>
+            <li class=""><a href="/phenotype/3456/">Number of cigarettes currently smoked daily (current cigarette smokers) - 3456</a>
+            </li>
+            <li class=""><a href="/phenotype/2887/">Number of cigarettes previously smoked daily - 2887</a>
+            </li>
+            <li class=""><a href="/phenotype/864/">Number of days/week walked 10&#43; minutes - 864</a>
+            </li>
+            <li class=""><a href="/phenotype/20128/">Number of fluid intelligence questions attempted within time limit - 20128</a>
+            </li>
+            <li class=""><a href="/phenotype/399_irnt/">Number of incorrect matches in round - 399_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2734/">Number of live births - 2734</a>
+            </li>
+            <li class=""><a href="/phenotype/3849/">Number of pregnancy terminations - 3849</a>
+            </li>
+            <li class=""><a href="/phenotype/4283/">Number of rounds of numeric memory test performed - 4283</a>
+            </li>
+            <li class=""><a href="/phenotype/135/">Number of self-reported non-cancer illnesses - 135</a>
+            </li>
+            <li class=""><a href="/phenotype/20543/">Number of things worried about during worst period of anxiety - 20543</a>
+            </li>
+            <li class=""><a href="/phenotype/137/">Number of treatments/medications taken - 137</a>
+            </li>
+            <li class=""><a href="/phenotype/2926/">Number of unsuccessful stop-smoking attempts - 2926</a>
+            </li>
+            <li class=""><a href="/phenotype/k11_othgastr/">Other gastritis (incl. Duodenitis) - K11_OTHGASTR</a>
+            </li>
+            <li class=""><a href="/phenotype/m13_otherjoint/">Other joint disorders - M13_OTHERJOINT</a>
+            </li>
+            <li class=""><a href="/phenotype/c3_other_skin/">Other malignant neoplasms of skin - C3_OTHER_SKIN</a>
+            </li>
+            <li class=""><a href="/phenotype/2473/">Other serious medical condition/disability diagnosed by doctor - 2473</a>
+            </li>
+            <li class=""><a href="/phenotype/2178/">Overall health rating - 2178</a>
+            </li>
+            <li class=""><a href="/phenotype/680_1/">Own or rent accommodation lived in. Own outright (by you or someone in your household) - 680_1</a>
+            </li>
+            <li class=""><a href="/phenotype/680_3/">Own or rent accommodation lived in. Rent - from local authority, local council, housing association - 680_3</a>
+            </li>
+            <li class=""><a href="/phenotype/680_4/">Own or rent accommodation lived in. Rent - from private landlord or letting agency - 680_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_4/">Pain type(s) experienced in last month. Back pain - 6159_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_1/">Pain type(s) experienced in last month. Headache - 6159_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_6/">Pain type(s) experienced in last month. Hip pain - 6159_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_7/">Pain type(s) experienced in last month. Knee pain - 6159_7</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_3/">Pain type(s) experienced in last month. Neck or shoulder pain - 6159_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_100/">Pain type(s) experienced in last month. None of the above - 6159_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6159_5/">Pain type(s) experienced in last month. Stomach or abdominal pain - 6159_5</a>
+            </li>
+            <li class=""><a href="/phenotype/1249/">Past tobacco smoking - 1249</a>
+            </li>
+            <li class=""><a href="/phenotype/3064_irnt/">Peak expiratory flow (PEF) - 3064_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20488/">Physically abused by family as a child - 20488</a>
+            </li>
+            <li class=""><a href="/phenotype/30080_irnt/">Platelet count - 30080_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30090_irnt/">Platelet crit - 30090_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30110_irnt/">Platelet distribution width - 30110_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2237/">Plays computer games - 2237</a>
+            </li>
+            <li class=""><a href="/phenotype/30520_irnt/">Potassium in urine - 30520_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20428/">Professional informed about anxiety - 20428</a>
+            </li>
+            <li class=""><a href="/phenotype/20448/">Professional informed about depression - 20448</a>
+            </li>
+            <li class=""><a href="/phenotype/20018/">Prospective memory result - 20018</a>
+            </li>
+            <li class=""><a href="/phenotype/4194_irnt/">Pulse rate - 4194_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/102_irnt/">Pulse rate, automated reading - 102_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/4196_irnt/">Pulse wave peak to peak time - 4196_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/4195_irnt/">Pulse wave reflection index - 4195_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/12340_irnt/">QRS duration - 12340_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_2/">Qualifications. A levels/AS levels or equivalent - 6138_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_1/">Qualifications. College or University degree - 6138_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_4/">Qualifications. CSEs or equivalent - 6138_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_100/">Qualifications. None of the above - 6138_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_3/">Qualifications. O levels/GCSEs or equivalent - 6138_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6138_6/">Qualifications. Other professional qualifications eg. nursing, teaching - 6138_6</a>
+            </li>
+            <li class=""><a href="/phenotype/6147_4/">Reason for glasses/contact lenses. For &#39;astigmatism&#39; - 6147_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6147_2/">Reason for glasses/contact lenses. For long-sightedness, i.e. for distance and near, but particularly for near tasks like reading (called &#39;hypermetropia&#39;) - 6147_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6147_1/">Reason for glasses/contact lenses. For short-sightedness, i.e. only or mainly for distance viewing such as driving, cinema etc (called &#39;myopia&#39;) - 6147_1</a>
+            </li>
+            <li class=""><a href="/phenotype/2664_3/">Reason for reducing amount of alcohol drunk. Health precaution - 2664_3</a>
+            </li>
+            <li class=""><a href="/phenotype/2664_5/">Reason for reducing amount of alcohol drunk. Other reason - 2664_5</a>
+            </li>
+            <li class=""><a href="/phenotype/20505/">Recent easy annoyance or irritability - 20505</a>
+            </li>
+            <li class=""><a href="/phenotype/20510/">Recent feelings of depression - 20510</a>
+            </li>
+            <li class=""><a href="/phenotype/20512/">Recent feelings of foreboding - 20512</a>
+            </li>
+            <li class=""><a href="/phenotype/20519/">Recent feelings of tiredness or low energy - 20519</a>
+            </li>
+            <li class=""><a href="/phenotype/20509/">Recent inability to stop or control worrying - 20509</a>
+            </li>
+            <li class=""><a href="/phenotype/20511/">Recent poor appetite or overeating - 20511</a>
+            </li>
+            <li class=""><a href="/phenotype/20515/">Recent trouble relaxing - 20515</a>
+            </li>
+            <li class=""><a href="/phenotype/20520/">Recent worrying too much about different things - 20520</a>
+            </li>
+            <li class=""><a href="/phenotype/30010_irnt/">Red blood cell (erythrocyte) count - 30010_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/30070_irnt/">Red blood cell (erythrocyte) distribution width - 30070_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2375/">Relative age of first facial hair - 2375</a>
+            </li>
+            <li class=""><a href="/phenotype/2385/">Relative age voice broke - 2385</a>
+            </li>
+            <li class=""><a href="/phenotype/20497/">Repeated disturbing thoughts of stressful experience in past month - 20497</a>
+            </li>
+            <li class=""><a href="/phenotype/20426/">Restless during period of worst anxiety - 20426</a>
+            </li>
+            <li class=""><a href="/phenotype/30240_irnt/">Reticulocyte percentage - 30240_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2040/">Risk taking - 2040</a>
+            </li>
+            <li class=""><a href="/phenotype/2100/">Seen a psychiatrist for nerves, anxiety, tension or depression - 2100</a>
+            </li>
+            <li class=""><a href="/phenotype/2090/">Seen doctor (GP) for nerves, anxiety, tension or depression - 2090</a>
+            </li>
+            <li class=""><a href="/phenotype/1950/">Sensitivity / hurt feelings - 1950</a>
+            </li>
+            <li class=""><a href="/phenotype/4717/">Shortness of breath walking on level ground - 4717</a>
+            </li>
+            <li class=""><a href="/phenotype/20015_irnt/">Sitting height - 20015_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/1717/">Skin colour - 1717</a>
+            </li>
+            <li class=""><a href="/phenotype/1160/">Sleep duration - 1160</a>
+            </li>
+            <li class=""><a href="/phenotype/1200/">Sleeplessness / insomnia - 1200</a>
+            </li>
+            <li class=""><a href="/phenotype/20116_0/">Smoking status. Never - 20116_0</a>
+            </li>
+            <li class=""><a href="/phenotype/20116_1/">Smoking status. Previous - 20116_1</a>
+            </li>
+            <li class=""><a href="/phenotype/1210/">Snoring - 1210</a>
+            </li>
+            <li class=""><a href="/phenotype/30530_irnt/">Sodium in urine - 30530_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5085_irnt/">Spherical power (left) - 5085_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/5084_irnt/">Spherical power (right) - 5084_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/50_irnt/">Standing height - 50_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20549_3/">Substances taken for anxiety. Medication prescribed to you (for at least two weeks) - 20549_3</a>
+            </li>
+            <li class=""><a href="/phenotype/20546_4/">Substances taken for depression. Drugs or alcohol (more than once) - 20546_4</a>
+            </li>
+            <li class=""><a href="/phenotype/20546_3/">Substances taken for depression. Medication prescribed to you (for at least two weeks) - 20546_3</a>
+            </li>
+            <li class=""><a href="/phenotype/2010/">Suffer from &#39;nerves&#39; - 2010</a>
+            </li>
+            <li class=""><a href="/phenotype/xviii_miscfindings/">Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified - XVIII_MISCFINDINGS</a>
+            </li>
+            <li class=""><a href="/phenotype/4080_irnt/">Systolic blood pressure, automated reading - 4080_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/93_irnt/">Systolic blood pressure, manual reading - 93_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/2492/">Taking other prescription medications - 2492</a>
+            </li>
+            <li class=""><a href="/phenotype/1990/">Tense / &#39;highly strung&#39; - 1990</a>
+            </li>
+            <li class=""><a href="/phenotype/20417/">Tense, sore, or aching muscles during worst period of anxiety - 20417</a>
+            </li>
+            <li class=""><a href="/phenotype/3466/">Time from waking to first cigarette - 3466</a>
+            </li>
+            <li class=""><a href="/phenotype/1050/">Time spend outdoors in summer - 1050</a>
+            </li>
+            <li class=""><a href="/phenotype/1090/">Time spent driving - 1090</a>
+            </li>
+            <li class=""><a href="/phenotype/1060/">Time spent outdoors in winter - 1060</a>
+            </li>
+            <li class=""><a href="/phenotype/1080/">Time spent using computer - 1080</a>
+            </li>
+            <li class=""><a href="/phenotype/1070/">Time spent watching television (TV) - 1070</a>
+            </li>
+            <li class=""><a href="/phenotype/400_irnt/">Time to complete round - 400_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/4803_0/">Tinnitus. No, never - 4803_0</a>
+            </li>
+            <li class=""><a href="/phenotype/4803_14/">Tinnitus. Yes, but not now, but have in the past - 4803_14</a>
+            </li>
+            <li class=""><a href="/phenotype/22506_113/">Tobacco smoking. Ex-smoker - 22506_113</a>
+            </li>
+            <li class=""><a href="/phenotype/22506_114/">Tobacco smoking. Never smoked - 22506_114</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140879802/">Treatment/medication code. amlodipine - 20003_1140879802</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140868226/">Treatment/medication code. aspirin - 20003_1140868226</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140866738/">Treatment/medication code. atenolol - 20003_1140866738</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1141146234/">Treatment/medication code. atorvastatin - 20003_1141146234</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1141194794/">Treatment/medication code. bendroflumethiazide - 20003_1141194794</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140923346/">Treatment/medication code. co-codamol - 20003_1140923346</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140864752/">Treatment/medication code. lansoprazole - 20003_1140864752</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1141191044/">Treatment/medication code. levothyroxine sodium - 20003_1141191044</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140860696/">Treatment/medication code. lisinopril - 20003_1140860696</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140884600/">Treatment/medication code. metformin - 20003_1140884600</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140865634/">Treatment/medication code. omeprazole - 20003_1140865634</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_2038460150/">Treatment/medication code. paracetamol - 20003_2038460150</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140860806/">Treatment/medication code. ramipril - 20003_1140860806</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140861958/">Treatment/medication code. simvastatin - 20003_1140861958</a>
+            </li>
+            <li class=""><a href="/phenotype/20003_1140861998/">Treatment/medication code. ventolin 100micrograms inhaler - 20003_1140861998</a>
+            </li>
+            <li class=""><a href="/phenotype/20533/">Trouble falling asleep - 20533</a>
+            </li>
+            <li class=""><a href="/phenotype/20517/">Trouble falling or staying asleep, or sleeping too much - 20517</a>
+            </li>
+            <li class=""><a href="/phenotype/2877_1/">Type of tobacco previously smoked. Manufactured cigarettes - 2877_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_5/">Types of physical activity in last 4 weeks. Heavy DIY (eg. weeding, lawn mowing, carpentry, digging) - 6164_5</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_4/">Types of physical activity in last 4 weeks. Light DIY (eg. pruning, watering the lawn) - 6164_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_100/">Types of physical activity in last 4 weeks. None of the above - 6164_100</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_2/">Types of physical activity in last 4 weeks. Other exercises (eg. swimming, cycling, keep fit, bowling) - 6164_2</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_3/">Types of physical activity in last 4 weeks. Strenuous sports - 6164_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6164_1/">Types of physical activity in last 4 weeks. Walking for pleasure (not as a means of transport) - 6164_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6162_1/">Types of transport used (excluding work). Car/motor vehicle - 6162_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6162_4/">Types of transport used (excluding work). Cycle - 6162_4</a>
+            </li>
+            <li class=""><a href="/phenotype/6162_3/">Types of transport used (excluding work). Public transport - 6162_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6162_2/">Types of transport used (excluding work). Walk - 6162_2</a>
+            </li>
+            <li class=""><a href="/phenotype/1150_3/">Usual side of head for mobile phone use. Equally left and right - 1150_3</a>
+            </li>
+            <li class=""><a href="/phenotype/1150_2/">Usual side of head for mobile phone use. Right - 1150_2</a>
+            </li>
+            <li class=""><a href="/phenotype/924/">Usual walking pace - 924</a>
+            </li>
+            <li class=""><a href="/phenotype/1548/">Variation in diet - 1548</a>
+            </li>
+            <li class=""><a href="/phenotype/6150_1/">Vascular/heart problems diagnosed by doctor. Heart attack - 6150_1</a>
+            </li>
+            <li class=""><a href="/phenotype/6150_100/">Vascular/heart problems diagnosed by doctor. None of the above - 6150_100</a>
+            </li>
+            <li class=""><a href="/phenotype/12336_irnt/">Ventricular rate - 12336_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20529/">Victim of physically violent crime - 20529</a>
+            </li>
+            <li class=""><a href="/phenotype/20531/">Victim of sexual assault - 20531</a>
+            </li>
+            <li class=""><a href="/phenotype/48_irnt/">Waist circumference - 48_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20535/">Waking too early - 20535</a>
+            </li>
+            <li class=""><a href="/phenotype/2207/">Wears glasses or contact lenses - 2207</a>
+            </li>
+            <li class=""><a href="/phenotype/1120/">Weekly usage of mobile phone in last 3 months - 1120</a>
+            </li>
+            <li class=""><a href="/phenotype/23098_irnt/">Weight - 23098_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/20536_1/">Weight change during worst episode of depression. Gained weight - 20536_1</a>
+            </li>
+            <li class=""><a href="/phenotype/20536_0/">Weight change during worst episode of depression. Stayed about the same or was on a diet - 20536_0</a>
+            </li>
+            <li class=""><a href="/phenotype/2316/">Wheeze or whistling in the chest in last year - 2316</a>
+            </li>
+            <li class=""><a href="/phenotype/30000_irnt/">White blood cell (leukocyte) count - 30000_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/6157_3/">Why stopped smoking. Health precaution - 6157_3</a>
+            </li>
+            <li class=""><a href="/phenotype/6157_100/">Why stopped smoking. None of the above - 6157_100</a>
+            </li>
+            <li class=""><a href="/phenotype/20530/">Witnessed sudden violent death - 20530</a>
+            </li>
+            <li class=""><a href="/phenotype/1980/">Worrier / anxious feelings - 1980</a>
+            </li>
+            <li class=""><a href="/phenotype/2000/">Worry too long after embarrassment - 2000</a>
+            </li>
+            <li class=""><a href="/phenotype/22501_irnt/">Year ended full time education - 22501_irnt</a>
+            </li>
+            <li class=""><a href="/phenotype/table/">List of Phenotypes</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/documentation/">Documentation</a>
+              <ul class="">
+            <li class=""><a href="/documentation/technical_detail/">Technical Details</a>
+            </li>
+            <li class=""><a href="/documentation/download/">Download Center</a>
+            </li>
+            <li class=""><a href="/documentation/implementation/">Source Code</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/contact_old/">Contact</a>
+            </li>
+            <li class=""><a href="/faq/">Frequently Asked Questions</a>
+            </li>
+            <li class="parent d-block "><a href="/blog/">Blogs</a>
+              <ul class="sub-menu">
+            <li class=" active "><a href="/blog/2015-07-23-r-rmarkdown/">Hello R Markdown</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/post/">Posts</a>
+              <ul class="">
+            <li class=""><a href="/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/elements/"></a>
+            </li></ul>
+            </nav>
+
+            
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="p-5 bg-white">
+            <h2>Hello R Markdown</h2>
+            
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="/rmarkdown-libs/bokehjs/bokeh.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/bokehjs/loader.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/bokehjs/bokeh.min.js"></script>
+<script src="/rmarkdown-libs/rbokeh-binding/rbokeh.js"></script>
+
+
+<pre class="r"><code>library(rbokeh)
+
+p &lt;- figure() %&gt;%
+  ly_points(Sepal.Length, Sepal.Width, data = iris,
+    color = Species, glyph = Species,
+    hover = list(Sepal.Length, Sepal.Width))
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+p
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.
+
+## Warning in structure(x, class = unique(c(&quot;AsIs&quot;, oldClass(x)))): Calling &#39;structure(NULL, *)&#39; is deprecated, as NULL cannot have attributes.
+##   Consider &#39;structure(list(), *)&#39; instead.</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="rbokeh html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"elementid":"ad321495a8a043b482a7f22c0a415c5f","modeltype":"Plot","modelid":"361d8e3bf6cc62f6d06ec41cfb03e306","docid":"8aba5c494d0da158ab21425e88b58b95","docs_json":{"8aba5c494d0da158ab21425e88b58b95":{"version":"0.12.2","title":"Bokeh Figure","roots":{"root_ids":["361d8e3bf6cc62f6d06ec41cfb03e306"],"references":[{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","attributes":{"id":"361d8e3bf6cc62f6d06ec41cfb03e306","sizing_mode":"scale_both","x_range":{"type":"Range1d","id":"7f5ba9a36c8bd2955538067073a8ac94"},"y_range":{"type":"Range1d","id":"55f68dc224291bf4bd400f35b4bf3a10"},"left":[{"type":"LinearAxis","id":"b28e9367e3b0facebd9bff6698a4bf37"}],"below":[{"type":"LinearAxis","id":"67e74ec86e0856a94eb28c48c3c317e0"}],"right":[],"above":[],"renderers":[{"type":"BoxAnnotation","id":"18b4edd4e5ea4ae2a6364dbe88b0e5fb"},{"type":"GlyphRenderer","id":"6cef0c237c08629d74d6ba82fd6563e9"},{"type":"GlyphRenderer","id":"3128e8ee794659c4eccb81a448832a09"},{"type":"GlyphRenderer","id":"fe02d6fb120b27cbdba59de23ef6277d"},{"type":"GlyphRenderer","id":"1de613319c5e8317fa4a01e0200b5b34"},{"type":"GlyphRenderer","id":"010203a288e32c3f20e36d12b5f7fbd6"},{"type":"GlyphRenderer","id":"186089ff28202f39eb8b59e85a281bb4"},{"type":"Legend","id":"1f91c2ecbda9b8755ad5ed747240b5ae"},{"type":"LinearAxis","id":"67e74ec86e0856a94eb28c48c3c317e0"},{"type":"Grid","id":"37c9454bdaa6bd0aa41acc1ee9340f3f"},{"type":"LinearAxis","id":"b28e9367e3b0facebd9bff6698a4bf37"},{"type":"Grid","id":"06d62582529d23c1948f8f74ea80854e"}],"extra_y_ranges":{},"extra_x_ranges":{},"tags":[],"min_border_left":4,"min_border_right":4,"min_border_top":4,"min_border_bottom":4,"lod_threshold":null,"toolbar":{"type":"Toolbar","id":"61eea4df49eb56163b4929cfbac17e7c"},"tool_events":{"type":"ToolEvents","id":"c583be2bbd6dc12a479fccf9cfd8afcb"}},"subtype":"Figure"},{"type":"Toolbar","id":"61eea4df49eb56163b4929cfbac17e7c","attributes":{"id":"61eea4df49eb56163b4929cfbac17e7c","tags":[],"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"type":"PanTool","id":"0e6bbff0825dca7c3a73b72e971d3a86"},{"type":"WheelZoomTool","id":"4430467d1d1533dd0312c3ebc388b52a"},{"type":"BoxZoomTool","id":"08366a2e7fc4d71e1eeb715acb9b7ee3"},{"type":"ResetTool","id":"6024422d3df9ed6892d032bc90996ac5"},{"type":"SaveTool","id":"78eb655e06a12e4789a79f78e9932fbf"},{"type":"HelpTool","id":"4eb07bb8739fe02914a984fc157aa991"},{"type":"HoverTool","id":"df3074deb4ac10b415f407659eacfa87"},{"type":"HoverTool","id":"8fc6a95600d11e28931769f846a44f09"},{"type":"HoverTool","id":"606d71cbf6a69f7dd184f1509b33aae3"}],"logo":null}},{"type":"PanTool","id":"0e6bbff0825dca7c3a73b72e971d3a86","attributes":{"id":"0e6bbff0825dca7c3a73b72e971d3a86","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"dimensions":["width","height"]}},{"type":"ToolEvents","id":"c583be2bbd6dc12a479fccf9cfd8afcb","attributes":{"id":"c583be2bbd6dc12a479fccf9cfd8afcb","tags":[]},"geometries":[]},{"type":"WheelZoomTool","id":"4430467d1d1533dd0312c3ebc388b52a","attributes":{"id":"4430467d1d1533dd0312c3ebc388b52a","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"dimensions":["width","height"]}},{"type":"BoxAnnotation","id":"18b4edd4e5ea4ae2a6364dbe88b0e5fb","attributes":{"id":"18b4edd4e5ea4ae2a6364dbe88b0e5fb","tags":[],"line_color":{"units":"data","value":"black"},"line_alpha":{"units":"data","value":1},"fill_color":{"units":"data","value":"lightgrey"},"fill_alpha":{"units":"data","value":0.5},"line_dash":[4,4],"line_width":{"units":"data","value":2},"level":"overlay","top_units":"screen","bottom_units":"screen","left_units":"screen","right_units":"screen","render_mode":"css"}},{"type":"BoxZoomTool","id":"08366a2e7fc4d71e1eeb715acb9b7ee3","attributes":{"id":"08366a2e7fc4d71e1eeb715acb9b7ee3","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"overlay":{"type":"BoxAnnotation","id":"18b4edd4e5ea4ae2a6364dbe88b0e5fb"}}},{"type":"ResetTool","id":"6024422d3df9ed6892d032bc90996ac5","attributes":{"id":"6024422d3df9ed6892d032bc90996ac5","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"}}},{"type":"SaveTool","id":"78eb655e06a12e4789a79f78e9932fbf","attributes":{"id":"78eb655e06a12e4789a79f78e9932fbf","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"}}},{"type":"HelpTool","id":"4eb07bb8739fe02914a984fc157aa991","attributes":{"id":"4eb07bb8739fe02914a984fc157aa991","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"redirect":"http://hafen.github.io/rbokeh","help_tooltip":"Click to learn more about rbokeh."}},{"type":"HoverTool","id":"df3074deb4ac10b415f407659eacfa87","attributes":{"id":"df3074deb4ac10b415f407659eacfa87","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"renderers":[{"type":"GlyphRenderer","id":"6cef0c237c08629d74d6ba82fd6563e9"}],"names":[],"anchor":"center","attachment":"horizontal","line_policy":"prev","mode":"mouse","point_policy":"snap_to_data","tooltips":[["Sepal.Length","@hover_col_1"],["Sepal.Width","@hover_col_2"]]}},{"type":"ColumnDataSource","id":"1afe9273ace1378e2e69ad69defc3eb7","attributes":{"id":"1afe9273ace1378e2e69ad69defc3eb7","tags":[],"column_names":["x","y","line_color","fill_color","hover_col_1","hover_col_2"],"selected":[],"data":{"x":[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5],"y":[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.6,3,3.4,3.5,2.3,3.2,3.5,3.8,3,3.8,3.2,3.7,3.3],"line_color":["#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4"],"fill_color":["#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4"],"hover_col_1":["5.1","4.9","4.7","4.6","5.0","5.4","4.6","5.0","4.4","4.9","5.4","4.8","4.8","4.3","5.8","5.7","5.4","5.1","5.7","5.1","5.4","5.1","4.6","5.1","4.8","5.0","5.0","5.2","5.2","4.7","4.8","5.4","5.2","5.5","4.9","5.0","5.5","4.9","4.4","5.1","5.0","4.5","4.4","5.0","5.1","4.8","5.1","4.6","5.3","5.0"],"hover_col_2":["3.5","3.0","3.2","3.1","3.6","3.9","3.4","3.4","2.9","3.1","3.7","3.4","3.0","3.0","4.0","4.4","3.9","3.5","3.8","3.8","3.4","3.7","3.6","3.3","3.4","3.0","3.4","3.5","3.4","3.2","3.1","3.4","4.1","4.2","3.1","3.2","3.5","3.6","3.0","3.4","3.5","2.3","3.2","3.5","3.8","3.0","3.8","3.2","3.7","3.3"]}}},{"type":"Circle","id":"24b4d99a0846c8856fe05bd8cf0b7392","attributes":{"id":"24b4d99a0846c8856fe05bd8cf0b7392","tags":[],"size":{"units":"screen","value":10},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","field":"line_color"},"fill_color":{"units":"data","field":"fill_color"}}},{"type":"Circle","id":"6a4fe9eebd0b66818b07229ba94bfbbb","attributes":{"id":"6a4fe9eebd0b66818b07229ba94bfbbb","tags":[],"size":{"units":"screen","value":10},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"}}},{"type":"Circle","id":"a4eeb5526f31ed3a937d34f185620f54","attributes":{"id":"a4eeb5526f31ed3a937d34f185620f54","tags":[],"size":{"units":"screen","value":10},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","field":"line_color"},"fill_color":{"units":"data","field":"fill_color"}}},{"type":"GlyphRenderer","id":"6cef0c237c08629d74d6ba82fd6563e9","attributes":{"id":"6cef0c237c08629d74d6ba82fd6563e9","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"6a4fe9eebd0b66818b07229ba94bfbbb"},"hover_glyph":{"type":"Circle","id":"a4eeb5526f31ed3a937d34f185620f54"},"name":null,"data_source":{"type":"ColumnDataSource","id":"1afe9273ace1378e2e69ad69defc3eb7"},"glyph":{"type":"Circle","id":"24b4d99a0846c8856fe05bd8cf0b7392"}}},{"type":"HoverTool","id":"8fc6a95600d11e28931769f846a44f09","attributes":{"id":"8fc6a95600d11e28931769f846a44f09","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"renderers":[{"type":"GlyphRenderer","id":"3128e8ee794659c4eccb81a448832a09"}],"names":[],"anchor":"center","attachment":"horizontal","line_policy":"prev","mode":"mouse","point_policy":"snap_to_data","tooltips":[["Sepal.Length","@hover_col_1"],["Sepal.Width","@hover_col_2"]]}},{"type":"ColumnDataSource","id":"42560bba66758fa3a1dd8c882e997f25","attributes":{"id":"42560bba66758fa3a1dd8c882e997f25","tags":[],"column_names":["x","y","line_color","fill_color","hover_col_1","hover_col_2"],"selected":[],"data":{"x":[7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7],"y":[3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8],"line_color":["#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E"],"fill_color":["#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E"],"hover_col_1":["7.0","6.4","6.9","5.5","6.5","5.7","6.3","4.9","6.6","5.2","5.0","5.9","6.0","6.1","5.6","6.7","5.6","5.8","6.2","5.6","5.9","6.1","6.3","6.1","6.4","6.6","6.8","6.7","6.0","5.7","5.5","5.5","5.8","6.0","5.4","6.0","6.7","6.3","5.6","5.5","5.5","6.1","5.8","5.0","5.6","5.7","5.7","6.2","5.1","5.7"],"hover_col_2":["3.2","3.2","3.1","2.3","2.8","2.8","3.3","2.4","2.9","2.7","2.0","3.0","2.2","2.9","2.9","3.1","3.0","2.7","2.2","2.5","3.2","2.8","2.5","2.8","2.9","3.0","2.8","3.0","2.9","2.6","2.4","2.4","2.7","2.7","3.0","3.4","3.1","2.3","3.0","2.5","2.6","3.0","2.6","2.3","2.7","3.0","2.9","2.9","2.5","2.8"]}}},{"type":"Square","id":"3adca169a98684247e038d2e116dc80c","attributes":{"id":"3adca169a98684247e038d2e116dc80c","tags":[],"size":{"units":"screen","value":10},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","field":"line_color"},"fill_color":{"units":"data","field":"fill_color"}}},{"type":"Square","id":"1b935ccc628d6ee545ba2b28b305fa7e","attributes":{"id":"1b935ccc628d6ee545ba2b28b305fa7e","tags":[],"size":{"units":"screen","value":10},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"}}},{"type":"Square","id":"d2f8dca07136ed47f28a2235550e6ab4","attributes":{"id":"d2f8dca07136ed47f28a2235550e6ab4","tags":[],"size":{"units":"screen","value":10},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","field":"line_color"},"fill_color":{"units":"data","field":"fill_color"}}},{"type":"GlyphRenderer","id":"3128e8ee794659c4eccb81a448832a09","attributes":{"id":"3128e8ee794659c4eccb81a448832a09","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Square","id":"1b935ccc628d6ee545ba2b28b305fa7e"},"hover_glyph":{"type":"Square","id":"d2f8dca07136ed47f28a2235550e6ab4"},"name":null,"data_source":{"type":"ColumnDataSource","id":"42560bba66758fa3a1dd8c882e997f25"},"glyph":{"type":"Square","id":"3adca169a98684247e038d2e116dc80c"}}},{"type":"HoverTool","id":"606d71cbf6a69f7dd184f1509b33aae3","attributes":{"id":"606d71cbf6a69f7dd184f1509b33aae3","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"renderers":[{"type":"GlyphRenderer","id":"fe02d6fb120b27cbdba59de23ef6277d"}],"names":[],"anchor":"center","attachment":"horizontal","line_policy":"prev","mode":"mouse","point_policy":"snap_to_data","tooltips":[["Sepal.Length","@hover_col_1"],["Sepal.Width","@hover_col_2"]]}},{"type":"ColumnDataSource","id":"6f5a9db195853a45448db35fe1f45e09","attributes":{"id":"6f5a9db195853a45448db35fe1f45e09","tags":[],"column_names":["x","y","line_color","fill_color","hover_col_1","hover_col_2"],"selected":[],"data":{"x":[6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],"y":[3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],"line_color":["#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C"],"fill_color":["#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C"],"hover_col_1":["6.3","5.8","7.1","6.3","6.5","7.6","4.9","7.3","6.7","7.2","6.5","6.4","6.8","5.7","5.8","6.4","6.5","7.7","7.7","6.0","6.9","5.6","7.7","6.3","6.7","7.2","6.2","6.1","6.4","7.2","7.4","7.9","6.4","6.3","6.1","7.7","6.3","6.4","6.0","6.9","6.7","6.9","5.8","6.8","6.7","6.7","6.3","6.5","6.2","5.9"],"hover_col_2":["3.3","2.7","3.0","2.9","3.0","3.0","2.5","2.9","2.5","3.6","3.2","2.7","3.0","2.5","2.8","3.2","3.0","3.8","2.6","2.2","3.2","2.8","2.8","2.7","3.3","3.2","2.8","3.0","2.8","3.0","2.8","3.8","2.8","2.8","2.6","3.0","3.4","3.1","3.0","3.1","3.1","3.1","2.7","3.2","3.3","3.0","2.5","3.0","3.4","3.0"]}}},{"type":"Triangle","id":"1cb496099863ab6a129006c70fa8002d","attributes":{"id":"1cb496099863ab6a129006c70fa8002d","tags":[],"size":{"units":"screen","value":10},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","field":"line_color"},"fill_color":{"units":"data","field":"fill_color"}}},{"type":"Triangle","id":"54b0572529d1b23733fcb7e2f91cb005","attributes":{"id":"54b0572529d1b23733fcb7e2f91cb005","tags":[],"size":{"units":"screen","value":10},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"}}},{"type":"Triangle","id":"22fd66fc93fdf3d0ef4d5ee3f9084341","attributes":{"id":"22fd66fc93fdf3d0ef4d5ee3f9084341","tags":[],"size":{"units":"screen","value":10},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","field":"line_color"},"fill_color":{"units":"data","field":"fill_color"}}},{"type":"GlyphRenderer","id":"fe02d6fb120b27cbdba59de23ef6277d","attributes":{"id":"fe02d6fb120b27cbdba59de23ef6277d","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Triangle","id":"54b0572529d1b23733fcb7e2f91cb005"},"hover_glyph":{"type":"Triangle","id":"22fd66fc93fdf3d0ef4d5ee3f9084341"},"name":null,"data_source":{"type":"ColumnDataSource","id":"6f5a9db195853a45448db35fe1f45e09"},"glyph":{"type":"Triangle","id":"1cb496099863ab6a129006c70fa8002d"}}},{"type":"ColumnDataSource","id":"b40d7e2ecaed924ea09174653f0bd92b","attributes":{"id":"b40d7e2ecaed924ea09174653f0bd92b","tags":[],"column_names":["x","y"],"selected":[],"data":{"x":[null,null],"y":[null,null]}}},{"type":"Circle","id":"18db84a1545d7b9ff3e2a978e87d50ff","attributes":{"id":"18db84a1545d7b9ff3e2a978e87d50ff","tags":[],"size":{"units":"screen","value":0},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#1F77B4"},"fill_color":{"units":"data","value":"#1F77B4"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"aef64040f3113d7fa161ea511537bff0","attributes":{"id":"aef64040f3113d7fa161ea511537bff0","tags":[],"size":{"units":"screen","value":0},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"ed3b52fa8b0d43919c9f7a13a1ff3002","attributes":{"id":"ed3b52fa8b0d43919c9f7a13a1ff3002","tags":[],"size":{"units":"screen","value":0},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#1F77B4"},"fill_color":{"units":"data","value":"#1F77B4"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"1de613319c5e8317fa4a01e0200b5b34","attributes":{"id":"1de613319c5e8317fa4a01e0200b5b34","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"aef64040f3113d7fa161ea511537bff0"},"hover_glyph":{"type":"Circle","id":"ed3b52fa8b0d43919c9f7a13a1ff3002"},"name":null,"data_source":{"type":"ColumnDataSource","id":"b40d7e2ecaed924ea09174653f0bd92b"},"glyph":{"type":"Circle","id":"18db84a1545d7b9ff3e2a978e87d50ff"}}},{"type":"Square","id":"856e8f41cd1b14c881b607dd25ffd9d9","attributes":{"id":"856e8f41cd1b14c881b607dd25ffd9d9","tags":[],"size":{"units":"screen","value":0},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#FF7F0E"},"fill_color":{"units":"data","value":"#FF7F0E"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Square","id":"00b93cc57fd781e547c1bbf0ec50126d","attributes":{"id":"00b93cc57fd781e547c1bbf0ec50126d","tags":[],"size":{"units":"screen","value":0},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Square","id":"953a57d034badd9720dbf2b9002d478f","attributes":{"id":"953a57d034badd9720dbf2b9002d478f","tags":[],"size":{"units":"screen","value":0},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#FF7F0E"},"fill_color":{"units":"data","value":"#FF7F0E"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"010203a288e32c3f20e36d12b5f7fbd6","attributes":{"id":"010203a288e32c3f20e36d12b5f7fbd6","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Square","id":"00b93cc57fd781e547c1bbf0ec50126d"},"hover_glyph":{"type":"Square","id":"953a57d034badd9720dbf2b9002d478f"},"name":null,"data_source":{"type":"ColumnDataSource","id":"b40d7e2ecaed924ea09174653f0bd92b"},"glyph":{"type":"Square","id":"856e8f41cd1b14c881b607dd25ffd9d9"}}},{"type":"Triangle","id":"2eaa989d280cff1a7537a8d1fcb4e16d","attributes":{"id":"2eaa989d280cff1a7537a8d1fcb4e16d","tags":[],"size":{"units":"screen","value":0},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#2CA02C"},"fill_color":{"units":"data","value":"#2CA02C"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Triangle","id":"d58d60d81092847fa59c261965c06c82","attributes":{"id":"d58d60d81092847fa59c261965c06c82","tags":[],"size":{"units":"screen","value":0},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Triangle","id":"1f5f0d2230e62a637f166604d862aa1f","attributes":{"id":"1f5f0d2230e62a637f166604d862aa1f","tags":[],"size":{"units":"screen","value":0},"visible":true,"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#2CA02C"},"fill_color":{"units":"data","value":"#2CA02C"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"186089ff28202f39eb8b59e85a281bb4","attributes":{"id":"186089ff28202f39eb8b59e85a281bb4","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Triangle","id":"d58d60d81092847fa59c261965c06c82"},"hover_glyph":{"type":"Triangle","id":"1f5f0d2230e62a637f166604d862aa1f"},"name":null,"data_source":{"type":"ColumnDataSource","id":"b40d7e2ecaed924ea09174653f0bd92b"},"glyph":{"type":"Triangle","id":"2eaa989d280cff1a7537a8d1fcb4e16d"}}},{"type":"Legend","id":"1f91c2ecbda9b8755ad5ed747240b5ae","attributes":{"id":"1f91c2ecbda9b8755ad5ed747240b5ae","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"legends":[["Species",[]],[" setosa",[{"type":"GlyphRenderer","id":"1de613319c5e8317fa4a01e0200b5b34"}]],[" versicolor",[{"type":"GlyphRenderer","id":"010203a288e32c3f20e36d12b5f7fbd6"}]],[" virginica",[{"type":"GlyphRenderer","id":"186089ff28202f39eb8b59e85a281bb4"}]]],"location":"top_right"}},{"type":"Range1d","id":"7f5ba9a36c8bd2955538067073a8ac94","attributes":{"id":"7f5ba9a36c8bd2955538067073a8ac94","tags":[],"start":4.048,"end":8.152}},{"type":"Range1d","id":"55f68dc224291bf4bd400f35b4bf3a10","attributes":{"id":"55f68dc224291bf4bd400f35b4bf3a10","tags":[],"start":1.832,"end":4.568}},{"type":"LinearAxis","id":"67e74ec86e0856a94eb28c48c3c317e0","attributes":{"id":"67e74ec86e0856a94eb28c48c3c317e0","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"axis_label":"Sepal.Length","formatter":{"type":"BasicTickFormatter","id":"2bd3150ca01c94effb9a11023d590757"},"ticker":{"type":"BasicTicker","id":"3ee1ec01c87df1c8b897c605d44d2440"},"visible":true,"axis_label_text_font_size":"12pt"}},{"type":"BasicTickFormatter","id":"2bd3150ca01c94effb9a11023d590757","attributes":{"id":"2bd3150ca01c94effb9a11023d590757","tags":[]}},{"type":"BasicTicker","id":"3ee1ec01c87df1c8b897c605d44d2440","attributes":{"id":"3ee1ec01c87df1c8b897c605d44d2440","tags":[],"num_minor_ticks":5}},{"type":"Grid","id":"37c9454bdaa6bd0aa41acc1ee9340f3f","attributes":{"id":"37c9454bdaa6bd0aa41acc1ee9340f3f","tags":[],"dimension":0,"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"ticker":{"type":"BasicTicker","id":"3ee1ec01c87df1c8b897c605d44d2440"}}},{"type":"LinearAxis","id":"b28e9367e3b0facebd9bff6698a4bf37","attributes":{"id":"b28e9367e3b0facebd9bff6698a4bf37","tags":[],"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"axis_label":"Sepal.Width","formatter":{"type":"BasicTickFormatter","id":"e3192784ec2a274e63bb0e03e7aedf06"},"ticker":{"type":"BasicTicker","id":"412b026d56783d3373fc61dc5fa5e8b7"},"visible":true,"axis_label_text_font_size":"12pt"}},{"type":"BasicTickFormatter","id":"e3192784ec2a274e63bb0e03e7aedf06","attributes":{"id":"e3192784ec2a274e63bb0e03e7aedf06","tags":[]}},{"type":"BasicTicker","id":"412b026d56783d3373fc61dc5fa5e8b7","attributes":{"id":"412b026d56783d3373fc61dc5fa5e8b7","tags":[],"num_minor_ticks":5}},{"type":"Grid","id":"06d62582529d23c1948f8f74ea80854e","attributes":{"id":"06d62582529d23c1948f8f74ea80854e","tags":[],"dimension":1,"plot":{"type":"Plot","id":"361d8e3bf6cc62f6d06ec41cfb03e306","subtype":"Figure"},"ticker":{"type":"BasicTicker","id":"412b026d56783d3373fc61dc5fa5e8b7"}}}]}}},"debug":false},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>#print(23232)
+#bdsd=bokeh_render_json(&#39;a.json&#39;)</code></pre>
+<p><script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
+
+<script type="text/javascript">
+  (function() {
+    var fn = function() {
+      Bokeh.safely(function() {
+        (function(root) {
+          function embed_document(root) {
+            
+          var docs_json = '{"65159e76-0df0-499c-8e19-8d10a25e54be":{"roots":{"references":[{"attributes":{"dimension":1,"ticker":{"id":"1357283","type":"BasicTicker"}},"id":"1357286","type":"Grid"},{"attributes":{},"id":"1357317","type":"BasicTickFormatter"},{"attributes":{"overlay":{"id":"1357324","type":"BoxAnnotation"}},"id":"1357301","type":"BoxZoomTool"},{"attributes":{"data_source":{"id":"1357289","type":"ColumnDataSource"},"glyph":{"id":"1357291","type":"Circle"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1357292","type":"Circle"},"selection_glyph":null,"view":{"id":"1357294","type":"CDSView"}},"id":"1357293","type":"GlyphRenderer"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"1357295","type":"HoverTool"},{"id":"1357296","type":"WheelPanTool"},{"id":"1357297","type":"TapTool"},{"id":"1357298","type":"WheelZoomTool"},{"id":"1357299","type":"PanTool"},{"id":"1357300","type":"LassoSelectTool"},{"id":"1357301","type":"BoxZoomTool"},{"id":"1357302","type":"ZoomOutTool"},{"id":"1357303","type":"ResetTool"},{"id":"1357304","type":"SaveTool"}]},"id":"1357287","type":"Toolbar"},{"attributes":{},"id":"1357304","type":"SaveTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"radius":{"units":"data","value":0.005},"x":{"field":"x_data"},"y":{"field":"y_data"}},"id":"1357292","type":"Circle"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"1357324","type":"BoxAnnotation"},{"attributes":{"below":[{"id":"1357277","type":"LinearAxis"}],"center":[{"id":"1357281","type":"Grid"},{"id":"1357286","type":"Grid"}],"left":[{"id":"1357282","type":"LinearAxis"}],"plot_height":700,"plot_width":700,"renderers":[{"id":"1357293","type":"GlyphRenderer"}],"title":{"id":"1357288","type":"Title"},"toolbar":{"id":"1357287","type":"Toolbar"},"x_range":{"id":"1357269","type":"DataRange1d"},"x_scale":{"id":"1357273","type":"LinearScale"},"y_range":{"id":"1357271","type":"DataRange1d"},"y_scale":{"id":"1357275","type":"LinearScale"}},"id":"1357268","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1357299","type":"PanTool"},{"attributes":{},"id":"1357321","type":"UnionRenderers"},{"attributes":{},"id":"1357273","type":"LinearScale"},{"attributes":{"fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"xs_units":"screen","ys_units":"screen"},"id":"1357323","type":"PolyAnnotation"},{"attributes":{},"id":"1357278","type":"BasicTicker"},{"attributes":{"callback":null,"overlay":{"id":"1357323","type":"PolyAnnotation"}},"id":"1357300","type":"LassoSelectTool"},{"attributes":{"source":{"id":"1357289","type":"ColumnDataSource"}},"id":"1357294","type":"CDSView"},{"attributes":{},"id":"1357275","type":"LinearScale"},{"attributes":{"axis_label":"Level of Polygenicity","formatter":{"id":"1357317","type":"BasicTickFormatter"},"ticker":{"id":"1357283","type":"BasicTicker"}},"id":"1357282","type":"LinearAxis"},{"attributes":{},"id":"1357302","type":"ZoomOutTool"},{"attributes":{},"id":"1357298","type":"WheelZoomTool"},{"attributes":{},"id":"1357296","type":"WheelPanTool"},{"attributes":{"fill_color":{"field":"hue_data"},"line_color":{"value":"#1f77b4"},"radius":{"units":"data","value":0.005},"x":{"field":"x_data"},"y":{"field":"y_data"}},"id":"1357291","type":"Circle"},{"attributes":{},"id":"1357322","type":"Selection"},{"attributes":{"callback":null,"data":{"bp8":{"__ndarray__":"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","dtype":"float64","shape":[210]},"description":["Standing height","Forced expiratory volume in 1-second (FEV1), predicted","6mm weak meridian (left)","6mm weak meridian (right)","3mm weak meridian (right)","Mean platelet (thrombocyte) volume","3mm strong meridian (right)","Sitting height","Heel bone mineral density (BMD) (left)","Heel bone mineral density (BMD)","Ankle spacing width (left)","Ankle spacing width","Platelet count","Leg fat-free mass (left)","Spherical power (left)","Spherical power (right)","Weight","Impedance of whole body","Mean corpuscular volume","Body mass index (BMI)","Comparative height size at age 10","Impedance of leg (left)","Corneal resistance factor (right)","Impedance of arm (right)","Leg fat mass (right)","Corneal resistance factor (left)","Platelet distribution width","Body fat percentage","Platelet crit","Leg fat percentage (left)","Arm fat percentage (right)","Fluid intelligence score","Hip circumference","High light scatter reticulocyte percentage","Red blood cell (erythrocyte) distribution width","Red blood cell (erythrocyte) count","Forced vital capacity (FVC)","Age when periods started (menarche)","Waist circumference","Reticulocyte percentage","Intra-ocular pressure, Goldmann-correlated (left)","Mean sphered cell volume","Mean reticulocyte volume","Monocyte count","Eosinophill percentage","Forced expiratory volume in 1-second (FEV1), predicted percentage","Intra-ocular pressure, Goldmann-correlated (right)","Corneal hysteresis (right)","Monocyte percentage","Lymphocyte count","Forced expiratory volume in 1-second (FEV1)","White blood cell (leukocyte) count","Corneal hysteresis (left)","QRS duration","Age asthma diagnosed by doctor","Eosinophill count","Age first had sexual intercourse","Neutrophill count","Haemoglobin concentration","Pulse rate, automated reading","Ventricular rate","Lymphocyte percentage","Systolic blood pressure, automated reading","Immature reticulocyte fraction","Haematocrit percentage","Comparative body size at age 10","Intra-ocular pressure, corneal-compensated (right)","Neutrophill percentage","Diastolic blood pressure, automated reading","Skin colour","Intra-ocular pressure, corneal-compensated (left)","Year ended full time education","Pulse rate","Systolic blood pressure, manual reading","Morning/evening person (chronotype)","Relative age of first facial hair","Difficulty not smoking for 1 day","Age asthma diagnosed","Neuroticism score","Hand grip strength (right)","Hand grip strength (left)","Maximum digits remembered correctly","Diastolic blood pressure, manual reading","Childhood sunburn occasions","6mm asymmetry index (left)","Age completed full time education","Time spent watching television (TV)","Birth weight","Number of cigarettes currently smoked daily (current cigarette smokers)","Peak expiratory flow (PEF)","Birth weight of first child","Overall health rating","Age started smoking in current smokers","6mm asymmetry index (right)","Time spent using computer","Number of cigarettes previously smoked daily","Past tobacco smoking","Age hay fever, rhinitis or eczema diagnosed","Average total household income before tax","Time to complete round","Number of rounds of numeric memory test performed","Duration to first press of snap-button in each round","3mm cylindrical power (right)","Felt loved as a child","Usual walking pace","Frequency of drinking alcohol","Length of menstrual cycle","Time from waking to first cigarette","Lifetime number of sexual partners","Mean time to correctly identify matches","Alcohol intake frequency.","Nap during day","Ever taken cannabis","Number of fluid intelligence questions attempted within time limit","Hot drink temperature","Health satisfaction","ECG, heart rate","Ever thought that life not worth living","Plays computer games","Time spend outdoors in summer","Age started wearing glasses or contact lenses","General happiness with own health","Getting up in morning","Sodium in urine","Sleep duration","Number of treatments/medications taken","Facial ageing","3mm cylindrical power (left)","Creatinine (enzymatic) in urine","Age started smoking in former smokers","Relative age voice broke","Sleeplessness / insomnia","3mm strong meridian angle (left)","Age hayfever or allergic rhinitis diagnosed by doctor","Happiness","Number of self-reported non-cancer illnesses","Frequency of consuming six or more units of alcohol","Maximum heart rate during fitness test","Friendships satisfaction","Average monthly spirits intake","6mm asymmetry angle (left)","Physically abused by family as a child","6mm strong meridian angle (left)","Drive faster than motorway speed limit","Frequency of tiredness / lethargy in last 2 weeks","6mm regularity index (right)","Recent feelings of tiredness or low energy","Maximum workload during fitness test","Number of pregnancy terminations","Belief that own life is meaningful","6mm strong meridian angle (right)","Longest period spent worried or anxious","Mean corpuscular haemoglobin concentration","Leg pain on walking : action taken","6mm asymmetry angle (right)","General happiness","Length of mobile phone use","Average weekly red wine intake","Amount of alcohol drunk on a typical drinking day","Number of live births","Prospective memory result","Financial situation satisfaction","Pulse wave reflection index","Current tobacco smoking","Family relationship satisfaction","Number of incorrect matches in round","Felt very upset when reminded of stressful experience in past month","Impact on normal roles during worst period of anxiety","Maximum frequency of taking cannabis","Trouble falling or staying asleep, or sleeping too much","Noisy workplace","3mm asymmetry angle (left)","Weekly usage of mobile phone in last 3 months","Frequency of inability to stop worrying during worst period of anxiety","Repeated disturbing thoughts of stressful experience in past month","Recent poor appetite or overeating","Felt hated by family member as a child","Daytime dozing / sleeping (narcolepsy)","3mm strong meridian angle (right)","ECG, load","Basophill percentage","Average weekly beer plus cider intake","Average monthly red wine intake","Age high blood pressure diagnosed","Recent easy annoyance or irritability","Frequency of feeling guilt or remorse after drinking alcohol in last year","Recent trouble relaxing","3mm asymmetry angle (right)","Time spent driving","Number of unsuccessful stop-smoking attempts","Recent inability to stop or control worrying","Able to confide","Felt distant from other people in past month","Cylindrical power (right)","Frequency of tenseness / restlessness in last 2 weeks","Variation in diet","Frequency of depressed mood in last 2 weeks","Ever contemplated self-harm","Duration of walks","Recent feelings of depression","Time spent outdoors in winter","Potassium in urine","Recent worrying too much about different things","Recent feelings of foreboding","Longest period of unenthusiasm / disinterest","6mm weak meridian angle (right)","3mm regularity index (right)","3mm weak meridian angle (left)","Pulse wave peak to peak time","Number of days/week walked 10+ minutes"],"hue_data":["#440154","#440154","#3e4a89","#433b84","#453480","#1e9c89","#46337f","#440154","#21a785","#277f8e","#440154","#440154","#2b738e","#440154","#440154","#440154","#440154","#440154","#24858e","#440154","#440154","#440154","#3e4989","#440154","#440154","#38568c","#218e8d","#440154","#25838e","#440154","#440154","#440154","#440154","#471466","#2d708e","#424086","#440154","#440154","#440154","#424086","#440154","#23878e","#23878e","#1f948c","#32658e","#440154","#404688","#2e6d8e","#26ad81","#440255","#440154","#470f62","#24868e","#fee724","#f7e61f","#32658e","#440154","#440154","#443983","#481669","#fee724","#423f85","#440154","#2b758e","#481e70","#440154","#2f6c8e","#414387","#440154","#e2e418","#2b738e","#460b5e","#218e8d","#86d549","#440154","#481c6e","#c0df24","#e2e418","#440154","#440154","#440154","#95d83f","#9bd93c","#b3dd2d","#86d549","#440154","#440154","#471466","#e8e519","#440154","#472b7a","#440154","#b5de2b","#b8de29","#440154","#7ad251","#440154","#58c765","#440154","#440154","#addd30","#440154","#2fb47c","#453681","#440154","#365c8d","#d8e319","#f9e721","#440154","#440154","#440154","#440154","#365b8d","#1f978b","#440154","#365c8d","#b3dd2d","#33638d","#440154","#440154","#440154","#20918c","#440154","#440154","#440154","#440154","#440154","#53c668","#440154","#38b977","#23878e","#440154","#65cc5e","#fee724","#29788e","#365c8d","#1fa188","#d3e21b","#1e998a","#f9e721","#e0e418","#20908d","#c0df24","#440154","#440154","#d5e21a","#23a983","#b3dd2d","#abdc32","#1e988b","#98d93e","#fee724","#27ae81","#fee724","#d3e21b","#28af80","#440154","#440154","#44bf70","#345f8d","#2fb47c","#26ad81","#2cb27d","#440154","#1e9c89","#440154","#1fa287","#f2e61c","#fee724","#21a785","#33b779","#a5db35","#440154","#f9e721","#24ab82","#39ba76","#2eb37c","#440154","#98d93e","#d8e319","#4dc36b","#3b508b","#fee724","#9bd93c","#4bc26c","#bddf26","#32b67a","#c0df24","#470f62","#abdc32","#53c668","#440154","#e8e519","#a0da39","#481c6e","#440154","#443882","#69cd5b","#440154","#42be71","#471466","#440154","#73d055","#5cc963","#fee724","#cde11d","#d3e21b","#b8de29","#58c765","#440154"],"index":["50_irnt","20153_irnt","5097_irnt","5098_irnt","5099_irnt","30100_irnt","5132_irnt","20015_irnt","4105_irnt","3148_irnt","4100_irnt","3143_irnt","30080_irnt","23117_irnt","5085_irnt","5084_irnt","23098_irnt","23106_irnt","30040_irnt","23104_irnt","1697","23108_irnt","5257_irnt","23109_irnt","23112_irnt","5265_irnt","30110_irnt","23099_irnt","30090_irnt","23115_irnt","23119_irnt","20016_irnt","49_irnt","30290_irnt","30070_irnt","30010_irnt","3062_irnt","2714","48_irnt","30240_irnt","5263_irnt","30270_irnt","30260_irnt","30130_irnt","30210_irnt","20154_irnt","5255_irnt","5256_irnt","30190_irnt","30120_irnt","3063_irnt","30000_irnt","5264_irnt","12340_irnt","22147_irnt","30150","2139_irnt","30140_irnt","30020_irnt","102_irnt","12336_irnt","30180_irnt","4080_irnt","30280_irnt","30030_irnt","1687","5254_irnt","30200_irnt","4079_irnt","1717","5262_irnt","22501_irnt","4194_irnt","93_irnt","1180","2375","3476","3786_irnt","20127_irnt","47_irnt","46_irnt","4282","94_irnt","1737","5157_irnt","845","1070","20022_irnt","3456","3064_irnt","2744","2178","3436_irnt","5158_irnt","1080","2887","1249","3761_irnt","738","400_irnt","4283","404_irnt","5116_irnt","20489","924","20414","3710","3466","2149","20023_irnt","1558","1190","20453","20128","1518","4548","5983_irnt","20479","2237","1050","2217_irnt","20459","1170","30530_irnt","1160","137","1757","5119_irnt","30510_irnt","2867_irnt","2385","1200","5104_irnt","22146_irnt","4526","135","20416","6033_irnt","4570","4440","5110_irnt","20488","5105_irnt","1100","2080","5161_irnt","20519","6032_irnt","3849","20460","5106_irnt","20420_irnt","30060_irnt","5507","5109_irnt","20458","1110","1568","20403","2734","20018","4581","4195_irnt","1239","4559","399_irnt","20498","20418","20454","20517","4825","5111_irnt","1120","20539","20497","20511","20487","1220","5107_irnt","5984_irnt","30220_irnt","1588","4407","2966_irnt","20505","20409","20515","5108_irnt","1090","2926","20509","2110","20496","5087_irnt","2070","1548","2050","20485","874_irnt","20510","1060","30520_irnt","20520","20512","5375_irnt","5101_irnt","5160_irnt","5103_irnt","4196_irnt","864"],"uni.Total Liability scale h2":{"__ndarray__":"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","dtype":"float64","shape":[210]},"uni.Total Observed scale h2":{"__ndarray__":"QfFjzF1L2D+L/WX35GHVP2wJ+aBns9I/PN9PjZdu0j/+Q/rt68DRP/5D+u3rwNE/B/AWSFD80D9+jLlrCfnQP5vmHafoSM4/toR80LNZzT/99nXgnBHNP1UwKqkT0Mw/EhQ/xty1zD9d3EYDeAvMP6MjufyH9Ms/+THmriXkyz9ZF7fRAN7KP/jCZKpgVMo/PQrXo3A9yj9nRGlv8IXJP+m3rwPnjMg/6bevA+eMyD8yVTAqqRPIP1YOLbKd78c/nYAmwoanxz+ASL99HTjHP1+6SQwCK8c/owG8BRIUxz+TOgFNhA3HP1afq63YX8Y/zTtO0ZFcxj/PZtXnaivGP0cDeAskKMY/f9k9eVioxT/3deCcEaXFP9cS8kHPZsU/ZvfkYaHWxD8SFD/G3LXEP2gibHh6pcQ/RpT2Bl+YxD+coiO5/IfEPwN4CyQofsQ/A3gLJCh+xD8DeAskKH7EP4XrUbgehcM/U5YhjnVxwz8zMzMzMzPDPxTQRNjw9MI/eqUsQxzrwj9q3nGKjuTCP0hQ/Bhz18I/pN++Dpwzwj+PU3Qkl//APxniWBe30cA/+FPjpZvEwD+3Yn/ZPXnAP+84RUdy+b8/S8gHPZtVvz+TOgFNhA2/P9qs+lxtxb4/3gIJih9jvj86kst/SL+9P+auJeSDnr0/liGOdXEbvT9TBaOSOgG9P4qw4emVsrw/8rBQa5p3vD/i6ZWyDHG8P9rO91Pjpbs/NV66SQwCuz8kl/+Qfvu6P0Fg5dAi27k/Ne84RUdyuT/y0k1iEFi5P1YOLbKd77c/E/JBz2bVtz+ASL99HTi3P03zjlN0JLc/Di2yne+ntj/tnjws1Jq2P4j029eBc7Y/e4MvTKYKtj/1SlmGONa1P8P1KFyPwrU/PL1SliGOtT9AE2HD0yu1P/32deCcEbU/qRPQRNjwtD++MJkqGJW0PycxCKwcWrQ/16NwPQrXsz9y+Q/pt6+zP5jdk4eFWrM/vsEXJlMFsz+MbOf7qfGyP8IXJlMFo7I/TKYKRiV1sj+TGARWDi2yPy9uowG8BbI/RIts5/upsT9YqDXNO06xPwXFjzF3LbE/4zYawFsgsT/Sb18HzhmxP+eMKO0NvrA/54wo7Q2+sD/WxW00gLewP7U3+MJkqrA/pHA9CtejsD9xGw3gLZCwP8pUwaikTrA/ylTBqKROsD9lqmBUUiewPzarPldbsa8/+zpwzojSrj/NO07RkVyuP0cDeAskKK4/XCBB8WPMrT8Mk6mCUUmtP0I+6Nms+qw/IbByaJHtrD+8BRIUP8asP1dbsb/snqw/0SLb+X5qrD+vlGWIY12sPwMJih9j7qo/OrTIdr6fqj8tQxzr4jaqP6YKRiV1Aqo/Y+5aQj7oqT9Wfa62Yn+pP1Z9rrZif6k/Vn2utmJ/qT+utmJ/2T2pP2uad5yiI6k/gLdAguLHqD+3Yn/ZPXmoPzAqqRPQRKg/MCqpE9BEqD8PnDOitDeoP+CcEaW9wac/nYAmwoanpz988rBQa5qnP1pkO99Pjac/1CtlGeJYpz9N845TdCSnPyxlGeJYF6c/hJ7Nqs/Vpj8f9GxWfa6mP1afq63YX6Y/NBE2PL1Spj/PZtXnaiumP89m1edqK6Y/rthfdk8epj+MSuoENBGmP4xK6gQ0EaY/SS7/If32pT8noImw4emlP3/ZPXlYqKU/Gy/dJAaBpT/XEvJBz2alP5T2Bl+YTKU/UdobfGEypT9R2ht8YTKlP+wvuycPC6U/I9v5fmq8pD+coiO5/IekP5yiI7n8h6Q/TRWMSuoEpD8rhxbZzvejP6VOQBNhw6M//Yf029eBoz+6awn5oGejPzMzMzMzM6M/EqW9wRcmoz9q3nGKjuSiPyfChqdXyqI/J8KGp1fKoj+gibDh6ZWiP3/7OnDOiKI/f/s6cM6Ioj9dbcX+snuiP9c07zhFR6I/coqO5PIfoj/sUbgeheuhP4enV8oyxKE/Iv32deCcoT8Ab4EExY+hP/T91HjpJqE/seHplbIMoT+PU3Qkl/+gP0w3iUFg5aA/TDeJQWDloD8qqRPQRNigPyqpE9BE2KA/CRueXinLoD/njCjtDb6gP6RwPQrXo6A/HThnRGlvoD/aG3xhMlWgP9obfGEyVaA/l/+Qfvs6oD92cRsN4C2gP3ZxGw3gLaA/Ece6uI0GoD8Rx7q4jQagPxHHuriNBqA/3nGKjuTynz8IrBxaZDufP4JzRpT2Bp8/","dtype":"float64","shape":[210]},"uni.Total h2 p":{"__ndarray__":"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","dtype":"float64","shape":[210]},"x_data":{"__ndarray__":"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","dtype":"float64","shape":[210]},"y_data":{"__ndarray__":"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","dtype":"float64","shape":[210]}},"selected":{"id":"1357322","type":"Selection"},"selection_policy":{"id":"1357321","type":"UnionRenderers"}},"id":"1357289","type":"ColumnDataSource"},{"attributes":{"callback":null},"id":"1357271","type":"DataRange1d"},{"attributes":{},"id":"1357283","type":"BasicTicker"},{"attributes":{},"id":"1357303","type":"ResetTool"},{"attributes":{"ticker":{"id":"1357278","type":"BasicTicker"}},"id":"1357281","type":"Grid"},{"attributes":{"callback":null},"id":"1357269","type":"DataRange1d"},{"attributes":{"callback":null},"id":"1357297","type":"TapTool"},{"attributes":{"axis_label":"Heritability (Observed scale)","formatter":{"id":"1357319","type":"BasicTickFormatter"},"ticker":{"id":"1357278","type":"BasicTicker"}},"id":"1357277","type":"LinearAxis"},{"attributes":{"text":"Level of Polygenicity - Heritability (continuous traits only)"},"id":"1357288","type":"Title"},{"attributes":{},"id":"1357319","type":"BasicTickFormatter"},{"attributes":{"callback":null,"tooltips":[["phenotype","@description"],["h2","@x_data"],["polygenicity","@y_data"]]},"id":"1357295","type":"HoverTool"}],"root_ids":["1357268"]},"title":"Bokeh Application","version":"1.3.4"}}';
+          var render_items = [{"docid":"65159e76-0df0-499c-8e19-8d10a25e54be","roots":{"1357268":"0c80462b-09ac-4130-89ea-9c8447af5a75"}}];
+          root.Bokeh.embed.embed_items(docs_json, render_items);
+        
+          }
+          if (root.Bokeh !== undefined) {
+            embed_document(root);
+          } else {
+            var attempts = 0;
+            var timer = setInterval(function(root) {
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+                clearInterval(timer);
+              }
+              attempts++;
+              if (attempts > 100) {
+                console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                clearInterval(timer);
+              }
+            }, 10, root)
+          }
+        })(window);
+      });
+    };
+    if (document.readyState != "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  })();
+</script>
+<div class="bk-root" id="0c80462b-09ac-4130-89ea-9c8447af5a75" data-root-id="1357268"></div><a href="http://electronic-moongchi.tistory.com">전자뭉치 블로그로 이동하기</a></p>
+<pre class="r"><code>print(2)
+## [1] 2
+#rbokeh::bokeh_render_json()
+#rbokeh::bokeh_render_json(&#39;a.json&#39;)</code></pre>
+<div id="r-markdown" class="section level1">
+<h1>R Markdown</h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>You can embed an R code chunk like this:</p>
+<pre class="r"><code>summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932</code></pre>
+</div>
+<div id="including-plots" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
+<pre class="r"><code>par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
+  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
+  init.angle = -50, border = NA
+)</code></pre>
+<div class="figure"><span id="fig:pie"></span>
+<img src="/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
+<p class="caption">
+Figure 1: A fancy pie chart.
+</p>
+</div>
+</div>
+
+            <nav class="pagination mt-3">
+            
+            </nav></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer -->
+<footer class="section bg-gray pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 text-md-left text-center">
+        <p>Copyright(c) 2019 by Chanwoo Kim @ Genomics &amp; Bioinformatics Laboratory (hanlab.snu.ac.kr)</p> 
+      </div>
+      <div class="col-md-4 text-md-right text-center">
+        <ul class="list-inline mb-3">
+          
+          <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="/"><i class="ti-home"></i></a></li>
+          
+          <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="https://github.com/ch6845/regional_heritability_analysis"><i class="ti-github"></i></a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- Bootstrap JS -->
+<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- highlight -->
+<script src="/plugins/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Main Script -->
+
+<script src="/js/script.min.js"></script>

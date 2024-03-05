@@ -1,0 +1,26 @@
+---
+date: "2019-08-19T11:02:05+06:00"
+title: Download Center
+weight: 5
+---
+
+We distribute raw data of our analysis result.
+
+Please feel free to contact us if you have any question.
+
+[Contact](../../contact_us/here)
+
+## List of files
+[phenotype_info.csv](../../raw_data/phenotype_info.csv)
+
+[phenotype_info_chr.csv](../../raw_data/phenotype_info_chr.csv)
+
+[phenotype_info_128Mb.csv](../../raw_data/phenotype_info_128Mb.csv)
+
+[phenotype_info_64Mb.csv](../../raw_data/phenotype_info_64Mb.csv)
+
+[phenotype_info_32Mb.csv](../../raw_data/phenotype_info_32Mb.csv)
+
+[phenotype_info_16Mb.csv](../../raw_data/phenotype_info_16Mb.csv)
+
+[phenotype_info_8Mb.csv](../../raw_data/phenotype_info_8Mb.csv)
